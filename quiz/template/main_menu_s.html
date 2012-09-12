@@ -1,0 +1,62 @@
+<SCRIPT LANGUAGE="JavaScript1.2" src="verify.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="form.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	function toggleMenu(currMenu) {
+		if (document.getElementById) {
+		thisMenu = document.getElementById(currMenu).style
+		if (thisMenu.display == "block") {
+		thisMenu.display = "none"
+		}
+		else {
+		thisMenu.display = "block"
+		}
+		return false
+		}
+		else {
+		return true
+		}
+	}
+</SCRIPT>
+</head>
+<br>
+<body>
+<table width="98%" align="center">
+  <tr>
+    <td align="center">
+	 
+          <table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+
+            <tr>
+              <td valign="top" style='border-top: solid  2px; border-right: solid  2px;' class="bordercolor" >
+			<form action="?a=stat&m=users&occ={OCC}&id={MODULE}&submit=submit&multiple={MULTI}"  method="post"  target="_parent"  onSubmit="return check({Q_LIMIT},'{NUM_ANS}');">
+			  <table width="100%"  border="0">
+				<!-- BEGIN quizlist --> 
+                  <tr>
+                    <td height="20" align="right" class="main"><a href="?a={PATH}&m=users&quiz_id={quizlist.Q_ID}&modules={MODULE}&occ={OCC}&h_qid={H_QID}&cnt={quizlist.NUM}">{quizlist.Q_LIST}</a></td>
+                  </tr>
+				   <!-- END quizlist -->
+                <tr>
+                  <td align="center">{SEND}</td>
+                </tr>
+              </table>
+			    </form>
+			  </td>
+              <td align="center" valign="top" style="border-top: solid  2px;" class="bordercolor">
+                <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+                </table>
+                {MAIN}
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" width="129" style="border-right: solid  2px;'" class="bordercolor">&nbsp;</td>
+              <td class="th14">&nbsp;</td>
+            </tr>
+            <tr>
+              <td valign="top" width="129">&nbsp;</td>
+              <td >&nbsp;</td>
+            </tr>
+          </table></td>
+  </tr>
+</table>
+</body>
+</html>

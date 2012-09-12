@@ -1,0 +1,508 @@
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-874">
+
+  <!-- BEGIN block -->
+
+
+<table width="98%" border="0" cellspacing="1" cellpadding="0" >
+
+  <tr>
+
+    <td>
+
+	<table width="100%"  border="0" class="tdborder1" >
+
+  <tr>
+
+    <td colspan="3" class="main"><b>{RESULTBY}{Q_NAME}</b></td>
+
+    </tr>
+
+  <tr>
+
+    <td width="8%">&nbsp;</td>
+
+    <td width="30%" class="main"><b>{TOTAL_RUN}</b></td>
+
+    <td width="62%" class="main"><b>{CNT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td><span class="main"><b>{TOTAL_USER}</b></span></td>
+
+    <td class="main"><b>{UCNT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td class="main"><b>{TOTAL_Q}</b></td>
+
+    <td class="main"><b>{NUM}</b></td>
+
+  </tr>
+
+</table>	
+
+<table width="100%"  border="0" >
+  <tr class="tdbackground_white">
+    <td colspan="3" class="main"><div align="center"><b>{charttitle}</b></div></td>
+  </tr>
+  <tr class="tdbackground_white">
+    <td colspan="3"><div align="center">{piechart}</div></td>
+  </tr>
+</table>
+
+</td>
+
+  </tr>
+
+</table>
+
+  <!-- END block -->
+
+  <!-- BEGIN error -->
+
+  <table width="100%"  border="0">
+
+  <tr>
+
+    <td class="error"><b>{error.ERROR}</b></td>
+
+  </tr>
+
+</table>
+
+  <!-- END error -->
+
+<br>
+
+<!-- BEGIN list -->
+
+<table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td width="3%">&nbsp;</td>
+
+    <td width="94%">&nbsp;{QUES_NO}{list.NUM}</td>
+
+    <td width="3%">&nbsp;</td>
+
+  </tr>
+
+<!-- BEGIN mltc -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td><table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td><b>{list.mltc.QUES}</b>&nbsp;&nbsp;{list.mltc.QUES_F} </td>
+
+  </tr>
+		  <tr>
+			<td>
+			
+	
+<table width="100%" border="0" cellspacing="1" cellpadding="1" class="tdborder2">
+  <tr >
+    <td width="3%" height="22" align="center" class="bblack">Choice</td>
+    <td align="center"  class="bblack" width="">Answer</td>
+    <td align="center" class="bblack" width="8%">Frequency</td>
+    <td align="center" class="bblack" width="8%">H</td>
+    <td align="center" class="bblack" width="8%">L</td>
+    <td align="center" class="bblack"  width="10%">Percentage(%)</td>
+    <td align="center" class="bblack" width="25%">Chart</td>
+    <td align="center" class="bblack" width="8%">DE**</td>
+  </tr>
+  
+  	<!-- BEGIN choice -->
+  <tr {list.mltc.choice.COLOR}>
+    <td align="center">{list.mltc.choice.CHOICE}</td>
+    <td align="left" class="gray">{list.mltc.choice.DETAIL_C}</td>
+	 <td ><div align="right">{list.mltc.choice.AMOUNT}</div></td>
+     <td align="right">{list.mltc.choice.H_VALUE}</td>
+     <td align="right">{list.mltc.choice.L_VALUE}</td>
+     <td class="res"><div align="right">{list.mltc.choice.PERCENT}</div></td>
+   
+    <td>{list.mltc.choice.CHART}</td>
+    <td align="right">{list.mltc.choice.devalue}</td>
+  </tr>
+    <!-- END choice -->
+  <tr >
+    <td>&nbsp;</td>
+    <td align="right" class="bblack">Total</td>
+    <td colspan="3" align="right" class="bblack">{totalstd}</td>
+    <td align="right" class="bblack">100%</td>
+    <td align="right" class="bwhite"></td>
+    <td align="right" class="bwhite"></td>
+  </tr>
+  
+</table>
+			</td>
+		  </tr>
+
+	
+
+  <tr>
+
+    <td>
+
+	<!-- BEGIN pr -->
+	<table width="100%"  border="0" align="center" cellpadding="1" cellspacing="1" class="tdborder2">
+
+	  <tr class="tdbackground3">
+
+			<td width="60%" align="center" valign="bottom">
+			
+<a href="#" onClick="view_des('1')">
+			<div align="left"><strong>P</strong> : ค่าร้อยละ (Percentage) ของการตอบถูก </div></a></td>
+	        <td width="61%" align="left" valign="bottom">{list.mltc.pr.pvalue}</td>
+	  </tr>
+	  <tr  class="tdbackground3">
+	    <td align="center" valign="bottom">
+		<a href="#" onClick="view_des('2')">
+		<div align="left"><strong>R</strong> : อำนาจจำแนกของข้อสอบ (discrimination power) </div>		</a></td>
+	    <td align="left" valign="bottom">{list.mltc.pr.rvalue}</td>
+	    </tr>
+	  <tr  class="tdbackground3">
+	    <td colspan="2" align="center" valign="bottom"><div align="left">  <strong>**DE</strong> : Distracter Efficiency หมายถึงประสิทธิภาพของตัวลวง ตัวลวงที่ดีจะมีค่าเป็นบวก </div></td>
+	    </tr>
+</table>  
+ <!-- END pr -->
+{list.mltc.LINE}
+	</td>
+  </tr>
+</table>
+
+
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+
+
+  <!-- END mltc -->
+
+  <!-- BEGIN tnf -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td><b>{list.tnf.QUES}</b>&nbsp;&nbsp;{list.tnf.QUES_F}</td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+	
+	<table width="100%" border="0" cellspacing="1" cellpadding="1" class="tdborder2">
+      <tr >
+        <td width="8%" height="22" align="center" class="bblack">Choice</td>
+        <td align="center"  class="bblack" width="33%">Answer</td>
+        <td align="center" class="bblack" width="14%">Frequency</td>
+        <td align="center" class="bblack"  width="16%">Percentage(%)</td>
+        <td align="center" class="bblack" width="29%">Chart</td>
+        </tr>
+
+      <tr {list.tnf.COLOR1}>
+        <td align="center">1.</td>
+        <td align="left" class="gray">True</td>
+        <td align="right">{list.tnf.ANS_T}</td>
+        <td class="res" align="right">{list.tnf.PERCENT_T}</td>
+        <td>{list.tnf.CHART_T}</td>
+      </tr>
+      <tr {list.tnf.COLOR2}>
+        <td align="center">2.</td>
+        <td align="left" class="gray">False</td>
+        <td><div align="right">{list.tnf.ANS_F}</div></td>
+        <td class="res"><div align="right">{list.tnf.PERCENT_F}</div></td>
+        <td>{list.tnf.CHART_F}</td>
+        </tr>
+
+      <tr >
+        <td>&nbsp;</td>
+        <td align="right" class="bblack">Total</td>
+        <td align="right" class="bblack">{list.tnf.totalstd}</td>
+        <td align="right" class="bblack">100%</td>
+        <td align="right" class="bwhite"></td>
+        </tr>
+    </table>
+	
+	</td>
+
+  </tr>
+
+ 
+
+  <tr>
+
+    <td><table width="100%"  border="0">
+
+  <tr>
+
+    <td align="center">&nbsp;</td>
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>	
+
+{list.tnf.LINE}
+
+</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+  <!-- END tnf -->
+
+   <!-- BEGIN fib -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0">
+
+  <tr>
+
+    <td><b>{list.fib.QUES}</b>&nbsp;&nbsp;{list.fib.QUES_F}</td>
+
+  </tr>
+<!--
+  <tr>
+    <td><b>1.</b>{list.fib.CHOICE}</td>
+  </tr>
+-->
+  <tr>
+
+    <td>
+	<table width="100%" border="0" cellspacing="1" cellpadding="1" class="tdborder2">
+      <tr >
+        <td width="33%" height="22" align="center"  class="bblack">Answer</td>
+        <td align="center" class="bblack" width="14%">Frequency</td>
+        <td align="center" class="bblack"  width="16%">Percentage(%)</td>
+        <td align="center" class="bblack" width="29%">Chart</td>
+        </tr>
+  
+      <tr {list.fib.COLOR1}>
+        <td align="left" class="gray"> {list.fib.CHOICE}</td>
+        <td align="right">{list.fib.ANS_T}</td>
+        <td class="res" align="right">{list.fib.PERCENT_T}</td>
+        <td>{list.fib.CHART_T}</td>
+      </tr>
+      <tr {list.fib.COLOR2}>
+        <td align="left" class="gray">  {OTHER}</td>
+        <td><div align="right">{list.fib.ANS_F}</div></td>
+        <td class="res"><div align="right">{list.fib.PERCENT_F}</div></td>
+        <td>{list.fib.CHART_F}</td>
+        </tr>
+
+      <tr >
+        <td align="right" class="bblack">Total</td>
+        <td align="right" class="bblack">{list.fib.totalstd}</td>
+        <td align="right" class="bblack">100%</td>
+        <td align="right" class="bwhite"></td>
+        </tr>
+    </table>
+
+	
+	</td>
+  </tr>
+
+</table>
+
+{list.fib.LINE}
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+  <!-- END fib -->
+
+  <!-- BEGIN mcit -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0">
+
+  <tr>
+
+    <td colspan="2">{list.mcit.QUES}<br>{list.mcit.COMMENT}</td>
+
+  </tr>
+
+  <tr>
+
+    <td width="50%">
+
+		<table width="100%"  border="0">
+
+				<!-- BEGIN quiz -->
+
+			  <tr>
+
+				<td style="width:10% "><b>{list.mcit.quiz.NO}</b></td>
+
+				<td width="90%">{list.mcit.quiz.Q_MCIT_D}<br>{list.mcit.quiz.Q_MCIT_F}</td>
+
+			  </tr>
+
+			  <!-- END quiz -->
+
+	</table>	
+
+</td>
+
+    <td width="50%">	
+
+	<table width="100%"  border="0">
+
+				<!-- BEGIN ans -->
+
+			  <tr>
+
+				<td width="10%"><b>{list.mcit.ans.ANS_CHOICE}</b></td>
+
+				<td width="90%">{list.mcit.ans.A_MCIT_D}<br>{list.mcit.ans.A_MCIT_F}</td>
+
+			  </tr>
+
+			  <!-- END ans -->
+
+    </table>
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2"><b>{T_RESULT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2"><table width="100%" border="0" cellspacing="1" cellpadding="1" class="tdborder2">
+      <tr >
+        <td height="22"width="33%" colspan="2" align="center"  class="bblack">Answer</td>
+        <td align="center" class="bblack" width="14%">Frequency</td>
+        <td align="center" class="bblack"  width="16%">Percentage(%)</td>
+        <td align="center" class="bblack" >Chart</td>
+      </tr>
+	       <!-- BEGIN result -->
+      <tr class="tdbackground_white">
+        <td width="11%" align="left" class="bblack">{list.mcit.result.NO}</td>
+        <td width="24%"  align="left"   valign="middle"class="gray">{list.mcit.result.Q_MCIT_D}&nbsp;</td>
+        <td align="right">&nbsp;</td>
+        <td class="res" align="right">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+	     <!-- BEGIN chart -->
+      <tr {list.mcit.result.chart.COLOR2}>
+        <td align="left" class="gray">&nbsp; </td>
+        <td align="right" class="gray"> {list.mcit.result.chart.CHOICE}</td>
+        <td><div align="right">{list.mcit.result.chart.STRT}</div></td>
+        <td class="res"><div align="right">{list.mcit.result.chart.PERCENT}</div></td>
+        <td> {list.mcit.result.chart.CHART}</td>
+      </tr>
+	     <!-- END chart -->
+		
+      <tr >
+        <td colspan="2" align="right" class="bblack">Total</td>
+        <td align="right" class="bblack">{list.mcit.result.totalstd}</td>
+        <td align="right" class="bblack">100%</td>
+        <td align="right" class="bwhite"></td>
+      </tr>
+	        <!-- END result -->
+    </table>          </td>
+  </tr>
+  <tr>
+    <td colspan="2">{list.mcit.LINE}</td>
+  </tr>
+
+</table>
+
+
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+ <!-- END mcit -->
+
+</table>
+
+<!-- END list -->
+
+<br>
+
+<table width="90%"  border="0" align="center" class="main">
+
+  <tr>
+
+    <td  class="main">
+
+	<!-- BEGIN page -->
+
+		{page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+
+	<!-- END page -->
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="main">{PAGE}
+
+	<!-- BEGIN pagerows -->
+
+		<b><font class="page">{pagerows.PAGE} </font></b>
+
+	<!-- END pagerows -->
+
+	</td>
+
+  </tr>
+
+</table>
+

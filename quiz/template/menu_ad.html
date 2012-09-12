@@ -1,0 +1,37 @@
+<table width="128" border="0" cellspacing="0">
+                  <tr>
+                    <td height="20" align="right" class="Tmenu"><a href="Javascript:editQuiz({Q_ID})" >{EDIT} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right"  class="Tmenu" height="20"><a href="#"  onclick="return toggleMenu('menu1')">{ADD}</a>
+		  <span class="Tmenu" id="menu1" style="display:none ">
+            <table width=80% cellspacing="0">
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestions({Q_ID})">- {ADD1}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestionstnf({Q_ID})">- {ADD2}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestionsmcit({Q_ID})">- {ADD3}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestionsfib({Q_ID})">- {ADD4}</a></td></tr>
+            </table>
+			</span></a></td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="right" class="Tmenu"><a href="Javascript:skipit({Q_ID})"> {SET} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right" class="Tmenu" height="20"><a href="Javascript:viewQuestions({Q_ID})"> {VIEWQ} </a></td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="right" class="Tmenu"><a href="Javascript:search_quiz({Q_ID})"> {SEARCH}</a></td>
+                  </tr>
+                  <tr>
+                    <td align="right" class="Tmenu" height="20"><a href="Javascript:check_delete({Q_ID})"> {DEL} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right" class="Tmenu" height="20"><a href="#"  onclick="return toggleMenu('menu2')">{RESULT}</a>
+		  <span id="menu2" style="display:none ">
+            <table width=80% cellspacing="0">
+			<tr><td class="nav" align="left"><a href="Javascript:viewUserResult({Q_ID})">- {RESULT1}</a></td></tr>
+            <tr><td class="nav" align="left"><a href="Javascript:viewall({Q_ID})">- {RESULT2}</a></td></tr>
+            </table>
+			</span> </td>
+                  </tr>
+              </table>

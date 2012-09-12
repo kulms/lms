@@ -1,0 +1,40 @@
+<SCRIPT LANGUAGE="JavaScript">
+function sendValue(s){
+var selvalue = s.options[s.selectedIndex].value;
+window.opener.document.popupform.text1.value = selvalue;
+window.close();
+}
+</script>
+
+<form name=selectform>
+<select name=selectmenu size="8">
+<option value="A">Item A
+<option value="B">Item B
+<option value="C">Item C
+<option value="D">Item D
+<option value="E">Item E
+<option value="F">Item F
+<option value="G">Item G
+<option value="H">Item H
+<option value="I">Item I
+<option value="J">Item J
+<option value="K">Item K
+<option value="L">Item L
+<option value="M">Item M
+<option value="M">Item N
+<option value="O">Item O
+<option value="P">Item P
+<option value="Q">Item Q
+<option value="R">Item R
+<option value="S">Item S
+<option value="T">Item T
+<option value="U">Item U
+<option value="V">Item V
+<option value="W">Item W
+<option value="X">Item X
+<option value="Y">Item Y
+<option value="Z">Item Z
+</select>
+<p>
+<input type=button value="Item Select Item" onClick="sendValue(this.form.selectmenu);">
+</form>

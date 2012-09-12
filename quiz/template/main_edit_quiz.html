@@ -1,0 +1,589 @@
+<SCRIPT LANGUAGE='javascript' src='popcalendar.js'></SCRIPT>
+
+<SCRIPT LANGUAGE="Javascript" SRC="PopupWindow.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="Javascript" SRC="AnchorPosition.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="Javascript" SRC="ColorPicker2.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="jscr.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" SRC="form.js"></SCRIPT>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+	var cp = new ColorPicker('window'); // Popup window
+
+	function radio(x) {
+
+			var r = document.forms['setup'].elements['view'];
+
+			if(x==0){
+
+				for (var i = 0; i < r.length; i++){
+
+					r[i].checked=true;
+
+					r[i].disabled=true;
+
+				}
+
+			}else{
+
+				for (var i = 0; i < r.length; i++){
+
+					r[0].checked=true;
+
+					r[i].disabled=false;
+
+				}
+
+			}
+
+		}
+
+		function sel() {
+
+		var hour = setup.sel_hour.options[setup.sel_hour.selectedIndex].value;
+
+		var minute= setup.sel_minute.options[setup.sel_minute.selectedIndex].value;
+
+		var time = document.forms['setup'].elements['time'];
+
+		if(minute != 0){
+
+			time[0].checked=false;
+
+			time[1].checked=true;
+
+		}else{
+
+			if(hour==0){
+
+				time[0].checked=true;
+
+			}else{
+
+				time[1].checked=true;
+
+			}
+
+		}
+
+		}
+
+		
+
+		function settime(){
+
+			var time = document.forms['setup'].elements['time'];
+
+			var hour = document.setup.sel_hour.options[document.setup.sel_hour.selectedIndex].value;
+
+			var minute= document.setup.sel_minute.options[document.setup.sel_minute.selectedIndex].value;
+
+			if(time[0].checked=true){
+
+				document.setup.sel_hour.selectedIndex = 0;
+
+				document.setup.sel_minute.selectedIndex = 0;
+
+			}
+
+		}
+
+		function radio_q(x){
+
+			var endview = document.forms['setup'].elements['endview'];
+
+			var view = document.forms['setup'].elements['view'];
+
+			var randomized = document.forms['setup'].elements['randomized'];
+
+			var grade = document.forms['setup'].elements['grade'];
+
+			if(x==0){
+
+				for (var i = 0; i < endview.length; i++){
+
+				endview[0].checked=true;
+
+				endview[i].disabled=false;
+
+				}
+
+				for (var ii = 0; ii < view.length; ii++){
+
+				view[0].checked=true;
+
+				view[ii].disabled=false;
+
+				randomized[1].checked=true;
+
+				randomized[ii].disabled=false;
+
+				grade[1].checked=true;
+
+				grade[ii].disabled=false;
+
+				}
+
+			}else{
+
+				for (var i = 0; i < endview.length; i++){
+
+				endview[2].checked=true;
+
+				endview[i].disabled=true;
+
+				}
+
+				for (var ii = 0; ii < view.length; ii++){
+
+				view[1].checked=true;
+
+				view[ii].disabled=true;
+
+				randomized[1].checked=true;
+
+				randomized[ii].disabled=true;
+
+				grade[1].checked=true;
+
+				grade[ii].disabled=true;
+
+				}
+
+			}
+
+		}
+
+		
+
+		function setcolor(){
+
+			var x = document.forms['setup'].elements['bgcolor'];
+
+			document.setup.OtherBgcolor.value="";
+
+		}
+
+		function radio_grade(x){
+
+		  var oneOrMany = document.forms['setup'].elements['oneOrMany'];
+
+		  if(x==0){
+
+				for (var i = 0; i < oneOrMany.length; i++){
+
+					oneOrMany[i].checked=true;
+
+					oneOrManyr[i].disabled=true;
+
+				}
+
+			}else{
+
+				for (var i = 0; i < oneOrMany.length; i++){
+
+					oneOrMany[0].checked=true;
+
+					oneOrMany[i].disabled=false;
+
+				}
+
+			}
+
+		}
+
+		
+
+</SCRIPT>
+
+<form action="?a=setup&m=admin&setup=1" method="post" name="setup" onSubmit="return verify(this)">
+
+<table width="100%"  border="0" class="main" align="center">
+
+  <tr>
+
+    <td><input type="submit" name="s1" value="{SUBMIT_B}" class="button">
+
+        <input type="reset" name="r1" value="{RESET_B}" class="button"></td>
+
+  </tr>
+
+  <tr>
+
+    <td >
+
+      <table width="100%" border="0" cellspacing="1" cellpadding="0" class="bg">
+
+        <tr>
+
+          <td>
+
+            <table width="100%"  border="0" class="tdborder1">
+
+              <tr class="main">
+
+                <td width="31%" valign="top" align="right" ><b>{QUIZ_NAME} :</b> </td>
+
+                <td width="69%"><input type="text" name="quizname" size="15" maxlength="15" value="{QuizName}" class="text"><font color="#FF0000">*</font>&nbsp;&nbsp;<b>({MAX_NAME})</b></td>
+
+                </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right" ><b>{QUIZ_SURVEY} :</b></td>
+
+                <td><input type="radio" name="quiztype" value="0" onClick="radio_q(0);" {IsSel_quiztype0}>{QUIZ}
+
+                  <input type="radio" name="quiztype" value="1"   onClick="radio_q(1);" {IsSel_quiztype1}>{SURVEY}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td valign="top" align="right" ><b>{DATE} :</b></td>
+
+                <td><input type="text" name="end_date" value="{EndDate}" class="text" maxlength="15" size="15" onFocus="this.blur();" >                    
+
+                  <script language='javascript'>
+
+											<!--
+
+											  if (!document.layers) {
+
+												document.write("<img id=aa  src=images/date.gif align=absmiddle border=0 onClick='popUpCalendar(this, setup.end_date, \"dd/mm/yyyy\")' style=cursor: pointer;>")
+
+											}
+
+											//-->
+
+										  </script> <span id="dateDiff"></span></td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td valign="top"  align="right"><b>{VALIDATE} :</b></td>
+
+                <td>				  <textarea  cols="30" rows="3">{Validate}</textarea>
+  
+                </td></tr>
+
+              <tr class="main" height="20">
+
+                <td   align="right"><b>{MULTIPLE} :</b></td>
+
+                <td ><input type="Radio" name="oneOrMany" value="1" {IsSel_oneOrMany1}>{DEPEND}
+
+                  <input type="Radio" name="oneOrMany" value="0" {IsSel_oneOrMany0}>{CHOOSE}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right"><b>{RANDOM} :</b></td>
+
+                <td><input type="Radio" name="randomized" value="1" {IsSel_random1} {IsDisabled_endview}>
+
+                  {YES}
+
+                    <input type="Radio" name="randomized" value="0" {IsSel_random0} {IsDisabled_endview}>
+
+                    {NO}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td rowspan="2" align="right" valign="top"><b>{VIEW_ANS} :</b></td>
+
+                <td><input type="Radio" name="endview" value="2" onClick="radio(1);" {IsDisabled_endview} {IsSel_endview2}>{OnebyOne}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;
+
+                  <input type="Radio" name="endview" value="1" onClick="radio(1); " {IsDisabled_endview} {IsSel_endview1}>{ViewAllQuiz}&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;
+
+				<input type="Radio" name="endview" value="0" onClick="radio(0); " {IsDisabled_endview} {IsSel_endview0}> {ViewAnsNo}
+
+				</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td><b>{VIEW_SOL}</b>
+
+                  <input type="Radio" name="view" value="1" {IsDisabled_view1} {IsSel_view1}>{YES}
+
+                  <input type="Radio" name="view" value="0" {IsDisabled_view0} {IsSel_view0}>{NO}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right"><b>{TIME_QUIZ} :</b></td>
+
+                <td><input type="Radio" name="multiple" value="1" {IsSel_multiple1} {IsSel_matching1}>{TIME_SEVERAL}
+
+				<input type="Radio" name="multiple" value="0" {IsSel_multiple0} {IsSel_matching0}>{TIME_ONCE}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td align="right"><b>{MATCHING} :</b></td>
+
+                <td><!--<input type="Radio" name="matching" value="1" {IsSel_matching1} {IsSelmatching1}>-->
+				<input type="Radio" name="matching" value="1" {IsSelmatching1}>
+				{YES}
+				<!--<input type="Radio" name="matching" value="0" {IsSel_matching0} {IsSelmatching0}>-->
+                  <input type="Radio" name="matching" value="0"  {IsSelmatching0}>{NO}</td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right"><b>{SEL_TIMER} :</b></td>
+
+                <td><input type="radio"  name="time" value="0" {IsSel_timeLimited0}  onClick="settime()">{NO}
+
+                  <input type="radio"  name="time" value="1" {IsSel_timeLimited1}>{YES}&nbsp;&nbsp;{TIMER} :&nbsp;&nbsp;
+
+				  {HOUR}
+
+				  <select name="sel_hour" class="text" onchange="javascript:sel();">
+
+  <option value="0" {IsSel_h0}>0</option>
+
+  <option value="60" {IsSel_h1}>1</option>
+
+  <option value="120" {IsSel_h2}>2</option>
+
+  <option value="180"{IsSel_h3}>3</option>
+
+</select>&nbsp;&nbsp;
+
+{MINUTE}
+
+<select name="sel_minute" class="text" onchange="javascript:sel();">
+
+  <option value="0" {IsSel_s0} >0</option>
+
+  <option value="5" {IsSel_s5}>5</option>
+
+  <option value="10" {IsSel_s10}>10</option>
+
+  <option value="15" {IsSel_s15}>15</option>
+
+  <option value="20" {IsSel_s20}>20</option>
+
+  <option value="25" {IsSel_s25}>25</option>
+
+  <option value="30" {IsSel_s30}>30</option>
+
+  <option value="35" {IsSel_s35}>35</option>
+
+  <option value="40" {IsSel_s40}>40</option>
+
+  <option value="45" {IsSel_s45}>45</option>
+
+  <option value="50" {IsSel_s50}>50</option>
+
+  <option value="55" {IsSel_s55}>55</option>
+
+</select>
+
+</td>
+
+              </tr>
+
+			  <tr class="main"  height="20">
+
+                <td  align="right"><b>ต้องการนำข้อสอบ ชุดนี้ทำการตัดเกรด ด้วยหรือไม่ :</b></td>
+
+                <td><input type="radio"  name="grade" value="1" {IsSel_grade1} onClick="return checkgrade('1')">
+
+                  {YES}
+
+				  <input type="radio"  name="grade" value="0"  {IsSel_grade0} onClick="return checkgrade('0')">
+
+                  {NO}
+
+                    </td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right"><b>{TOTAL} :</b></td>
+
+                <td><input type="text" maxlength="2" size="5" name="qlimit" value="{QuizLimit}" class="text"><font color="#FF0000">*</font></td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td colspan="2"><table width="100%"  class="main">
+
+                  <tr>
+
+                    <td width="6%">&nbsp;</td>
+
+                    <td width="94%">&nbsp;</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td width="6%">&nbsp;</td>
+
+                    <td width="94%" height="25"><b>{SEL_COLOR}</b></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td colspan="2">
+
+                      <table width="100%" border="0" cellspacing="1" cellpadding="0" height="100%">
+
+                        <tr align="center">
+
+                          <td width="64%">
+
+                            <table width="95%" class="main">
+
+                              <tr>
+
+                                <td width="9%" height="23">&nbsp;</td>
+
+                                <td width="19%" bgcolor="#FFFFFF"><input type="Radio" name="bgcolor" value="white" {IsSel_white}  onClick="setcolor();">
+
+                                   {White}</td>
+
+                                <td width="2%">&nbsp;</td>
+
+                                <td width="19%" height="23"  bgcolor="AntiqueWhite"><input type="Radio" name="bgcolor" value="antiquewhite" {IsSel_antiquewhite} onClick="setcolor();">
+
+                                    {AntiqueWhite}</td>
+
+                                <td width="2%" height="23">&nbsp;</td>
+
+                                <td width="19%" height="23" bgcolor="MintCream"><input type="Radio" name="bgcolor" value="mintcream" {IsSel_mintcream} onClick="setcolor();">
+
+                                  {MintCream}</td>
+
+                                <td width="2%" height="23">&nbsp;</td>
+
+                                <td width="19%" height="23"  bgcolor="#ccccff"><input type="Radio" name="bgcolor" value="#ccccff" {IsSel_#ccccff} onClick="setcolor();">
+
+                                    {LearnLoopBlue}</td>
+
+                                <td width="9%" height="23">&nbsp;</td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td colspan="9" >&nbsp;</td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td height="23">&nbsp;</td>
+
+                                <td height="23" bgcolor="Coral"><input type="Radio" name="bgcolor" value="coral" {IsSel_coral} onClick="setcolor();">
+
+                                  {Coral}</td>
+
+                                <td height="23">&nbsp;</td>
+
+                                <td height="23" bgcolor="Tan"><input type="Radio" name="bgcolor" value="tan" {IsSel_tan} onClick="setcolor();">
+
+                                   {Tan}</td>
+
+                                <td height="23">&nbsp;</td>
+
+                                <td height="23" bgcolor="RoyalBlue"><input type="Radio" name="bgcolor" value="royalblue" {IsSel_royalblue} onClick="setcolor();">
+
+                                    {RoyalBlue}</td>
+
+                                <td height="23">&nbsp;</td>
+
+                                <td height="23" bgcolor="Gainsboro"><input type="Radio" name="bgcolor" value="gainsboro" {IsSel_gainsboro} onClick="setcolor();">
+
+                                    {Gainsboro}</td>
+
+                                <td height="23" >&nbsp;</td>
+
+                              </tr>
+
+                          </table></td>
+
+                        </tr>
+
+                    </table></td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td width="6%" height="36">&nbsp;</td>
+
+                    <td width="94%">{OtherColor}
+
+                        <input type="Text" name="OtherBgcolor"  class="text"  onFocus="this.blur();" value="{Color}">
+
+&nbsp;<a  ><img src="images/cpiksel.gif"  name="color"align=absmiddle border=0 onClick="cp.select(document.forms[0].OtherBgcolor,'color');return false;"></a> </td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td>&nbsp;</td>
+
+                    <td>&nbsp;</td>
+
+                  </tr>
+
+                </table></td>
+
+                </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right" valign="top"><b>{StartPage} :</b></td>
+
+                <td><textarea name="text_info" cols="60" rows="7" wrap="physical" class="main">{TextInfo}
+
+                </textarea></td>
+
+              </tr>
+
+              <tr class="main"  height="20">
+
+                <td  align="right">&nbsp;</td>
+
+                <td>&nbsp;</td>
+
+              </tr>
+
+          </table></td>
+
+        </tr>
+
+    </table></td>
+
+  </tr>
+
+</table>
+
+<input type="hidden" name="modules" value="{Q_ID}">
+
+<input type="hidden" name="num_score" value="{Score}">
+
+</form>

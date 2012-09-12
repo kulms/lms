@@ -1,0 +1,100 @@
+<SCRIPT LANGUAGE="JavaScript" src="verify.js"></SCRIPT>
+<script language="JavaScript" type="text/JavaScript">
+function check(){
+	//alert("fff");
+	input = document.form.score_T.value;
+			if (isNaN(input)) 
+			{
+				alert("กรุณากรอกเป็นตัวเลข");
+				document.form.score_T.value="";
+				document.form.score_T.focus()
+				return false;
+			}
+		
+}
+</script>
+<!-- BEGIN copy -->
+<p class="main" align="center"><b>{Explanation}:</b></p>
+<table width="100%"  border="0" class="tdbackground_white">
+  <tr class="tdbackground">
+    <td class="menu" align="center">{Text_courses}</td>
+    <td class="menu" align="center">{Text_modules}</td>
+    <td class="menu" align="center">{Text_create}</td>
+  </tr>
+  <tr class="tdbackground1">
+    <td align="center">{copy.C_NO}{copy.C_NAMET}{copy.C_NAMEE}</td>
+    <td align="center">{copy.M_NAME}</td>
+    <td align="center">{copy.CREATE}</td>
+  </tr>
+</table>
+<!-- END copy -->
+<form name="form" method="post" action="?a=addQuestion&m=admin&add=1" ENCTYPE="multipart/form-data" onReset="return confirm('Are you sure that you wish to erase/reset ALL data in the form?')" onSubmit="return verifyMCIT(this,{QUIZ_TYPE},'cond','','','{TOTAL_SCORE}');">
+<table width="100%"  border="0" class="main" align="center">
+  <tr>
+    <td><input type="submit" name="s1" value="{EDIT_B}" class="button">
+    <input type="reset" name="r1" value="{RESET_B}" class="button"></td>
+  </tr>
+    <!-- BEGIN result -->
+  <tr>
+  	<td><b>{result.RESULT}</b></td>
+  </tr>
+  <!-- END result -->
+  
+  <tr>
+    <td >
+	<table width="100%" border="0" cellspacing="1" cellpadding="0" class="bg">
+  <tr>
+    <td>
+	<table width="100%"  border="0" class="tdborder1">
+  <tr class="main">
+        <td width="16%" valign="buttom"><b>{CAT_TEXT} : </b></td>
+    <td width="69%">{CAT_TEXT1}
+	<table width="100%" class="main">
+              <tr>
+                <td valign="top">
+                  <select name="categories" style="font-size:10px">
+                    <option value="0" id="none">Categories</option>
+                    <!-- BEGIN cat_list -->
+					<option value="{cat_list.CAT_ID}" {cat_list.IS_SELECT}>{cat_list.CAT_NAME}</option>
+					<!-- END cat_list -->
+                </select></td>
+                <td align="left" width="80%"><div style="cursor:hand" onclick='window.open("?a=addCategory&m=admin", "_blank", "left=300, top=250, width=400,height=200,scrollbars=yes,status=yes,toolbar=no,menubar=no,location=no,resizable=yes")'><b>[{ADD_CAT}]</b></div></td></tr>
+            </table>
+			</td>
+    <td width="15%">&nbsp;</td>
+   </tr>
+  <tr class="main">
+    <td><B>{NUM_QUIZ} : </B></td>
+    <td><input type="text" maxlength="10"  name="totquestion" value="{NUMQ}" class="text">&nbsp;&nbsp;<b>{SCORE_T} :</b> <input type="text" class="text" value="{SCORE}" size="3" maxlength="3" onKeyUp="javascript: return check();" name="score_T" >
+      </td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr class="main">
+    <td><b>{NUM_ANS} :</b></td>
+    <td><input type="text" maxlength="10"  name="totanswer" value="{NUMA}" class="text"></td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr class="main">
+    <td><b>{SET} : </b></td>
+    <td><input type="Radio" name="value_active" value="1" checked>                 
+                 &nbsp;<strong>{Active}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		         <input type="Radio" name="value_active" value="0">	
+		         <strong>{InActive}</strong></td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr class="main">
+    <td><b>{Desc} : </b></td>
+    <td><textarea name="Comment" rows="5" wrap="PHYSICAL" cols="65" class="small">{DESC}</textarea></td>
+    <td>&nbsp;</td>
+    </tr>
+   
+</table>	</td>
+    </tr>
+</table>	</td>
+  </tr>
+</table>
+<input type="hidden" name="modules" value="{Q_ID}">
+<input type="hidden" name="qnr" value="{QUIZ_ID}">
+<input type="hidden" name="makecopy" value="{Makecopy}">
+<input type="hidden" name="question_type" value="{QT}">
+</form>

@@ -1,0 +1,69 @@
+.main  {
+	font-family : "Geneva","Verdana","Helvetica", "Arial", "sans-serif";
+	font-size : 9pt;
+}
+
+.mainwhite  {
+	font-family : "Geneva","Verdana","Helvetica", "Arial", "sans-serif";
+	font-size : 9pt;
+	color : #ffffff;
+}
+
+.small  {
+	font-size : 9pt;
+	font-family : "Geneva","Verdana","Helvetica", "Arial";
+}
+
+.error  {
+	font-size : 12pt;
+	font-family : "Helvetica", "Arial", "sans-serif";
+	font-weight : bold;
+	color:red;
+}
+
+.courier  {
+	font-size : 10pt;
+	font-family : "Courier", "Courier New";
+}
+
+.h1  {
+	font-size : 20pt;
+	font-family : "Helvetica","Arial";
+	font-weight : bold;
+	color : #333333;
+}
+.h2 {
+	font-size : 18pt;
+	font-family : "Helvetica","Arial";
+	font-weight : bold;
+	color : #333333;
+}
+
+.h3  {
+	font-size : 16pt;
+	font-family : "Helvetica","Arial";
+	font-weight : bold;
+	color : #333333;
+}
+
+.h4  {
+	font-size : 12pt;
+	font-family : "Helvetica","Arial";
+	color : #333333;
+}
+
+.h5  {
+	font-size : 12pt;
+	font-family : "Helvetica","Arial";
+	color : #333333;
+}
+
+A{
+	text-decoration:none;
+	color: #000000;
+}
+A:Hover{
+	text-decoration:underline;
+	color: #000000;
+}
+

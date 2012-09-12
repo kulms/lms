@@ -1,0 +1,4 @@
+login,password,firstname,category
+kung,kung,kung,3
+oon,oon,oon,2
+fon,fon,fon,3

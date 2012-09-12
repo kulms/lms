@@ -1,0 +1,250 @@
+<html>
+
+<head>
+
+<title>e-Evaluation for M@xlearn / KU-LMS</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+<script language="javascript1.2">
+
+<!--
+
+function CheckDetail(){
+
+    if(document.form1.g_name.value==""){
+
+       alert("กรุณาตั้งหัวข้อคำถาม");
+
+           return false;
+
+  }else{
+
+ 		    if((document.form1.num_C.value=='')&&(document.form1.num_F.value=='')){
+					 alert("กรุณาระบุจำนวนข้อคำถาม");
+          			 return false;
+
+			 }else{
+			 			    if((isNaN(document.form1.num_C.value)==true) || (isNaN(document.form1.num_F.value)==true)){
+									 alert("กรุณาระบุข้อคำถามเป็นตัวเลข");
+          							 return false;
+							}else{
+								 return true;
+								 }
+
+			 }
+
+  }
+
+}
+
+
+
+
+
+function CheckSelect(){
+
+	var  gname=document.form1.g_name.value;
+
+	var  gid=document.form1.g_id.value;
+
+    if(document.form1.g_name.value==""){
+
+       alert("กรุณาตั้งหัวข้อคำถาม");
+
+           return false;
+
+  }else{
+
+	window.open("selectUserQues.php?gname="+gname+"&gid="+gid,"_self")
+
+  }
+
+}
+
+
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.01
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+//-->
+
+</script>
+
+
+
+</head>
+
+<body onLoad="MM_preloadImages('../images/home2.gif')">
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+
+    <td>{HEADER}</td>
+
+  </tr>
+
+</table>
+
+<br>
+
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0"  class="tdborder1">
+
+  <tr   class="boxcolor">
+
+    <td height="30"  class="bwhite">{Eval_AddGroupQues}</td>
+
+  </tr>
+
+	<tr class="tdbackground_white">
+
+	  <td><form name="form1" method="post" action="addSession.php">
+
+	    <table width="85%" height="39"  border="0" align="center" cellpadding="3" cellspacing="0">
+
+
+
+          <tr>
+
+            <td width="33%" align="right" class="news">{Eval_GroupName} : </td>
+
+            <td width="67%" align="left">{BOX1}<!--  <input name="g_name" type="text" {DISA} size="60" value="{GNAME}"> -->
+
+																<input name="g_id" type="hidden"  value="{GID}">
+
+																<!--  <input name="g_name" type="hidden"  value="{GNAME}"> -->
+
+			</td>
+
+          </tr>
+
+        </table>
+
+	    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+          <tr align="center" bgcolor="#FFFFFF">
+
+            <td colspan="3">
+
+			
+
+			</td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td height="44" colspan="3">   <input  type="button" name="Submit2" value="  {chooseQues}  " onClick="return CheckSelect();"></td>
+
+          </tr>
+
+          <tr align="center">
+
+            <td colspan="3">
+
+ </td>
+
+          </tr>
+
+          <tr>
+
+            <td align="right" bgcolor class="tdbackground3"> <b>{AddChoice} :</b></td>
+
+            <td width="21%" bgcolor class="tdbackground3">&nbsp;
+<input type="text" name="num_C" value="" size="2" maxlength="2">
+&nbsp; <b>{Eval_Question}</b>&nbsp; </td>
+
+            <td width="28%" bgcolor class="tdbackground3">&nbsp;</td>
+
+          </tr>
+
+          <tr>
+
+            <td width="51%" align="right" bgcolor class="tdbackground3"><b>{AddFill} :</b></td>
+
+            <td bgcolor class="tdbackground3">&nbsp;
+<input type="text" name="num_F" value="" size="2" maxlength="2">
+&nbsp; <b>{Eval_Question}</b>&nbsp;</td>
+
+            <td bgcolor class="tdbackground3">&nbsp;</td>
+
+          </tr>
+
+          <tr align="center" valign="bottom">
+
+            <td height="32" colspan="3" class="tdbackground3">
+
+        
+
+              <input type="submit" name="Submit" value="{Eval_AddTeaQues}" onClick="return CheckDetail();">            
+
+            <input type="button" name="Back" value=" {Back} " onClick="javascript: window.location='t_index.php'"></td>
+
+          </tr>
+
+        </table>
+
+	    </form>
+
+	  </td>
+
+	</tr>
+
+	<tr>
+
+	  <td align="center" class="tdbackground_white">
+
+	  <a href="t_index.php?grp_id={GID}#QT" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/home2.gif',1)"><img src="images/home.gif" name="Image2" width="70" height="28" border="0"></a></td>
+
+	</tr>
+
+</table>
+
+</body>
+
+</html>
+

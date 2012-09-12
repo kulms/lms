@@ -1,0 +1,120 @@
+<html>
+
+<head>
+
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+
+
+<link href="include/main.css" rel="stylesheet" type="text/css">
+
+<link href="../include/main.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+
+
+<body>
+
+<form name="std_q" method="post" action="chooseStd.php">
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+
+    <td height="65"><img src="images/pen.gif" width="26" height="54" border="0"><font color="navy"><b>{Eval_StdQues}</b></font> 
+
+   </td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+	
+
+	<table width="100%" border="0" align="center" cellpadding="3" cellspacing="0"  class="tdborder1">
+
+  <tr  class="boxcolor">
+
+        <td width="7%" align="center"  style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Num}</span></td>
+
+        <td width="27%" align="center" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Question}</span></td>
+
+        <td width="5%" align="center" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Action}</span></td>
+
+        <td colspan="6" align="center"><span class="Bcolor">{Eval_Score}</span></td>
+
+      </tr>
+
+	  {NOTSTANDARD}
+
+      <!-- BEGIN StdQ -->
+
+      <tr>
+
+        <td align="center" {StdQ.COLOR}>{StdQ.S_NUM}</td>
+
+        <td align="left" {StdQ.COLOR}>{StdQ.S_Question}</td>
+
+      <td align="center" {StdQ.COLOR}> <a href="javascript:iconfirmdel('deleteAnything.php?g_id={StdQ.S_GID}')"><img src="images/delete.gif" alt="{strDelete}" border="0"></a> </td>
+
+        <td width="12%" align="center" {StdQ.COLOR}>{StdQ.S_RADIO1}</td>
+
+      <td width="12%" align="center" {StdQ.COLOR}>{StdQ.S_RADIO2}</td>
+
+      <td width="12%" align="center" {StdQ.COLOR}>{StdQ.S_RADIO3}</td>
+
+      <td width="12%" align="center" {StdQ.COLOR}>{StdQ.S_RADIO4}</td>
+
+      <td width="14%" align="center" {StdQ.COLOR}>{StdQ.S_RADIO5}</td>
+
+      </tr>
+
+	     <!-- END StdQ -->
+
+		  <!-- BEGIN Suggest -->
+
+      <tr>
+
+        <td  align="center" {Suggest.COLOR}>{Suggest.SG_NUM}</td>
+
+        <td align="left" {Suggest.COLOR}>{Suggest.SG_QUESTION}</td>
+
+        <td align="center" {Suggest.COLOR}><a href="javascript:iconfirmdel('deleteAnything.php?g_id={Suggest.SG_ID}')"><img src="images/delete.gif" alt="{strDelete}" border="0"></a></td>
+
+        <td colspan="5" align="left" {Suggest.COLOR}><input name="textfield" type="text" size="50" disabled></td>
+
+        </tr>
+
+      <!-- END Suggest -->
+
+
+
+    </table>
+
+ </td>
+
+  </tr>
+
+        <tr>
+
+        <td height="30" colspan="8" align="center"><input type="submit" name="StdSubmit" value="{Eval_AddstdQues}" class="button"></td>
+
+      </tr>
+
+</table>
+
+  </form>
+
+</body>
+
+</html>
+

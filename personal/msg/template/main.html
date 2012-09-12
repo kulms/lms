@@ -1,0 +1,92 @@
+
+
+<script language=javascript>
+function checkAll(){
+for (var i=0;i<document.forms[0].elements.length;i++)
+{
+var e=document.forms[0].elements[i];
+if ((e.name != 'allbox') && (e.type=='checkbox'))
+{
+e.checked=document.forms[0].allbox.checked;
+}
+}
+}
+</script>
+<table width="95%" height="20"  border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr class="boxcolor">
+    <td class="Bcolor">&nbsp;&nbsp;{HEADER}</td>
+  </tr>
+</table>
+<br>
+   <!-- BEGIN error -->
+<table width="55%"  border="0" align="center" >
+  <tr>
+    <td class="main"><img src="images/new.gif" align="absmiddle"><a href="newmsg_form.php">{NEW}</a>
+      <table width="95%"  border="0" class="tdborder1" align="center">
+  <tr>
+    <td align="center"><b>{error.ERROR}</b></td>
+  </tr>
+</table></td>
+  </tr>
+</table>
+   <!-- END error -->
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+
+  	<tr>
+    	<td class="main">
+		   <!-- BEGIN list -->
+		<form action="sentComplete.php" method="post">
+			<table width="85%"  border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+			<td colspan="5"><img src="images/new.gif" align="absmiddle"><a href="newmsg_form.php">{NEW}</a> </td>
+
+			</tr>
+		  	  <tr class="boxcolor1">
+		  	    <td align="center" valign="middle" class="main">&nbsp;</td>
+		  	    <td align="left" valign="middle" class="main"><input type="checkbox" value="on" name="allbox" onclick="checkAll();"></td>
+		  	    <td align="center" class="Bcolor">&nbsp;{SUBJECT}</td>
+		  	    <td align="center" class="Bcolor">&nbsp;{FROM}</td>
+		  	    <td align="center" class="Bcolor">{DATE}</td>
+	  	      </tr>
+			    <!-- BEGIN topiclist -->
+		  	  <tr class ="{list.topiclist.BG_C}">
+				<td width="12%" align="center" valign="middle" class="main">{list.topiclist.ICON}</td>
+			    <td width="8%" align="left" valign="middle" class="main">
+				<input type="checkbox" name="{list.topiclist.MSG_N}" value="{list.topiclist.MSG_ID}">
+				
+				</td>
+			    <td width="41%" class="main">&nbsp;{list.topiclist.SUBJECT}</td>
+			    <td width="17%" align="center">&nbsp;{list.topiclist.FROM}</td>
+			    <td width="22%" align="center" >{list.topiclist.DAY}</td>
+			  </tr>  
+			   <!-- END topiclist -->		
+			  		<tr align="right" class="boxcolor1">
+						<td height="20" colspan="5">{SAV}  {DEL} 
+					  <input name="num_i" type="hidden" value="{NUM}">					  </td>
+			  </tr>
+		</table>
+		</form>
+		   <!-- END list -->
+	 </td>
+  </tr>
+  	
+  	<tr align="right" class="{topiclist.BG_C}">
+  	  <td class="main"><table width="85%"  border="0" align="center">
+        <tr>
+          <td align="left"  class="main">
+            <!-- BEGIN page -->
+      {page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+      <!-- END page -->
+          </td>
+        </tr>
+
+          <td align="left" class="main">{PAGE}
+              <!-- BEGIN pagerows -->
+              <b><font color="{pagerows.COLPAGE}">{pagerows.PAGE} </font></b>
+              <!-- END pagerows -->
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br>

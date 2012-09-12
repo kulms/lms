@@ -1,0 +1,53 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+</head>
+<body>
+{HEADER}
+{DETAIL}
+
+    <table width="90%"  border="0" cellspacing="0"class="tdborder1" align="center">
+
+<tr>
+    <td width="100%">
+	<form method="post" action="s_index2.php" >  
+	<table width="100%"  border="0" align="center" cellspacing="0" class="tdbackground">
+  <tr align="left"  class="boxcolor">
+    <td colspan="4"  class="Bcolor" height="20">ผลการสำรวจรูปแบบการเรียนรู้ของนิสิต</td>
+    </tr>
+  <tr  class="tdbackground2">
+    <td width="9%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;">{NUM}</td>
+    <td width="47%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{NAME_TITLE}</td>
+    <td width="22%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">Major</td>
+    <td width="22%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">Minor</td>
+    </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="4" >
+	<!-- BEGIN block -->
+		
+	
+	<table width="100%" border="0" cellspacing="1"  cellpadding="1"class="tdbackground">
+  <tr bgcolor="#FFFFFF" >
+    <td width="8%" height="24" align="center">{block.NO}</td>
+    <td width="48%">{block.FULLNAME}</td>
+    <td width="22%" align="center">{block.MAJOR}</td>
+    <td width="22%" align="center">{block.MINOR}</td>
+    </tr>
+</table>
+
+	<!-- END block -->	</td>
+  </tr>
+    <tr align="right" >
+    <td height="20"  colspan="4" class="gray"> {FROM_WHO} </td>
+  </tr>
+  </table>
+</form>
+	</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

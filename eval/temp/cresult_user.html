@@ -1,0 +1,58 @@
+<SCRIPT LANGUAGE="JavaScript">
+	function test(q,std,g){
+		links = "view_result.php?qid="+ q+"&std="+std+"&gid="+g;
+		window.open(links, "qWindow", "ScreenX=200,ScreenY=70,width=650,height=580,status=no,toolbar=no,menubar=no,scrollbars=yes");
+	}
+</SCRIPT>
+<!-- BEGIN GroupQ -->
+<table width="95%"  border="0" align="center" cellpadding="3" cellspacing="1" class="tdborder1">
+  <tr  class="boxcolor">
+    <td colspan="4"><span class="Bcolor">{Eval_TeaQues}</span><a name="QT"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="Bcolor">[{GROUP_NAME}]</span></td>
+  </tr>
+  <tr  class="boxcolor">
+    <td colspan="4"  style="border-bottom: solid #FFFFFF 1px; ">&nbsp;<span class="Bcolor">{GroupQ.G_NAME}</span></td>
+  </tr>
+  <tr   bgcolor class="tdbackground2">
+    <td align="center" style="width:7%; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;"><b>{QuesNo}</b></td>
+    <td style="width:59% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{Eval_Question}</b></td>
+    <td style="width:9% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{MaxScore}</b></td>
+    <td style="width:25% ;border-bottom: solid #FFFFFF 1px;" align="center"><b>{AverageScore}</b></td>
+  </tr>
+<!-- BEGIN Ques -->
+  <tr height="25"  class="tdbackground_white">
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{GroupQ.Ques.Num}</td>
+    <td style="border-right: solid #FFFFFF 1px;">{GroupQ.Ques.Question}</td>
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{GroupQ.Ques.MaxScore}</td>
+    <td valign="top">{GroupQ.Ques.GRAPH}</td>
+  </tr>
+<!-- END Ques -->
+<!-- BEGIN QuesFill -->
+  <tr height="25"  class="tdbackground_white">
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{GroupQ.QuesFill.QF_NUM}</td>
+    <td style="border-right: solid #FFFFFF 1px;">{GroupQ.QuesFill.Question}</td>
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{GroupQ.QuesFill.MaxScore}</td>
+    <td valign="top">{GroupQ.QuesFill.Click}</td>
+  </tr>
+<!-- END QuesFill -->
+</table>
+<!-- END GroupQ -->
+
+<!-- BEGIN error_ -->
+<table width="95%"  border="0" align="center" cellpadding="3" cellspacing="1" class="tdborder1">
+  <tr class="boxcolor">
+    <td colspan="4"><span class="Bcolor">{Eval_TeaQues}</span><a name="QT"></a>&nbsp;&nbsp;</td>
+  </tr>
+  <tr class="boxcolor">
+    <td colspan="4"  style="border-bottom: solid #FFFFFF 1px; ">&nbsp;<span class="Bcolor">{GroupQ.G_NAME}</span></td>
+  </tr>
+  <tr   class="tdbackground2">
+    <td align="center" style="width:7%; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;"><b>{QuesNo}</b></td>
+    <td style="width:59% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{Eval_Question}</b></td>
+    <td style="width:9% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{MaxScore}</b></td>
+    <td style="width:25% ;border-bottom: solid #FFFFFF 1px;" align="center"><b>{AverageScore}</b></td>
+  </tr>
+  <tr height="25">
+    <td colspan="4" align="center" style="border-right: solid #FFFFFF 1px;"   bgcolor class="tdbackground2"><b>{error_.NoData_}</b></td>
+  </tr>
+</table>
+<!-- END error_ -->

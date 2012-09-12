@@ -1,0 +1,261 @@
+ <SCRIPT LANGUAGE="JavaScript" SRC="form.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function CheckMaxscore(val){
+
+var total = 0;
+
+var i=0,x=0;
+
+var maxscores="";qtype="";
+
+var temp_mcit = new Array();
+
+var temp = new Array();
+
+var temp1_mcit = new Array();
+
+var msg;
+
+var checkError = "";
+
+for (var idx = 1; idx < val.num.value; idx++) {
+
+	if (document.all["use_question["+idx+"]"].checked == true) {
+
+		total += 1;
+
+		qtype=document.all["q_type["+idx+"]"].value;
+
+		if(qtype=='mcit'){
+
+			if(val.grade.value == 1){
+
+				temp_mcit[i]=document.all["maxscore["+idx+"]"].value;
+
+				if(i>0){
+
+					var ii=0;
+
+					ii=i-1;
+
+					if(temp_mcit[ii] !=temp_mcit[i]){
+
+						checkError += "\nคะแนนของ Mcit ไม่ตรงกัน\n";
+
+						break;
+
+					}
+
+				}
+
+				i++;
+
+			}else{
+
+				temp_mcit[i]=document.all["maxscore["+idx+"]"].value;
+
+				if(val.maxmcit.value !=temp_mcit[i]){
+
+						checkError += "\nคะแนนของ Mcit ไม่ตรงกัน เนื่องจากคะแนน mcit ของคุณมีคะแนน เท่ากับ "+val.maxmcit.value+"\n";
+
+						break;
+
+				}
+
+				i++;
+
+			}
+
+		}else{
+
+			if(val.grade.value == 1){
+
+				temp[x]=document.all["maxscore["+idx+"]"].value;
+
+				if(x>0){
+
+					var xx=0;
+
+					xx=x-1;
+
+					if(temp[xx] !=temp[x]){
+
+						checkError += "\nคะแนนของชุดข้อสอบ ไม่เท่ากัน\n";
+
+						break;
+
+					}
+
+				}
+
+				x++;
+
+			}
+
+		}
+
+	  }
+
+}
+
+
+
+if(total==0)
+
+	checkError += "\nกรุณาเลือก ข้อสอบที่ต้องการ\n";
+
+
+
+if (!checkError)return true;{
+
+	msg  = "______________________________________________________\n\n";
+
+	msg += "Your Form was not processed since it contained som errors. \n";
+
+	msg += "              Please correct the errors and try again.\n";
+
+	msg += "______________________________________________________\n\n";
+
+	msg += checkError;
+
+	alert(msg); 
+
+	return false;
+
+}
+
+}
+
+
+
+</SCRIPT>
+
+  <!-- BEGIN block -->
+
+<form action="?a=sql_use&m=admin" method="post" {Java} name="form">
+
+<table width="100%"   border="0" cellpadding="0" cellspacing="1" class="tdbackground_white">
+
+  <tr>
+
+    <td height="26" colspan="3" class="main"><a href="?a=search&m=admin&modules={Q_ID}">[{NEW_SERACH}]</a></td>
+
+    <td height="26" class="main" align="right">&nbsp;</td>
+
+    <td class="main" align="right"><b>{RESULT_SERACH}&nbsp;"{QRY}" : {TOTAL_SEARCH} : {block.TOTAL_NUM}</b></td>
+
+  </tr>
+
+  <tr class="tdbackground">
+
+    <td width="10%" height="26" align="center" class="main"><b>{NUM}</b></td>
+
+    <td width="5%" align="center" class="main"><b>{USE}</b></td>
+
+    <td width="13%" align="center" class="main"><b>{Q_TYPE}</b></td>
+
+    <td width="10%" align="center" class="main"><b>{SCORE}</b></td>
+
+    <td width="62%" align="center" class="main"><b>{QUES}</b></td>
+
+  </tr>
+
+  <!-- BEGIN search -->
+
+  <tr class="tdbackground1" height="20">
+
+    <td align="center" class="main">{block.search.NUM}</td>
+
+    <td align="center"><!--<input type="checkbox" name="list" value="{block.search.RESULT}" id="use_question[{block.search.NUM}]" {block.search.DISABLED}> -->
+
+	<input type="checkbox" name="use_question[{block.search.NUM}]" value="{block.search.RESULT}"{block.search.DISABLED}>
+
+	</td>
+
+    <td class="main">{block.search.TYPE}</td>
+
+    <td  class="main" align="center"><b>{block.search.SCORE}{block.search.SCORE_MCIT}</b></td>
+
+    <td  class="main"><a href="JavaScript:view_q({block.search.RESULT},{Q_ID},{block.search.NUM});">{block.search.QUES}</a></td>
+
+  <input type="hidden" name="maxscore[{block.search.NUM}]" value="{block.search.SCORE}{block.search.SCORE_MCIT}">
+
+   <input type="hidden" name="q_type[{block.search.NUM}]" value="{block.search.Q_TYPE}">
+
+  </tr>
+
+  
+
+  <!-- END search -->
+
+  <tr>
+
+    <td colspan="5">
+
+      <input name="submit" type="submit" value="{SUBMIT_USE}" class="button">
+
+    </td>
+
+  </tr>
+
+  </table>
+
+<input type="hidden" name="qry" value="{QRY}">
+
+<input type="hidden" name="searchtype" value="{SEARCH_T}">
+
+<input type="hidden" name="modules" value="{Q_ID}">
+
+<input type="hidden" name="num" value="{block.TOTAL_NUM}">
+
+<input type="hidden" name="grade" value="{Grade}">
+
+<input type="hidden" name="maxmcit" value="{MaxMcit}">
+
+</form>
+
+  <!-- END block -->
+
+  
+
+  <table width="100%"  border="0">
+
+  <tr>
+
+       <td colspan="4" class="main">{PAGE}
+
+	<!-- BEGIN pagerows -->
+
+		<b>{pagerows.PAGE} </b>
+
+	<!-- END pagerows --></td>
+
+  </tr>
+
+  </tr>
+
+</table>
+
+
+
+<!-- BEGIN error -->
+
+<table width="100%"  border="0">
+
+  <tr>
+
+    <td><font class="error"><b>{error.ERROR}</b></font>&nbsp;&nbsp;<b><font class="main"> "{QRY}</font>"</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td><span class="main"><a href="?a=search&m=admin&modules={Q_ID}">[{NEW_SERACH}]</a></span></td>
+
+  </tr>
+
+</table>
+
+<!-- END error -->

@@ -1,0 +1,5 @@
+<? 
+include('classes/config.inc.php');
+redirect("test1.php");
+echo "ddd";
+?>

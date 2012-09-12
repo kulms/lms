@@ -1,0 +1,85 @@
+body {
+  background: #ffffff;
+  font: 1em/1.5em "MS Sans Serif", Tahoma, sans-serif;
+  color: #454545;
+  margin: 10px;
+}
+
+a {
+  color: #00CCCC;
+  text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #990000;
+
+}
+
+a:active {
+  color: 4545aa;
+}
+
+/**** now some actual page elements ****/
+
+#pageheader {
+  margin-left: 10px;
+  margin-top: 20px;
+  border: 2px solid #222222;
+  padding: 8px;
+  font: 1.8em verdana, helvetica, arial, sans-serif;
+  color: #444444;
+  width: 600px;
+}
+
+#pageheader a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#pageheader a:hover {
+  text-decoration: underline;
+}
+
+#pagecontent {
+  margin-top: 15px;
+  margin-left: 10px;
+  border: 2px solid #222222;
+  padding: 8px;
+  width: 600px;
+}
+
+.sectionheading {
+  border-bottom: 1px dashed #aaaaaa;
+  width: 100%;
+  margin: 0px 0px 3px 0px;
+}
+
+.darker {
+  padding: 3px;
+  background: #dedede;
+}
+
+.lighter {
+  padding: 3px;
+  background: #eeeeee;
+}
+.line {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #66CCCC;
+}
+.projecttable {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}

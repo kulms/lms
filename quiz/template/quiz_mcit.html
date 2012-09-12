@@ -1,0 +1,66 @@
+<SCRIPT LANGUAGE="JavaScript" src="form.js"></SCRIPT>
+
+<table width="98%"  border="0" cellspacing="1" cellpadding="0"  class="tdborder1">
+<form method="post" action="?a={PATH}&m=users&occ={OCC}&ans=1&modules={MODULE}&quiz_id={Q_ID}&h_qid={H_QID}{CHECK}" {JAVA}>
+  <tr>
+    <td>
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="{BG}" >
+  <tr>
+    <td width="7%" height="34" align="center"><b>{Num}.</b>&nbsp;</td>
+    <td colspan="3" align="left" class="main">{COMMENT}</td>
+  </tr>
+    <tr>
+    <td colspan="4" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="17" align="center">&nbsp;</td>
+    <td width="9%" height="17" align="center">&nbsp;</td>
+    <td width="38%" class="main"><b>{Quiz}</b></td>
+    <td width="50%" class="main" ><b>{Answer}</b></td>
+  </tr>  
+    <tr>
+    <td  align="center"></td>
+    <td colspan="2" align="center" valign="top">
+	<table width="100%" height="45"  border="0" cellpadding="0" cellspacing="0" class="main">
+ <!-- BEGIN queslist -->	
+  <tr>
+    <td width="19%" height="32" align="center" valign="top"><b>{queslist.NUM}</b>.&nbsp;
+      <input type="text" size="3" maxlength="3" value="{queslist.MCIT_ANS}" name="text[{queslist.COUNT}]" {IS_DISABLED} ><input type="hidden" name="hid[{queslist.COUNT}]" value="{queslist.MCIT_ID}"></td><td width="81%" valign="top">&nbsp;&nbsp;{queslist.MCIT_DES}<br>
+      {queslist.PIC_QUES}</td>
+  </tr>
+    <tr>
+  <td  colspan="2">{queslist.BR}</td></tr>
+<!-- END queslist -->	
+ <br> 
+</table>
+	 </td>
+    <td align="center" valign="top">
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="main">
+   <!-- BEGIN anslist -->	
+   <tr>
+    <td height="32"><b>{anslist.MCIT_ANS_CHOICE}</b>.&nbsp;&nbsp;{anslist.MCIT_ANS_DES}<br>{anslist.PIC_ANS}</td>
+    <td>&nbsp;</td>
+   </tr>
+  <tr>
+  <td  colspan="3">{anslist.BR}</td></tr>
+    <!-- END anslist -->	
+	 <br>
+</table>
+
+	</td>
+    </tr>  
+  <tr>
+    <td height="22" align="center">&nbsp;</td>
+    <td height="22" align="center">&nbsp;</td>
+    <td height="22" colspan="2" class="main"><input type="submit" name="s1" value="{SUBMIT}" class="button" {IS_DISABLED}>
+      <input type="hidden" name="count" value="{COUNT}">
+      {VIEW_PRO}</td>
+    </tr>
+
+</table>
+	</td>
+  </tr>
+  </form>
+</table>
+
+

@@ -1,0 +1,300 @@
+<html>
+
+<head>
+
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<script type="text/javascript" language="JavaScript" src="js/fieldLimiter.js"></script>
+
+
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+
+<!--
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.01
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+//-->
+
+</script>
+
+</head>
+
+<body onLoad="MM_preloadImages('../images/home2.gif')">
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+
+    <td>{HEADER}</td>
+
+  </tr>
+
+</table>
+
+<form name="addaltfrm" method="post" action="addChoice.php"> 
+
+
+
+  <table width="100%"  border="0" cellspacing="0" cellpadding="5">
+
+    <tr>
+
+      <td class="bdarkblue"> >> {GNAME} </td>
+
+    </tr>
+
+  </table>
+
+	   <!-- BEGIN startB1 -->
+
+  <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0"   class="tdborder1">
+
+    <tr  class="boxcolor">
+
+      <td height="25" class="Bcolor">{ChoiceQues}</td>
+
+    </tr>
+
+    <tr class="tdbackground_white">
+
+      <td><table width="90%" border="0" align="center">
+
+        <tr>
+
+          <td align="right">
+
+            <!-- <select name="alt" id="alt" onChange="open_win('addalt.php?courses=<? echo $courses; ?>&qset=<? echo $qset; ?>&std=<? echo $std; ?>&totalstd=<? echo $totalstd; ?>&alts=<? echo $alts; ?>&alt='+this.options[selectedIndex].value+'')">-->
+
+            <select name="select" id="select" onChange="window.location='addalt.php?course={COURSE}&module_id={MODULE_ID}&num_C={NUM_C}&alt='+this.options[selectedIndex].value;">
+
+                <option value="0" selected>{ADDALT}</option>
+
+                <option value="1">1 ชุด</option>
+
+                <option value="2">2 ชุด</option>
+
+                <option value="3">3 ชุด</option>
+
+                <option value="4">4 ชุด</option>
+
+                <option value="5">5 ชุด</option>
+
+              </select></td>
+
+          </tr>
+
+      </table>
+
+        <table width="90%" border="0" align="center" cellpadding="5" cellspacing="0">
+
+          <!-- BEGIN boxQ -->
+
+          <tr>
+
+            <td align="right" valign="top" bgcolor class="tdbackground3"> <b>{Eval_Question}{Eval_Num}{startB1.boxQ.NUM} :</b></td>
+
+            <td colspan="2" bgcolor class="tdbackground3"> &nbsp;
+
+                <textarea name="q{startB1.boxQ.NUM}" cols="50" rows="5" wrap="VIRTUAL" id="textarea"></textarea>
+
+                <br>
+
+&nbsp;
+
+      <script>displaylimit("document.addaltfrm.q{startB1.boxQ.NUM}",255)</script></td>
+
+          </tr>
+
+          <tr>
+
+            <td height="25" align="right" valign="top" bgcolor class="tdbackground3"><b>{ALTERNATIVE}:</b></td>
+
+            <td colspan="2" bgcolor class="tdbackground3"> &nbsp;
+
+                <select name="alt{startB1.boxQ.NUM}">
+
+  							 {startB1.boxQ.ALT}
+
+                </select>
+
+          &nbsp; &nbsp; </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="25" align="right" valign="top" bgcolor class="tdbackground3"><strong>Active Now : </strong></td>
+
+            <td colspan="2" bgcolor class="tdbackground3"><input type="checkbox" name="active_c{startB1.boxQ.NUM}"  value="1" checked></td>
+
+          </tr>
+
+          <tr>
+
+            <td height="25" colspan="3" align="right" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+
+          </tr>
+
+
+
+  <!-- END boxQ -->
+
+        </table></td>
+
+    </tr>
+
+  </table>
+
+    <!-- END startB1 -->
+
+  
+
+  <p>
+
+   <!-- BEGIN startB2 -->
+
+  <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0"   class="tdborder1">
+
+    <tr class="boxcolor">
+
+      <td height="25" class="Bcolor">{FillQues}</td>
+
+    </tr>
+
+    <tr class="tdbackground_white">
+
+      <td>
+
+	  <br><table align="center" width="90%" border="0" cellspacing="0" cellpadding="5">
+
+	   <!-- BEGIN boxQF -->
+
+            <tr valign="top">
+
+              <td width="33%" align="right" bgcolor class="tdbackground3"><br>
+
+                  <b>{Eval_Question}{Eval_Num}</b><b>{startB2.boxQF.NUM} :</b> </td>
+
+              <td width="67%" bgcolor class="tdbackground3"> &nbsp;
+
+                  <textarea name="text{startB2.boxQF.NUM}" cols="50" rows="5" wrap="VIRTUAL" ></textarea>
+
+                  <br>
+
+&nbsp;
+
+      <script>displaylimit("document.addaltfrm.text{startB2.boxQF.NUM}",255)</script>
+
+              </td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td align="right" bgcolor class="tdbackground3"><strong>Active Now : </strong></td>
+
+              <td bgcolor class="tdbackground3"><input type="checkbox" name="active_f{startB2.boxQF.NUM}" value="1" checked></td>
+
+            </tr>
+
+			
+
+            <tr valign="top">
+
+              <td align="right" bgcolor="#FFFFFF">&nbsp;</td>
+
+              <td bgcolor="#FFFFFF" >&nbsp;</td>
+
+            </tr>
+
+			  <!-- END boxQF -->
+
+          </table></td>
+
+    </tr>
+
+  </table>
+
+ <!-- END startB2 -->
+
+  <table width="84%" height="53" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  	<tr>
+
+  	  <td height="30" align="center" valign="middle">    <input type="submit" name="AddQ" value=" {Create} " class="button">
+
+	  <input name="g_id" type="hidden"  value="{GID}">
+
+   <!--   <input name="button" type="button" onClick="javascript: window.location='Add_UsrdQ.php?course={COURSE}&module_id={MODULE_ID}'"  value="B a c k">   -->
+
+      <input name="button" type="button" onClick="javascript: window.location='ques_Group.php?g_id={GID}&gname={GNAME}'"  value=" {Back} " class="button"> </td>
+
+  	</tr>
+
+  	<tr>
+
+  	  <td align="center">
+
+	  <a href="t_index.php?grp_id={GID}#QT" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/home2.gif',1)"><img src="images/home.gif" name="Image2" width="70" height="28" border="0"></a>
+
+	  </td>
+
+    </tr>
+
+  </table>
+
+</form>
+
+</body>
+
+</html>
+

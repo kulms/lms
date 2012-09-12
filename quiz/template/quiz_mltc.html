@@ -1,0 +1,43 @@
+
+<SCRIPT LANGUAGE="JavaScript" src="form.js"></SCRIPT>
+
+<table width="98%"  border="0" cellspacing="1" cellpadding="0"  class="tdborder1">
+<form method="post" action="?a={PATH}&m=users&occ={OCC}&ans=1&modules={MODULE}&quiz_id={Q_ID}&h_qid={H_QID}{CHECK}" {JAVA} >
+  <tr>
+    <td>
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0" bgcolor="{BG}" >
+  <tr>
+    <td width="7%" height="39" align="center"><b>{Num}.</b>&nbsp;</td>
+    <td colspan="2" align="left" class="main">{QUESTION}</td>
+  </tr>
+    <tr>
+    <td colspan="3" align="center">{PIC_QUE}</td>
+  </tr>
+  <!-- BEGIN anslist -->
+  <tr>
+    <td height="22" align="center">&nbsp;</td>
+    <td width="10%" height="22" align="center" class="main"><b>{anslist.NUM}.</b>&nbsp;<input type="{SEL}" name="alt_id[]" value="{anslist.ANS_ID}" 
+	{anslist.IS_CHECK} {IS_DISABLED}></td>
+    <td width="84%" class="main">{anslist.ANS_NAME}</td>
+  </tr>  
+    <tr>
+    <td  align="center">&nbsp;</td>
+    <td width="10%" align="center">&nbsp;</td>
+    <td width="84%" class="main">{anslist.PIC_ANS}</td>
+  </tr>  
+  <!-- END anslist -->
+  <tr>
+    <td height="22" align="center">&nbsp;</td>
+    <td height="22" align="center">&nbsp;</td>
+    <td class="main">
+	<input type="hidden" name="count" value="{NUM}">
+	<input type="submit" name="s1" value="{SUBMIT}" class="button" {IS_DISABLED}>
+	{VIEW_PRO}</td>
+  </tr>
+
+</table>
+	</td>
+  </tr>
+  </form>
+</table>
+

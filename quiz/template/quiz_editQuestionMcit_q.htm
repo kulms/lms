@@ -1,0 +1,274 @@
+<SCRIPT LANGUAGE="JavaScript" src="verify.js"></SCRIPT>
+
+<!-- BEGIN copy -->
+
+<p class="main" align="center"><b>{Explanation}:</b></p>
+
+<table width="100%"  border="0" class="tdbackground_white">
+
+  <tr class="tdbackground">
+
+    <td class="menu" align="center"><b>{Text_courses}</b></td>
+
+    <td class="menu" align="center"><b>{Text_modules}</b></td>
+
+    <td class="menu" align="center"><b>{Text_create}</b></td>
+
+  </tr>
+
+  <tr class="tdbackground1">
+
+    <td align="center">{copy.C_NO}{copy.C_NAMET}{copy.C_NAMEE}</td>
+
+    <td align="center">{copy.M_NAME}</td>
+
+    <td align="center">{copy.CREATE}</td>
+
+  </tr>
+
+</table>
+
+<!-- END copy -->
+
+<div align="left"><font color="#FF0000"><b>{DONOT_COPY}{DONOT_COPY1}</b></font></div>
+
+<form action="?a={Action}&m=admin" method="post" onSubmit="return verifyMCIT(this,{QUIZ_TYPE},'data',{TOTAL_QUIZ},{TOTAL_ANS},'');" onReset="return confirm('Are you shure that you wish to erase ALL data in the form?')" ENCTYPE="multipart/form-data" >
+
+<table width="98%"  border="0">
+
+  <tr>
+
+    <td><input type="submit" name="s1" value="{EDIT_B}" class="button" {IS_DISABLED} {IS_DISABLED1}>
+
+    <input type="reset" name="r1" value="{RESET_B}" class="button" {IS_DISABLED} {IS_DISABLED1}></td>
+
+  </tr>
+
+  <tr>
+
+    <td><table width="100%" border="0" cellspacing="1" cellpadding="0" class="bg">
+
+      <tr>
+
+        <td><table width="100%" border="0" class="tdborder1">
+
+          <tr class="main">
+
+            <td width="21%" align="right"><b>{CAT_TEXT} : </b></td>
+
+            <td width="79%"><strong>{CAT_NAME}</strong>
+
+	<!-- BEGIN mcit -->
+
+			{CAT_TEXT1}
+
+	<table width="100%" class="main">
+
+              <tr>
+
+                <td valign="top">
+
+                  <select name="categories" style="font-size:10px">
+
+                    <option value="0" id="none">Categories</option>
+
+                    <!-- BEGIN cat_list -->
+
+					<option value="{mcit.cat_list.CAT_ID}" {cat_list.IS_SELECT}>{mcit.cat_list.CAT_NAME}</option>
+
+					<!-- END cat_list -->
+
+                </select></td>
+
+                <td align="left" width="80%"><div style="cursor:hand" onclick='window.open("?a=addCategory&m=admin", "_blank", "left=300, top=250, width=400,height=200,scrollbars=yes,status=yes,toolbar=no,menubar=no,location=no,resizable=yes")'><b>[{ADD_CAT}]</b></div></td></tr>
+
+     </table>
+
+<!-- END mcit -->			</td>
+
+            </tr>
+
+          <tr class="main">
+
+            <td align="right"><B>{NUM_QUIZ} : </B></td>
+
+            <td><strong>{TOTAL_QUIZ}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{SCORE_T} :</b><strong>{SCORE}</strong></td>
+
+            </tr>
+
+          <tr class="main">
+
+            <td align="right"><b>{NUM_ANS} :</b></td>
+
+            <td><strong>{TOTAL_ANS}</strong></td>
+
+            </tr>
+
+		<tr class="main">
+
+   		 <td align="right"><b>{SET} : </b></td>
+
+    	<td><input type="Radio" name="active" value="1" {IS_CHECK_AT} {IS_DISABLED}>                 
+
+                 &nbsp;<strong>{Active}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		         <input type="Radio" name="active" value="0" {IS_CHECK_IAT} {IS_DISABLED}>	
+
+		         <strong>{InActive}</strong></td>
+
+		</tr>
+
+          <tr class="main">
+
+            <td align="right"><b>{Desc} : </b></td>
+
+            <td><textarea name="comment" rows="5" wrap="PHYSICAL" cols="60" class="small">{DESC}</textarea></td>
+
+            </tr>
+
+          <tr>
+
+            <td colspan="2">{LINE}</td>
+
+          </tr>
+
+          <tr>
+
+            <td colspan="2">
+
+			<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+  	<tr class="main">
+
+		<td width="550" align="center" ><b></b><b>{QUES_TEXT}</b></td>
+
+		<td align="center" style="width:25 "><b>{CORRECT_ANS}</b></td>
+
+		<td align="center"><b></b><b>{ANS_TEXT}</b></td>
+
+  	</tr>
+
+    <tr>
+
+    <td height="78" colspan="2" valign="top"> 
+
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0" valign="top">
+
+ <!-- BEGIN quiz_list -->
+
+<tr class="main">
+
+    <td width="10%" height="86" ><b>{quiz_list.COUNT}</b></td>
+
+    <td width="84%">
+
+<textarea name="question{quiz_list.COUNT}" cols="40" rows="3" wrap="PHYSICAL" class="small">{quiz_list.QUES}</textarea>      
+
+<input type="file" name="qpicture{quiz_list.COUNT}" maxlength="50" size="31" class="text">
+
+{quiz_list.IMG}&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:DeleteQuestion('{Makecopy}','{quiz_list.QMCIT_ID}','','{Q_ID}','{QT}','1','1')">{quiz_list.DEL_P}</a>
+
+</td>
+
+    <td width="6%" ><input type="text" name="question_a{quiz_list.COUNT}" size="3" class="text" value="{quiz_list.CORRECT}" maxlength="2"></td>
+
+    <input type="hidden" name="hid_q{quiz_list.COUNT}" value="{quiz_list.QMCIT_ID}">
+
+<input  type="hidden" name="old_pic_q{quiz_list.COUNT}"  value="{quiz_list.OLD_PIC}">
+
+ <!--<input  type="hidden" name="old_alternative_pic{quiz_list.COUNT}"  value="<? echo $real_attached_file_q[$a-1]?>">
+
+ -->
+
+  </tr>
+
+<!-- END quiz_list -->
+
+</table>  	
+
+ 
+
+</td>
+
+    <td width="359" valign="top">
+
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+
+	
+
+ <!-- BEGIN ans_list -->
+
+    <tr class="main">
+
+    <td width="5%" height="86">&nbsp;&nbsp;<b>{ans_list.CHOICE}</b><input type="hidden" name="ans_choice{ans_list.COUNT}" value="{ans_list.CHOICE}"></td>
+
+    <td width="95%"><textarea name="answer{ans_list.COUNT}" cols="40" rows="3" wrap="PHYSICAL" class="small">{ans_list.ANS}</textarea>
+
+      <input type="file" name="apicture{ans_list.COUNT}" maxlength="50" size="31" class="text">
+
+	  {ans_list.IMG}&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:DeleteQuestion('{Makecopy}','','{ans_list.AMCIT_ID}','{Q_ID}','{QT}','0','1')">{ans_list.DEL_P}</a>
+
+	  </td>
+
+	  <input type="hidden" name="hid_a{ans_list.COUNT}" value="{ans_list.AMCIT_ID}">
+
+	  <input  type="hidden" name="old_pic_a{ans_list.COUNT}"  value="{ans_list.OLD_PIC}">
+
+  </tr>
+
+ <!-- END ans_list -->
+
+
+
+</table>
+
+</td>
+
+    </tr>
+
+</table>
+
+			
+
+			</td>
+
+          </tr>
+
+          <tr>
+
+            <td colspan="2">&nbsp;</td>
+
+          </tr>
+
+        </table></td>
+
+      </tr>
+
+    </table>	</td>
+
+  </tr>
+
+</table>
+
+<input type="hidden" name="modules" value="{Q_ID}">
+
+<input type="hidden" name="qnr" value="{QUIZ_ID}">
+
+<input type="hidden" name="makecopy" value="{Makecopy}">
+
+<input type="hidden" name="question_type" value="{QT}">
+
+<!--<input type="hidden" name="active" value="{MCIT_ACTIVE}">-->
+
+<input type="hidden" name="score" value="{SCORE}">
+
+<!--<input type="hidden" name="categories" value="{CAT_ID}">-->
+
+<!--<input type="hidden" name="comment" value="{DESC}"> -->
+
+<input type="hidden" name="totquestion" value="{TOTAL_QUIZ}">
+
+<input type="hidden" name="totanswer" value="{TOTAL_ANS}">
+
+</form>
+

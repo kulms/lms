@@ -1,0 +1,66 @@
+<SCRIPT LANGUAGE="JavaScript1.2" src="verify.js"></SCRIPT>
+<!-- BEGIN block -->
+<table width="100%"  border="0" class="tdbackground_white" cellpadding="0" cellspacing="1" >
+  <tr>
+    <td colspan="5" class="error"><b>{OutOfTime}</b></td>
+  </tr>
+  <tr class="tdbackground">
+    <td colspan="5" class="main" height="28"><b>{ResultAll}{Q_NAME}</b></td>
+  </tr>
+  <tr class="tdbackground1" height="20">
+    <td colspan="2" class="main"><b>{UniPart_T} : {UniCount}</b></td>
+    <td class="main"><b>{NrRun_T} : {NrRun}</b></td>
+    <td colspan="2" class="main"><b>{NrSend} : {NumOcc}</b></td>
+  </tr>
+  <tr class="tdbackground1">
+    <td height="20" colspan="2" align="center" class="main"><b>{Part}</b>{block.img_u}</td>
+    <td width="26%" align="center" class="main"><b>{Occ}</b></td>
+    <td width="21%" class="main" align="center"><b>{Score}</b>{block.img_s}</td>
+    <td width="20%" class="main"  align="center"><b>{Percent}(%)</b></td>
+  </tr>
+  <!-- BEGIN data -->
+  <tr class="{block.data.BG}" height="20">
+    <td width="23%" class="main">{block.data.UserName}</td>
+    <td width="10%" class="main" align="center"><a href="#" onClick="view_ans({block.data.occid},{Q_ID})">{Answer}</a></td>
+    <td class="main">{block.data.DateTime}</td>
+    <td class="main"><b>{block.data.score}</b></td>
+    <td class="main">{block.data.percent}</td>
+  </tr>
+  <!-- END data -->
+</table>
+<!-- END block -->
+
+<!-- BEGIN survey -->
+<table width="100%"  border="0" class="bg_white" cellpadding="0" cellspacing="1" >
+  <tr>
+    <td colspan="4"class="error"><b >{OutOfTime}</b></td>
+  </tr>
+  <tr class="tdbackground">
+    <td colspan="4" class="main" height="28"><b>{ResultAll}{Q_NAME}</b></td>
+  </tr>
+  <tr class="tdbackground1" height="20">
+    <td colspan="2" class="main"><b>{UniPart_T} : {UniCount}</b></td>
+    <td width="26%" class="main"><b>{NrRun_T} : {NrRun}</b></td>
+    <td width="41%" class="main"><b>{NrSend} : {NumOcc}</b></td>
+  </tr>
+  <tr class="tdbackground1">
+    <td height="20" colspan="2" align="center" class="main"><b>{Part}</b>{block.img_u}</td>
+    <td colspan="2" align="center" class="main"><b>{Occ}</b></td>
+  </tr>
+  <!-- BEGIN sdata -->
+  <tr class="tdbackground" height="20">
+    <td width="23%" class="main">{survey.sdata.UserName}</td>
+    <td width="10%" class="main" align="center"><a href="#" onClick="view_ans({survey.sdata.occid},{Q_ID})">{Answer}</a></td>
+    <td colspan="2" class="main">{survey.sdata.DateTime}</td>
+  </tr>
+  <!-- END sdata -->
+</table>
+<!-- END survey -->
+
+<!-- BEGIN error -->
+<table width="100%"  border="0">
+  <tr>
+    <td height="18" class="error"><b>{error.ERROR}</b></td>
+  </tr>
+</table>
+<!-- END error -->

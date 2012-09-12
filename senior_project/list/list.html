@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Keyword List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-874">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+
+<body bgcolor="#99FFFF">
+<div id="Layer1" style="position:absolute; left:354px; top:50px; width:89px; height:61px; z-index:1"><img src="../pic/search.jpg" width="115" height="64"></div>
+<div id="Layer2" style="position:absolute; left:74px; top:36px; width:39px; height:17px; z-index:2"><img src="../pic/kaset.jpg" width="158" height="161"></div>
+<div id="Layer3" style="position:absolute; left:291px; top:140px; width:344px; height:131px; z-index:3"><font face="MS San Sarif"><b> 
+  <li><a href="listproject.php">ค้นหาตามชื่อโครงงาน</a> 
+  <li><a href="liststudent.php">ค้นหาตามชื่อนิสิต</a> 
+  <li><a href="listadviser.php">ค้นหาตามชื่ออาจารย์ที่ปรึกษาโครงงาน</a> 
+  <li><a href="listsubject.php">ค้นหาตามชื่อวิชาที่เกี่ยวข้อง</a> 
+  <li><a href="listcompany.php">ค้นหาตามชื่อบริษัท</a> 
+  <li><a href="listtopic.php">ค้นหาตามคำสำคัญ/Keyword</a> 
+  </b> </font></div>
+<div id="Layer4" style="position:absolute; left:83px; top:335px; width:546px; height:67px; z-index:4"> 
+  <form  method="post" action="searchtext.php">
+     ค้นหาตาม
+    <select name="searchtopic" size="1">
+      <option value="none">เลือกหัวข้อค้นหา</option>
+      <option value="s_project">ชื่อโครงงาน</option>
+      <option value="s_name">ชื่อนิสิต</option>
+      <option value="s_adviser">ชื่ออาจารย์ที่ปรึกษาโครงงาน</option>
+      <option value="s_subject">ชื่อวิชาที่เกี่ยวข้อง(อังกฤษ)</option>
+      <option value="s_company">ชื่อบริษัท</option>
+      <option value="s_comkind">ประเภทบริษัท</option>
+      <option value="s_comaddress">ที่ตั้งบริษัท</option>
+      <option value="s_keyword">คำสำคัญ</option>
+    </select>
+    ที่มีคำว่า
+    <input type="text" name="searchtext">
+    <input type="submit" name="Submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

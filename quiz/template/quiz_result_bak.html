@@ -1,0 +1,430 @@
+  <!-- BEGIN block -->
+
+<table width="98%" border="0" cellspacing="1" cellpadding="0" >
+
+  <tr>
+
+    <td>
+
+	<table width="100%"  border="0" class="tdborder1" >
+
+  <tr>
+
+    <td colspan="3" class="main"><b>{RESULTBY}{Q_NAME}</b></td>
+
+    </tr>
+
+  <tr>
+
+    <td width="8%">&nbsp;</td>
+
+    <td width="30%" class="main"><b>{TOTAL_RUN}</b></td>
+
+    <td width="62%" class="main"><b>{CNT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td><span class="main"><b>{TOTAL_USER}</b></span></td>
+
+    <td class="main"><b>{UCNT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td class="main"><b>{TOTAL_Q}</b></td>
+
+    <td class="main"><b>{NUM}</b></td>
+
+  </tr>
+
+</table>	</td>
+
+  </tr>
+
+</table>
+
+  <!-- END block -->
+
+  <!-- BEGIN error -->
+
+  <table width="100%"  border="0">
+
+  <tr>
+
+    <td class="error"><b>{error.ERROR}</b></td>
+
+  </tr>
+
+</table>
+
+  <!-- END error -->
+
+<br>
+
+<!-- BEGIN list -->
+
+<table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td width="3%">&nbsp;</td>
+
+    <td width="94%">&nbsp;{QUES_NO}{list.NUM}</td>
+
+    <td width="3%">&nbsp;</td>
+
+  </tr>
+
+<!-- BEGIN mltc -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td><table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td><b>{list.mltc.QUES}</b>&nbsp;&nbsp;{list.mltc.QUES_F} </td>
+
+  </tr>
+
+  		<!-- BEGIN choice -->
+
+		  <tr>
+
+			<td><b>{list.mltc.choice.CHOICE}</b>{list.mltc.choice.DETAIL_C}&nbsp;&nbsp;{list.mltc.choice.DETAIL_F}</td>
+
+		  </tr>
+
+	  <!-- END choice -->
+
+  <tr>
+
+    <td>
+
+	<table width="4%"  border="0" align="center" class="main">
+
+	  <tr>
+
+	  		<!-- BEGIN chart -->
+
+			<td align="center" valign="bottom">{list.mltc.chart.STRT}<br>{list.mltc.chart.CHART}<br>{list.mltc.chart.NUM}</td>
+
+			<!-- END chart -->
+
+	  </tr>
+
+</table>
+
+{list.mltc.LINE}
+
+	</td>
+
+  </tr>
+
+</table>
+
+
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+
+
+  <!-- END mltc -->
+
+  <!-- BEGIN tnf -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0" class="main">
+
+  <tr>
+
+    <td><b>{list.tnf.QUES}</b>&nbsp;&nbsp;{list.tnf.QUES_F}</td>
+
+  </tr>
+
+  <tr>
+
+    <td><b>1.</b>True</td>
+
+  </tr>
+
+  <tr>
+
+    <td><b>2.</b>False</td>
+
+  </tr>
+
+  <tr>
+
+    <td><table width="100%"  border="0">
+
+  <tr>
+
+    <td align="center"><table width="8%"  border="0" class="main">
+
+      <tr>
+
+        <td width="50%" height="24" valign="bottom" align="center"><b>{list.tnf.ANS_T}</b><br>{list.tnf.CHART_T}<br>1</td>
+
+        <td width="50%" valign="bottom" align="center"><b>{list.tnf.ANS_F}</b><br>{list.tnf.CHART_F}<br>2</td>
+
+      </tr>
+
+    </table>      </td>
+
+  </tr>
+
+</table>
+
+</td>
+
+  </tr>
+
+</table>	
+
+{list.tnf.LINE}
+
+</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+  <!-- END tnf -->
+
+   <!-- BEGIN fib -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0">
+
+  <tr>
+
+    <td><b>{list.fib.QUES}</b>&nbsp;&nbsp;{list.fib.QUES_F}</td>
+
+  </tr>
+
+  <tr>
+
+    <td><b>1.</b>{list.fib.CHOICE}</td>
+
+  </tr>
+
+  <tr>
+
+    <td><table width="8%"  border="0" class="main" align="center">
+
+      <tr>
+
+        <td width="50%" height="24" valign="bottom" align="center"><b>{list.fib.ANS_T}</b><br>
+
+          {list.fib.CHART_T}<br>
+
+          1</td>
+
+        <td width="50%" valign="bottom" align="center"><b>{list.fib.ANS_F}</b><br>
+
+          {list.fib.CHART_F}<br>
+
+          {OTHER}</td>
+
+      </tr>
+
+    </table></td>
+
+  </tr>
+
+</table>
+
+{list.fib.LINE}
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+  <!-- END fib -->
+
+  <!-- BEGIN mcit -->
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td>
+
+	<table width="100%"  border="0">
+
+  <tr>
+
+    <td colspan="2">{list.mcit.QUES}<br>{list.mcit.COMMENT}</td>
+
+  </tr>
+
+  <tr>
+
+    <td width="50%">
+
+		<table width="100%"  border="0">
+
+				<!-- BEGIN quiz -->
+
+			  <tr>
+
+				<td style="width:10% "><b>{list.mcit.quiz.NO}</b></td>
+
+				<td width="90%">{list.mcit.quiz.Q_MCIT_D}<br>{list.mcit.quiz.Q_MCIT_F}</td>
+
+			  </tr>
+
+			  <!-- END quiz -->
+
+	</table>	
+
+</td>
+
+    <td width="50%">	
+
+	<table width="100%"  border="0">
+
+				<!-- BEGIN ans -->
+
+			  <tr>
+
+				<td width="10%"><b>{list.mcit.ans.ANS_CHOICE}</b></td>
+
+				<td width="90%">{list.mcit.ans.A_MCIT_D}<br>{list.mcit.ans.A_MCIT_F}</td>
+
+			  </tr>
+
+			  <!-- END ans -->
+
+    </table>
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2"><b>{T_RESULT}</b></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="2"><table width="100%"  border="0">
+
+      <!-- BEGIN result -->
+
+      <tr>
+
+        <td style="width:5% "><b>{list.mcit.result.NO}</b></td>
+
+        <td style="width:45% ">{list.mcit.result.Q_MCIT_D}<br>
+
+          </td>
+
+        <td style="width:50% ">
+
+		<table width="20%"  border="0">
+
+			  <tr>
+
+			   <!-- BEGIN chart -->
+
+				<td><b>{list.mcit.result.chart.STRT}</b><br>
+
+				  {list.mcit.result.chart.CHART}<br>
+
+				<b> {list.mcit.result.chart.CHOICE}</b></td>
+
+			 <!-- END chart -->
+
+			  </tr>
+
+		</table>
+
+		</td>
+
+      </tr>
+
+      <!-- END result -->
+
+    </table></td>
+
+    </tr>
+
+</table>
+
+
+
+	</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+ <!-- END mcit -->
+
+</table>
+
+<!-- END list -->
+
+<br>
+
+<table width="90%"  border="0" align="center" class="main">
+
+  <tr>
+
+    <td  class="main">
+
+	<!-- BEGIN page -->
+
+		{page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+
+	<!-- END page -->
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="main">{PAGE}
+
+	<!-- BEGIN pagerows -->
+
+		<b><font class="page">{pagerows.PAGE} </font></b>
+
+	<!-- END pagerows -->
+
+	</td>
+
+  </tr>
+
+</table>
+

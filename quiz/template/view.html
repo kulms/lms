@@ -1,0 +1,149 @@
+<SCRIPT LANGUAGE="JavaScript">
+	function alert_java(t){
+		if (!t == "")
+			return confirm(t);
+		else
+			return true;
+	alert(t);
+    return false;
+	}
+</SCRIPT>
+<title>{VIEW_T}</title>
+<link rel="STYLESHEET" type="text/css" href="../themes/{Theme}/style/main.css">
+<table width="482" border="0" cellspacing="0" cellpadding="0" align="center"
+class="bg1" height="53">
+  <tr>
+    <td align="center" class="menu"><strong>{Q_NAME}</strong></td>
+  </tr>
+</table>
+
+<br>
+<table width="95%"  border="0" align="center">
+  <tr>
+    <td align="right" class="main"><a href="#" onClick="JavaScript:window.close()">[{CLOSE}]</a></td>
+  </tr>
+  <tr>
+    <td><hr class="colorLine"> </td>
+  </tr>
+</table>
+<!-- BEGIN mltc -->
+<table width="90%"  border="0" cellspacing="1" cellpadding="0" align="center" class="tdborder1">
+  <tr>
+    <td><table width="100%"  border="0" bgcolor="{BG}" class="main">
+  <tr>
+    <td colspan="2"><b>{Question}{Cnt}.</b>&nbsp;&nbsp;{mltc.QUES}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">{mltc.IMG}</td>
+  </tr>
+  	<!-- BEGIN ans -->
+	  <tr>
+		<td width="7%" align="right" valign="top">&nbsp;</td>
+	    <td width="93%" valign="top"><b>{mltc.ans.NUM}.</b>
+	      <input type="{DISPLAY}">
+	    &nbsp;{mltc.ans.ANS}<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{mltc.ans.IMG}</td></tr>
+	<!-- END ans -->
+  <tr>
+    <td colspan="2"><input type="submit" value="{SUBMIT}" name="B1" class="button" onClick="JavaScript:alert_java('{VALI}');"></td>
+  </tr>
+</table></td>
+  </tr>
+</table>
+<!-- END mltc -->
+<!-- BEGIN fib -->
+<table width="90%" border="0" cellspacing="1" cellpadding="0" align="center" class="tdborder1">
+  <tr>
+    <td>
+	<table width="100%"  border="0" bgcolor="{BG}" class="main">
+  <tr>
+    <td colspan="2"><b>{Question}{Cnt}.</b>&nbsp;&nbsp;{fib.QUES}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">{fib.IMG}</td>
+  </tr>
+  <tr>
+    <td width="9%">&nbsp;</td>
+    <td width="91%"><input type="text" name="ans"  size="45" ></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" value="{SUBMIT}" name="B12" class="button" onClick="JavaScript:alert_java('{VALI}');"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<!-- END fib -->
+<!-- BEGIN tnf -->
+<table width="90%" border="0" cellspacing="1" cellpadding="0" align="center" class="tdborder1">
+  <tr>
+    <td>
+	<table width="100%"  border="0" bgcolor="{BG}" class="main">
+  <tr>
+    <td colspan="2"><b>{Question}{Cnt}.</b>&nbsp;&nbsp;{tnf.QUES}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">{tnf.IMG}</td>
+  </tr>
+  <tr>
+    <td width="9%" align="right"><b>1</b>&nbsp;.</td>
+    <td width="91%"><input type="radio" name="ans">True</td>
+  </tr>
+   <tr>
+    <td width="9%" align="right"><b>2.</b>&nbsp;</td>
+    <td width="91%"><input type="radio" name="ans">
+      False</td>
+   </tr>
+  <tr>
+    <td colspan="2"><input type="submit" value="{SUBMIT}" name="B12" class="button" onClick="JavaScript:alert_java('{VALI}');"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<!-- END tnf -->
+<!-- BEGIN mcit -->
+<table width="90%" border="0" cellspacing="1" cellpadding="0" align="center" class="tdborder1">
+  <tr>
+    <td>
+	<table width="100%"  border="0" bgcolor="{BG}" class="main">
+  <tr>
+    <td colspan="2"><b>{Question}{Cnt}.</b>&nbsp;&nbsp;{mcit.QUES}({MCIT})</td>
+  </tr>
+  <tr>
+    <td width="50%">
+	<table width="100%"  border="0">
+	<!-- BEGIN quiz -->
+  <tr class="main">
+    <td width="8%"><b>{mcit.quiz.NUM} . </b></td>
+    <td width="11%"><input type="text" size="3" value="" name="" maxlength="3"></td>
+    <td width="81%">{mcit.quiz.QUIZ}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>{mcit.quiz.IMG}</td>
+  </tr>
+  <!-- END quiz -->
+</table>	
+</td>
+    <td width="50%"><table width="100%"  border="0">
+      <!-- BEGIN ans -->
+      <tr class="main">
+        <td><b>{mcit.ans.CHOICE} . </b></td>
+        <td width="81%">{mcit.ans.ANS}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>{mcit.ans.IMG}</td>
+      </tr>
+      <!-- END ans -->
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" value="{SUBMIT}" name="B12" class="button" onClick="JavaScript:alert_java('{VALI}');"></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<!-- END mcit -->

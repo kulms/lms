@@ -1,0 +1,80 @@
+/* CSS Document */
+BODY {
+	FONT-SIZE: 10px; FONT-FAMILY: MS Sans Serif
+}
+/*
+INPUT {
+	BORDER-RIGHT: #FF0000 1px solid; BORDER-TOP: #FF0000 1px solid; BORDER-LEFT: #FF0000 1px solid; WIDTH: 84px; BORDER-BOTTOM: #FF0000 1px solid; HEIGHT: 20px
+}
+*/
+TABLE {
+	FONT-SIZE: 11px; FONT-FAMILY: MS Sans Serif ,verdana
+}
+A {
+	COLOR: #62799b; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #CC0033
+}
+
+.tdRed {
+	border: 1px solid #FF0000;
+}
+.Bred {
+	font-family: "MS Sans Serif";
+	font-size: 10px;
+	font-weight: bold;
+	color: #CC0033;
+}
+.tdBlue {
+	border: 1px solid #006699;
+}
+.Bblue {
+	font-size: 10px;
+	font-weight: bold;
+	color: #006699;
+}
+.tdRred {
+	border-right-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-color: #CC0033;
+}
+.tdR {
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #CC0033;
+}
+.Bwhite {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.tdBotred {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CC0033;
+}
+.footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #CCCCCC;
+}
+.tdBot1 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #6699CC;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #6699CC;
+	border-left-color: #6699CC;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #6699CC;
+
+}

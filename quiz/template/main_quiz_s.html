@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="images/main.css">
+<SCRIPT LANGUAGE="JavaScript" src="form.js"></SCRIPT>
+</head>
+<body>
+<table width="98%" align="center">
+<tr>
+<td> &nbsp;&nbsp; {VIEW}</td>
+</tr>
+  <tr>
+    <td align="center">
+          <table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+
+            <tr>
+              <td valign="top" style='border-top: solid #cc0033 2px; border-right: solid #cc0033 2px;'>
+                <table width="128" border="0" cellspacing="0">
+				<!-- 
+				<form action="{PATH}?occ={OCC}&modules={MODULE}&check_ans=1"  method="post" onSubmit="return check({Q_LIMIT},'{NUM_ANS}');">
+				//--> 
+				<form action="main.php?occ={OCC}&id={MODULE}&submit=submit&multiple={MULTI}"  method="post"  target="_parent"  onSubmit="return check({Q_LIMIT},'{NUM_ANS}');">
+				<!-- BEGIN quizlist --> 
+                  <tr>
+                    <td height="20" align="right"><a href="{PATH}?quiz_id={quizlist.Q_ID}&modules={MODULE}&occ={OCC}&h_qid={H_QID}">{quizlist.Q_LIST}</a></td>
+                  </tr>
+				   <!-- END quizlist -->
+				   <tr>
+				     <td align="right">{SEND}</td>
+				   </tr> 
+				   </form>
+              </table></td>
+              <td align="center" valign="top" bgcolor="#FFFFFF" style="border-top: solid #cc0033 2px;">
+                <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+                </table>
+                {MAIN}
+			  </td>
+            </tr>
+            <tr>
+              <td valign="top" width="129" style="border-right: solid #cc0033 2px;'">&nbsp;</td>
+              <td class="message"></td>
+            </tr>
+            <tr>
+              <td valign="top" width="129">&nbsp;</td>
+              <td >&nbsp;</td>
+            </tr>
+          </table></td>
+  </tr>
+</table>
+</body>
+</html>

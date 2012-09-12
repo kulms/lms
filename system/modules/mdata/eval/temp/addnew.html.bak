@@ -1,0 +1,82 @@
+<script type="text/javascript" language="JavaScript" src="fieldLimiter.js"></script>
+<script type="text/javascript" language="JavaScript">
+function test(currMenu,d) {
+thisMenu = document.getElementById(currMenu).style;
+	if(d ==0){
+		thisMenu.display = "none";
+		document.form.choice_h.value=0;
+	}else{
+		thisMenu.display = "block";
+		document.form.choice_h.value=1;
+	}
+}
+
+  function CheckSubmit(){
+	 var choice=document.form.choice_h.value
+	if(choice==1){
+		if(document.form.alt.value==""){
+			alert("Empty alternatives!! ");
+			return false;
+		}
+	}
+		return true;
+  }
+  
+</script>
+
+<form action="?m=mdata&m1=eval&a=exec_addeditQ&q_id={Q_ID}" method="post" name="form" onSubmit="return CheckSubmit();" >
+<table width="95%"  border="0" align="center">
+  <tr>
+    <td><a href="?m=mdata&m1=eval&a=index"><img src="../images/back.gif" border="0">Back</a> </td>
+  </tr>
+</table>
+<table width="95%"  border="0" align="center" class="tdborder1">
+  <tr>
+    <td height="20"><b>Add New Questions</b> </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>
+	<table width="68%"  border="0" align="center">
+  <tr>
+    <td width="22%" align="right"><b>Question :</b></td>
+    <td width="78%"><textarea name="q" cols="50" rows="5" wrap="VIRTUAL" id="textarea2">{Ques}</textarea>      <br>
+&nbsp;
+      <script>displaylimit("document.form.q",255)</script></td>
+  </tr>
+  <tr>
+    <td align="right"><b>Selete Answer</b> : </td>
+    <td><input type="radio" name="choice" value="1" onClick="test('menu1',1)" {IS_CHECK_CHOICE}>      
+      Choice&nbsp;&nbsp;
+          <input type="radio" name="choice" value="0" onClick="test('menu1',0)" {IS_CHECK_FILL}>
+        Fill	
+		<input type="hidden" name="choice_h" value="{CHOICE}">
+		  </td></tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+    <span id="menu1" style="display:{BLOCK} ">
+    <select name="alt">
+      <option value="">- Alternatives -</option>
+      <!-- BEGIN boxQ -->
+  {boxQ.ALT}
+  <!-- END boxQ -->
+        </select>
+    </span> 
+</td>
+  </tr>
+  <tr>
+    <td align="right"><b>Active : </b></td>
+    <td><input type="checkbox" name="act" value="1" {ACTIVE}></td>
+  </tr> 
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+</table>	</td>
+  </tr>
+  <tr>
+    <td height="20" align="center"><input type="submit" name="add" value="Add" class="button">&nbsp;&nbsp;
+	<input type="reset" name="reset" value="Reset" class="button"><input type="hidden" name="q_id " value="{Q_ID}">
+	</td>
+  </tr>
+</table>
+</form>

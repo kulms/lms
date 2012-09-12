@@ -1,0 +1,207 @@
+<html>
+
+<head>
+
+<title>Insert Question or Break word</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+
+
+<link href="../include/main.css" rel="stylesheet" type="text/css">
+
+<link href="include/main.css" rel="stylesheet" type="text/css">
+
+<script language=javascript>
+
+<!--
+
+function checkAll(){
+
+for (var i=0;i<document.forms[0].elements.length;i++)
+
+{
+
+var e=document.forms[0].elements[i];
+
+if ((e.name != 'allbox') && (e.type=='checkbox'))
+
+{
+
+e.checked=document.forms[0].allbox.checked;
+
+}
+
+}
+
+}
+
+
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.01
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+//-->
+
+</script>
+
+
+
+</head>
+
+
+
+<body onLoad="MM_preloadImages('../images/home2.gif')">
+
+{HEADER}
+
+<form name="form" method="post" action="chooseStd.php">
+
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+
+  <tr>
+
+    <td height="30" class="bdarkblue"  style="border-bottom: solid #000000 1px;"><img src="images/question.gif" width="30" height="29" align="absmiddle"> {Eval_StdQues}</td>
+
+  </tr>
+
+	<tr>
+
+	  <td>
+
+	    <table width="100%" height="93" align="center" cellpadding="0" cellspacing="0"class="tdborder1">
+
+          <tr class="boxcolor">
+
+            <td width="6%" rowspan="2" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><input type="checkbox" value="on" name="allbox" onclick="checkAll();"></td>
+
+            <td width="30%" rowspan="2" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Question}</span></td>
+
+            <td height="24" colspan="5" align="center"  style="border-bottom: solid #FFFFFF 1px; "><span class="Bcolor">{Eval_Score}</span></td>
+
+          </tr>
+
+          <tr class="boxcolor">
+
+            <td width="11%" height="23" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{CHOICE_1}</span></td>
+
+            <td width="11%" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{CHOICE_2} </span></td>
+
+            <td width="11%" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{CHOICE_3}</span></td>
+
+            <td width="11%" align="center" style="border-right: solid #FFFFFF 1px; border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{CHOICE_4}</span></td>
+
+            <td width="12%" align="center" style="border-bottom: solid #FFFFFF 1px;"><span class="Bcolor">{CHOICE_5}</span></td>
+
+          </tr>
+
+          <!-- BEGIN StdQ -->
+
+          <tr>
+
+            <td height="16" align="center" {StdQ.COLOR}><input type="checkbox" name="check{StdQ.Q_ID}" value="{StdQ.Q_ID}"></td>
+
+            <td {StdQ.COLOR}>{StdQ.Question}</td>
+
+            <td align="center" {StdQ.COLOR}>{StdQ.RADIO1}</td>
+
+            <td align="center" {StdQ.COLOR}>{StdQ.RADIO2}</td>
+
+            <td align="center" {StdQ.COLOR}>{StdQ.RADIO3}</td>
+
+            <td align="center" {StdQ.COLOR}>{StdQ.RADIO4}</td>
+
+            <td align="center" {StdQ.COLOR}>{StdQ.RADIO5}</td>
+
+          </tr>
+
+          <!-- END StdQ -->
+
+		      <!-- BEGIN Suggest -->
+
+          <tr>
+
+            <td height="28" align="center" {Suggest.COLOR}><input type="checkbox" name="check{Suggest.SG_ID}" value="{Suggest.SG_ID}"></td>
+
+            <td height="20" {Suggest.COLOR}>{Suggest.SUGGEST}</td>
+
+            <td colspan="5" align="left" {Suggest.COLOR}><input name="textfield" type="text" size="70" disabled></td>
+
+          </tr>
+
+		  <!-- END Suggest -->
+
+        </table>
+
+  </tr>
+
+	<tr>
+
+	<td height="30" align="center" valign="bottom">
+
+        <input type="submit" name="AddStd" value="S u b m i t" class="button">
+
+      <input type="button" name="Back" value="B a c k" onClick="history.back();" class="button"></td>
+
+	</tr>
+
+	<tr>
+
+	  <td height="30" align="center" valign="bottom">
+
+	  <a href="t_index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/home2.gif',1)"><img src="images/home.gif" name="Image2" width="70" height="28" border="0"></a></td>
+
+    </tr>
+
+
+
+	</table>
+
+</form>  
+
+</body>
+
+</html>

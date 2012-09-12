@@ -1,0 +1,56 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+</head>
+<body>
+{HEADER}
+{DETAIL}
+    <table width="90%"  border="0" cellspacing="0"class="tdborder1" align="center">
+<tr>
+    <td width="100%">
+	<form method="post" action="s_index2.php" >  
+	<table width="100%"  border="0" align="center" cellspacing="0" class="tdbackground">
+  <tr >
+    <td width="9%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;">{Eval_Num}</td>
+    <td width="51%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{Eval_Question}</td>
+    <td width="8%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{CH1}</td>
+    <td width="8%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{CH2}</td>
+    <td width="8%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{CH3}</td>
+    <td width="8%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{CH4}</td>
+    <td width="8%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{CH5}</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="7" >
+	<!-- BEGIN block -->
+		
+	
+	<table width="100%" border="0" cellspacing="1"  cellpadding="1"class="tdbackground">
+  <tr class="{block.COLOR}">
+    <td width="8%" height="24" align="center">{block.NO}</td>
+    <td width="52%">{block.QUES}</td>
+    <td width="8%" align="center"><input name="score{block.Q_ID}" type="radio" value="5" disabled></td>
+    <td width="8%" align="center"><input name="score{block.Q_ID}" type="radio" value="4" disabled></td>
+    <td width="8%" align="center"><input name="score{block.Q_ID}" type="radio" value="3" disabled></td>
+    <td width="8%" align="center"><input name="score{block.Q_ID}" type="radio" value="2" disabled></td>
+    <td width="8%" align="center"><input name="score{block.Q_ID}" type="radio" value="1" disabled></td>
+  </tr>
+</table>
+
+	<!-- END block -->	</td>
+  </tr>
+    <tr bgcolor="#FFFFFF" >
+    <td  colspan="7" align="center">&nbsp;</td>
+  </tr>
+  
+  </table>
+</form>
+
+	</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

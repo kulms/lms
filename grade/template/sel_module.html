@@ -1,0 +1,53 @@
+<SCRIPT LANGUAGE="JavaScript" SRC="classes/form.js"></SCRIPT>
+<title>Select Modules</title>
+<link href="../themes/{Theme}/style/main.css" rel="stylesheet" type="text/css">
+<table width="95%"  border="0">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<form method="post" name="form">
+<table width="98%"  border="0" align="center"  class="tdborder1">
+  <tr>
+    <td colspan="5" align="center" class="main"><b>{H_Module}</b></td>
+  </tr>
+  <tr  class="boxcolor">
+    <td align="center" class="main_white"  style="width:4% "><b>{M_No}</b></td>
+    <td class="main_white"  align="center" style="width:48% "><b>{M_name}</b></td>
+    <td class="main_white"  align="center" style="width:18% "><b>{M_Cate}</b></td>
+    <td class="main_white" align="center"  style="width:18% "><b>{M_Group}</b></td>
+    <td align="center" nowrap class="main_white" style="width:10% "><b>{M_Totalscore}</b></td>
+  </tr>
+  <!-- BEGIN list_quiz -->
+  <tr bgcolor="#FFFFFF" height="30%">
+    <td ><input type="radio" name="sel" value="{list_quiz.M_ID}" onClick="Click('{list_quiz.M_ID}');" {list_quiz.IS_SELECT}  ><input type="hidden" name="qname_{list_quiz.M_ID}" value="{list_quiz.NAME}"></td>
+    <td><b>{list_quiz.NAME}</b></td>
+    <td align="center">{list_quiz.M_TYPE}</td>
+    <td align="center">{list_quiz.GROUP}</td>
+    <td>{list_quiz.SCORE}</td>
+  </tr>
+  <!-- END list_quiz -->
+  
+  <!-- BEGIN list_hw -->
+  <tr bgcolor="#FFFFFF" height="30%">
+    <td ><input type="radio" name="sel" value="{list_hw.M_ID}" onClick="Click('{list_hw.M_ID}');" {list_hw.IS_SELECT}><input type="hidden" name="qname_{list_hw.M_ID}" value="{list_hw.NAME}"></td>
+    <td><b>{list_hw.NAME}</b></td>
+    <td align="center">{list_hw.M_TYPE}</td>
+    <td align="center">{list_hw.GROUP}</td>
+    <td>{list_hw.SCORE}</td>
+  </tr>
+  <!-- END list_hw -->
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="submit" value="{Btn_Submit}" class="button" onClick="set('{Form}')"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<input type="hidden" name="m_id" value="{M_ID}">
+</form>

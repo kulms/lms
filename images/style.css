@@ -1,0 +1,123 @@
+TD {
+	FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+B {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.bdarkblue {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #05498a; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.bblue {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #6799cc; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.bblack {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.bwhite {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.bbrown {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #8d5a01; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.fbrown {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #8d5a01; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.fblue {
+	FONT-SIZE: 8pt; COLOR: #3399ca; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.fblack {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.fwhite {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+A {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #518fbe; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a1:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #518fbe; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.a1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.a2:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #006699; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.a2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #3497ce; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.a3:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #006699; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #343434; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a4:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #006600; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #99cc00; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a5:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #006699; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #3497ce; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a6:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #006699; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a6 {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #689b02; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a7:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a7 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a8 {
+	FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a8:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.a9:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: gray; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.ao:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #333333; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.ao {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #343434; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.at:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 7pt; COLOR: #006699; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.at {
+	FONT-WEIGHT: normal; FONT-SIZE: 7pt; COLOR: #343434; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.a10 {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #666666; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.a10:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #47a31a; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: underline
+}
+.hsName {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica; TEXT-DECORATION: none
+}
+.title 
+{ 
+	font-family:Tahoma, Arial, sans-serif; 
+	font-size: 10px; 
+	color:#313031; 
+	text-decoration:none; 
+	font-weight:bold;
+	text-transform:uppercase
+}

@@ -1,0 +1,63 @@
+<? require("../include/global_login.php"); ?>
+<html>
+<head><link rel="STYLESHEET" type="text/css" href="../main.css">
+</head>
+
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0">
+<table width="482" border="0" cellspacing="0" cellpadding="0" align="center"
+background="../images/headerbg.gif" height="53">
+  <tr><td class="menu" align="center">
+        <b>Course  Area</b>
+</td></tr>
+</table>
+<table width="80%" border="0" cellspacing="0" cellpadding="5"  align="center">
+<?
+$check = mysql_query("SELECT category from users where id = ".$person["id"].";");
+if($row = mysql_fetch_array($check))
+{
+   switch ($row["category"]) 
+	{  case 5:		
+			$ok=0;	
+			include("traineeinfo.php"); 
+			break;
+		case 3:
+			$ok=0;	
+			include("studentinfo.php"); 
+			break;
+		case 2:
+			$ok=1;
+			include("check_teacherinfo.php"); 
+			break;
+	 }
+}
+/*  $check=mysql_query("SELECT * FROM users WHERE category=5 and id=".$person["id"].";");
+if(mysql_num_rows($check)==1)
+{
+ include("traineeinfo.php"); 
+}  */
+
+/*  not use
+$check=mysql_query("SELECT * FROM users WHERE category=4 and id=".$person["id"].";");
+if(mysql_num_rows($check)==1)
+{
+ include("staffinfo.php"); 
+} 
+
+$check=mysql_query("SELECT * FROM users WHERE category=3 and id=".$person["id"].";");
+if(mysql_num_rows($check)==1)
+{
+	include("studentinfo.php"); 
+} 
+   
+$check=mysql_query("SELECT * FROM users WHERE category=2 and id=".$person["id"].";");
+if(mysql_num_rows($check)==1)
+{
+ include("teacherinfo.php"); 
+} 
+*/
+?>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<SCRIPT LANGUAGE="JavaScript1.2" src="verify.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	function toggleMenu(currMenu) {
+		if (document.getElementById) {
+		thisMenu = document.getElementById(currMenu).style
+		if (thisMenu.display == "block") {
+		thisMenu.display = "none"
+		}
+		else {
+		thisMenu.display = "block"
+		}
+		return false
+		}
+		else {
+		return true
+		}
+	}
+</SCRIPT>
+</head>
+<br>
+<body>
+<table width="98%" align="center">
+<tr>
+<td class="main"> &nbsp; &nbsp; <b>{VIEW} &nbsp;{BY}</b></td>
+</tr>
+  <tr>
+    <td align="center">
+	 
+          <table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+
+            <tr>
+              <td width="129" valign="top" class="bordercolor" style='border-top: solid  2px; border-right: solid  2px;' >
+                <table width="100%" border="0" cellspacing="0">
+                  <tr>
+                    <td height="20" align="right" class="main"><a href="Javascript:editQuiz({Q_ID})" >{EDIT} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right"  class="main" height="20"><a href="#"  onclick="return toggleMenu('menu1')">{ADD}</a>
+		  <span class="main" id="menu1" style="display:none" >
+            <table width=80% cellspacing="0">
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestions({Q_ID},'mltc')">- {ADD1}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestions({Q_ID},'tnf')">- {ADD2}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestions({Q_ID},'mcit')">- {ADD3}</a></td></tr>
+            <tr><td td class="nav" align="left"><a href="Javascript:addquestions({Q_ID},'fib')">- {ADD4}</a></td></tr>
+            </table>
+			</span></a></td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="right" class="main"><a href="Javascript:skipit({Q_ID})"> {SET} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right" class="main" height="20"><a href="Javascript:viewQuestions({Q_ID})"> {VIEWQ} </a></td>
+                  </tr>
+                  <tr>
+                    <td height="20" align="right" class="main"><a href="Javascript:search_quiz({Q_ID})"> {SEARCH}</a></td>
+                  </tr>
+			
+                  <tr>
+                    <td align="right" class="main" height="20"><a href="Javascript:check_delete({Q_ID})"> {DEL} </a></td>
+                  </tr>
+                  <tr>
+                    <td align="right" class="main" height="20"><a href="#"  onclick="return toggleMenu('menu2')">{RESULT}</a>
+		  <span id="menu2" style="display:none ">
+            <table width=80% cellspacing="0">
+			<tr><td class="nav" align="left"><a href="Javascript:viewUserResult({Q_ID})">- {RESULT1}</a></td></tr>
+            <tr><td class="nav" align="left"><a href="Javascript:viewall({Q_ID})">- {RESULT2}</a></td></tr>
+            </table>
+			</span> </td>
+                  </tr>
+              </table></td>
+              <td align="center" valign="top" style="border-top: solid  2px;" class="bordercolor">
+                <table width="98%"  border="0" cellspacing="0" cellpadding="0">
+                </table>
+                {MAIN}
+              </td>
+            </tr>
+          </table></td>
+  </tr>
+</table>
+</body>
+</html>

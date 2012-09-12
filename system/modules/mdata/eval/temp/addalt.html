@@ -1,0 +1,92 @@
+<SCRIPT LANGUAGE="Javascript" SRC="form.js"></SCRIPT>
+<form action="?m=mdata&m1=eval&a=exec_addeditA&alt_id={ALT_ID}" name="form" method="post" onSubmit="return CheckEmptyAlt(this)" >
+<table width="500"  border="0" 	align="center">
+  <tr>
+    <td><a href="?m=mdata&m1=eval&a=list_alt"><img src="../images/back.gif" border="0">Back</a></td>
+  </tr>
+</table>
+
+<table width="500" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#333333">
+    <tr> 
+      <td colspan="3" align="center">ระดับการประเมิน</td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td colspan="3">   &nbsp;  &nbsp;   ตัวอย่างการกรอกข้อมูล :</td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td align="right">ระดับที่ 1 
+        <input name="exalt1" type="text" id="exalt" value="ดีมาก" maxlength="200" disabled readonly> 
+        &nbsp; &nbsp;</td>
+      <td colspan="2">&nbsp; คะแนน&nbsp; <input name="exscr1" type="text" id="exscr" value="5" size="5" disabled readonly></td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td align="right">ระดับที่ 2 
+        <input name="exalt2" type="text" disabled value="ดี" maxlength="200" readonly> 
+        &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="exscr2" type="text" disabled value="4" size="5" maxlength="5" readonly></td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td align="right">ระดับที่ 3 
+        <input name="exalt3" type="text" disabled value="ปานกลาง" maxlength="200" readonly> 
+        &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="exscr3" type="text" disabled value="3" size="5" maxlength="5" readonly></td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td align="right">ระดับที่ 4 
+        <input name="exalt4" type="text" disabled value="พอใช้" maxlength="200" readonly> 
+        &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="exscr4" type="text" disabled value="2" size="5" maxlength="5" readonly></td>
+    </tr>
+    <tr class="tdbackground"> 
+      <td align="right">ระดับที่ 5 
+        <input name="exalt5" type="text" disabled value="ควรปรับปรุง" maxlength="200" readonly> 
+        &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="exscr5" type="text" disabled value="1" size="5" maxlength="5" readonly></td>
+    </tr>
+    <tr class="tdbackground">
+      <td height="22" colspan="3">  &nbsp;  &nbsp;  <u>หมายเหตุ</u> &nbsp;  <font color="red"><b>***</b></font>    ข้อมูลที่กรอกจะถูกเก็บตามลำดับ (ลำดับมีความสำคัญ) <font color="red"><b>***</b></font> 
+	  <br>&nbsp; &nbsp;  รูปแบบข้อมูลที่กรอก : ระดับการประเมิน - ตัวอักษร, &nbsp;  คะแนน - ตัวเลข</td>
+    </tr>
+
+    <tr> 
+      <td height="22" colspan="3"> &nbsp; &nbsp;  </td>
+    </tr>
+    <tr> 
+      <td align="right">ระดับที่ 1 
+        <input name="alt1" type="text"  maxlength="200" value="{ALT1}"> &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="res1" type="text" size="5" maxlength="5" onKeyUp="return CheckNum(document.form.res1)" value="{RES1}"></td>
+    </tr>
+    <tr> 
+      <td align="right">ระดับที่ 2 
+        <input name="alt2" type="text"  maxlength="200" value="{ALT2}"> &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="res2" type="text" size="5" maxlength="5" onKeyUp="return CheckNum(document.form.res2)" value="{RES2}"></td>
+    </tr>
+    <tr> 
+      <td align="right">ระดับที่ 3 
+        <input name="alt3" type="text"  maxlength="200" value="{ALT3}"> &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="res3" type="text" size="5" maxlength="5" onKeyUp="return CheckNum(document.form.res3)" value="{RES3}"></td>
+    </tr>
+    <tr> 
+      <td align="right">ระดับที่ 4 
+        <input name="alt4" type="text"  maxlength="200" value="{ALT4}"> &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="res4" type="text" size="5" maxlength="5" onKeyUp="return CheckNum(document.form.res4)" value="{RES4}"></td>
+    </tr>
+    <tr> 
+      <td align="right">ระดับที่ 5 
+        <input name="alt5" type="text"  maxlength="200" value="{ALT5}"> &nbsp; &nbsp; </td>
+      <td colspan="2"> &nbsp; คะแนน&nbsp; <input name="res5" type="text" size="5" maxlength="5" onKeyUp="return CheckNum(document.form.res5)" value="{RES5}">
+        &nbsp; 
+      </td>
+    </tr>
+  </table>
+<table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr> 
+		  <td align="center" height="22" colspan="3"><br>
+            <input type="submit" name="AltSubmit"   value="S u b m i t">          
+            &nbsp; 
+            <input name="b" type="reset" id="b2" value="R e s e t">
+            <br>
+            &nbsp; </td>
+		</tr>
+</table>
+</form>

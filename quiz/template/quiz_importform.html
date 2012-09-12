@@ -1,0 +1,24 @@
+<form name="importform" method="post" ENCTYPE="multipart/form-data">
+<input type="hidden" name="dosql" value="do_import">
+<input type="hidden" name="modules" value="{Q_ID}">
+<table width="98%"  border="0" align="center">
+  <tr>
+    <td><b>{VIEW}</b></td>
+  </tr>
+  <tr>
+    <td>
+		<table width="100%"  border="0" class="tdborder1">
+	  <tr>
+		<td width="25%" height="34"><b>{SELIMPORT} : </b> &nbsp;</td>
+	    <td width="75%"><input type="file" name="file" maxlength="50" size="39" class="text">&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td height="34" colspan="2"><input type="submit" name="submit" value="{IMPORT}" class="button">&nbsp;&nbsp;</td>
+	    </tr>
+	</table>   </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>

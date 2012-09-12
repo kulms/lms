@@ -1,0 +1,65 @@
+<table width="90%" align="center">
+  <tr>
+    <td height="20" align="right" class="main"><b>{TOTAL}</b></td>
+  </tr>
+</table>
+<table width="90%" align="center">
+  <tr class="main">
+    <td height="20" align="center"><b>{TEXT2} {Q_NAME}</b></td>
+  </tr> 
+    <tr>
+    <td align="center" class="main"><b>{TEXT3}</b></td>
+  </tr> 
+   <!-- BEGIN errorlist -->
+  <tr>
+    <td align="center">
+	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td colspan="4">&nbsp;</td>
+  </tr>
+  <tr class="main">
+    <td width="3%">{errorlist.NUM}</td>
+    <td colspan="3">{errorlist.Q_NAME}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3" align="center">{errorlist.Q_PIC}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3" class="main"><b>คำตอบที่ถูกต้อง</b></td>
+  </tr>
+   <!-- BEGIN ans -->
+  <tr class="main">
+    <td height="35" colspan="2">&nbsp;</td>
+    <td width="40%"><li>{errorlist.ans.Q_ANS}{errorlist.ans.Q_ANS_P}</td>
+    <td width="41%">{errorlist.ans.Q_ANS_MCIT}{errorlist.ans.Q_ANS_P_MCIT}</td>
+  </tr>
+   <!-- END ans -->
+{errorlist.SOL}
+  <tr>
+    <td colspan="4">{LINE}</td>
+  </tr>
+</table>
+	</td>
+  </tr>
+   <!-- END errorlist -->
+</table>
+<table width="90%"  align="center">
+  <tr>
+    <td height="23" class="main">{BACK}</td>
+    <td width="353" class="main" align="right"> {PAGE} </strong> 
+              <!-- BEGIN pagerows -->
+              <b> {pagerows.PAGE}</b> 
+              <!-- END pagerows --> 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+</table>
+
+

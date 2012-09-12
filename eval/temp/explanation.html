@@ -1,0 +1,152 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+<script language="JavaScript">
+function checkRadios(){
+		var el = document.forms[0].elements;
+ for(var i = 0 ; i < el.length ; ++i) {
+
+  if(el[i].type == "radio") {
+
+   var radiogroup = el[el[i].name]; // get the whole set of radio buttons.
+
+   var itemchecked = false;
+
+   for(var j = 0 ; j < radiogroup.length ; ++j) {
+    if(radiogroup[j].checked) {
+	 itemchecked = true;
+	 break;
+	}
+   }
+  if(!itemchecked) { 
+    alert("กรุณาทำแบบประเมินให้ครบทุกข้อ");
+    if(el[i].focus)
+     el[i].focus();
+	return false;
+   }
+  }
+ }
+ return true;
+	}
+
+
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+</script>
+
+
+</head>
+<body>
+{HEADER}
+	<table width="90%" height="33" border="0"  cellpadding="1" cellspacing="1" class="tdborder1" align="center">
+  <tr class="boxcolor">
+    <td align="center" class="Bcolor" height="25">Explanation Of Perceptual Learning Style Preference</td>
+    </tr>
+
+  <tr  bgcolor="#FFFFFF">
+    <td align="left">
+	<table width="100%"  border="0" align="center" cellspacing="0"  cellpadding="0"class="tdbackground">
+      <tr >
+        <td width="24%"  height="20"align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px; border-left: solid  1px; border-right: solid  1px;" ><span class="bblack">{EVAL_Perceptual_title}</span></td>
+        <td width="76%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;border-right: solid  1px;"><span class="bblack">{DESC}</span></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td colspan="2" >
+   
+          <table width="100%" border="0" cellspacing="0"  cellpadding="3"class="tdbackground">
+            <tr bgcolor="#FFFFFF" >
+              <td width="24%" height="24" align="center" class="bblack">Visual</td>
+              <td width="76%" class="bblack">{EVAL_Visual_NAME}</td>
+            </tr>
+            <tr bgcolor="#FFFFFF" >
+              <td height="64" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="30" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr class="tdbackground3">
+                  <td width="78%">{EVAL_Visual_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="24" align="center" class="bblack">Tactile</td>
+              <td><span class="bblack">{EVAL_Tactile_NAME}</span></td>
+            </tr>
+            <tr>
+              <td height="24" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="30" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr  bgcolor="#FFFFFF">
+                  <td width="78%">{EVAL_Tactile_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr bgcolor="#FFFFFF" >
+              <td height="24" align="center" class="bblack">Auditory</td>
+              <td><span class="bblack">{EVAL_Auditory_NAME}</span></td>
+            </tr>
+            <tr bgcolor="#FFFFFF" >
+              <td height="24" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="38" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr class="tdbackground3">
+                  <td width="78%">{EVAL_Auditory_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr >
+              <td height="24" align="center" class="bblack">Group</td>
+              <td><span class="bblack">{EVAL_Group_NAME}</span></td>
+            </tr>
+            <tr >
+              <td height="24" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="38" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr  bgcolor="#FFFFFF">
+                  <td width="78%">{EVAL_Group_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr bgcolor="#FFFFFF" >
+              <td height="24" align="center" class="bblack">Kinesthetic</td>
+              <td><span class="bblack">{EVAL_Kinesthetic_NAME}</span></td>
+            </tr>
+            <tr bgcolor="#FFFFFF" >
+              <td height="24" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="38" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr class="tdbackground3">
+                  <td width="78%">{EVAL_Kinesthetic_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="24" align="center" class="bblack">Individual</td>
+              <td><span class="bblack">{EVAL_Individual_NAME}</span></td>
+            </tr>
+            <tr>
+              <td height="24" align="center" class="bblack">&nbsp;</td>
+              <td><table width="85%" height="38" border="0"  cellpadding="3" cellspacing="1"class="tdborder1">
+                <tr  bgcolor="#FFFFFF">
+                  <td width="78%">{EVAL_Individual_DES}</td>
+                </tr>
+              </table></td>
+            </tr>
+          </table>
+ 
+        </td>
+      </tr>
+      <tr bgcolor="#FFFFFF" >
+        <td  colspan="2" align="center">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+
+</table>
+<br>
+
+
+</body>
+
+</html>

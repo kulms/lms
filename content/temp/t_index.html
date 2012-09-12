@@ -1,0 +1,182 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+<script language="JavaScript" src="js/JSCookMenu.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/ThemeOffice/theme.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/popup.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+<!--
+	_editor_url = "editor/htmlarea3_xtd/";
+	_editor_lang = "en";
+//-->
+</script>
+<script type="text/javascript" src="editor/htmlarea3_xtd/htmlarea_xtd.js"></script>
+<script type="text/javascript" src="editor/htmlarea3_xtd/dialog.js"></script>
+<script type="text/javascript" src="editor/htmlarea3_xtd/lang/en.js"></script>
+<script language='javascript'> 
+function popup2(url, name, width, height)
+{
+	mywinpos = findscreencenter(width,height);
+	settings=
+	"toolbar=no,location=no,directories=no,"+
+	"status=no,menubar=no,scrollbars=no,"+
+	"resizable=no,width="+width+",height="+height+",top="+mywinpos[0]+",left="+mywinpos[1];
+	orgname="mymain";
+
+	MyNewWindow=launch(url,name,settings,orgname);
+}
+function changeColor(el,newColor)
+{
+		el.style.color = newColor;
+}
+ function downloadme(url){
+		  window.open(url,"new_win","top=20,left=100,width=800,height=650,resizable,scrollbars=yes,status=no");
+}
+function toggleMenu(currMenu){
+	if (document.getElementById) { // DOM3 = IE5, NS6
+		thisMenu = document.getElementById(currMenu).style
+		if (thisMenu.display == "none"){
+			thisMenu.display = 'block';
+		} else {
+			thisMenu.display = 'none';			
+		}	
+} else { 
+							thisMenu.display = 'none';
+						
+		}
+}
+
+function iconfirmdel(in_url){
+				if( confirm("คุณต้องการลบใช่หรือไม่ ?") )
+					{   
+					//self.close();
+					//opener.window.location.reload(); 
+					//window.close();
+						document.location =in_url; 
+					 }
+}
+function checkfm(num,name,time)
+{
+	var result = true; 
+			if (document.createFrm.less_no.value=="") {
+								alert('กรุณาระบุ "' + num+'"');
+								document.createFrm.less_no.focus();
+								result = false;
+					}else if(document.createFrm.less_name.value==""){
+							alert('กรุณาระบุ "' + name+'"');
+							document.createFrm.less_name.focus();
+								result = false;
+					}else if(document.createFrm.less_times.value==""){
+							alert('กรุณาระบุ "' + time+'"');
+							document.createFrm.less_times.focus();
+								result = false;
+					}
+	return result;
+}
+</script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+
+</head>
+<body>
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td align="center">&nbsp;	</td>
+  </tr>
+  <tr>
+    <td align="left"><table width="80%" border="0" align="center" cellpadding="1" cellspacing="1"  class="tdborder1">
+      <form name="createFrm" method="post" action="t_index.php?less_id={LESSID}">
+        <tr  class="boxcolor">
+          <td height="27" colspan="2" align="center" class="Bcolor"><strong>{CID} : {CNAME} </strong></td>
+        </tr>
+        <tr align="center" class="tdbackground2">
+          <td colspan="2" class="bblack">{MOD_NAME}</td>
+        </tr>
+        <tr align="center]"  class="tdbackground_white">
+          <td width="280" align="right">{Content_LessNum} :</td>
+          <td align="left">&nbsp;
+              <input name="less_no" type="text" id="less_no" size="3" maxlength="2" value="{LESSNO}"></td>
+        </tr>
+        <tr align="center"  class="tdbackground_white">
+          <td align="right">{Content_LessName} : </td>
+          <td align="left"> &nbsp;
+              <input name="less_name" type="text" id="less_name" size="50" maxlength="50" value="{LESSNAME}"></td>
+        </tr>
+        <tr align="center"  valign="baseline"  class="tdbackground_white">
+          <td align="right" valign="top">{Content_Abstract} : </td>
+          <td align="left"> &nbsp;
+              <textarea name="less_abstract" cols="40" rows="4" id="less_abstract">{ABTRACT}</textarea></td>
+        </tr>
+        <tr align="center"  class="tdbackground_white">
+          <td align="right">{Content_Times} : </td>
+          <td align="left">&nbsp;
+              <input name="less_times" type="text" id="less_times" value="{LESSTIMES}" size="3" maxlength="2"> {Content_TimeUnit}</td>
+        </tr>
+        <tr valign="middle"  class="tdbackground3">
+          <td height="30" colspan="2" align="center">
+		<input type="submit" class="button" {BUTTON} onClick="return checkfm('{Content_LessNum}','{Content_LessName}','{Content_Times}')">
+            <input type="button" value="{CANCLE}" class="button" name="cancel" onClick="javascript: window.location='t_index.php';"></td>
+          </tr>
+      </form>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"><table width="95%" height="74"  align="center" cellpadding="3" cellspacing="1"  class="tdborder1">
+      <tr align="left"  class="boxcolor">
+        <td height="24" colspan="3" class="Bcolor">{Content_Content}</td>
+        </tr>
+   {NODATA}
+      <!-- BEGIN LESS -->
+      <tr class="tdbackground3">
+        <td width="14%" valign="top"><b>{Content_LessNum} : {LESS.LessOrder}<b>
+          <input type="hidden" name="less_id{LESS.LessID}" value="{LESS.LessID}"></td>   
+        <td width="75%" align="left"><a href="#{LESS.LessID}"  onClick="return toggleMenu('{LESS.LessID}')" >{LESS.LessTitle} &nbsp;[{LESS.LessTimes} {Content_TimeUnit}] </a>		  <span class="Tmenu" id="{LESS.LessID}" style="display:none">
+       
+	        <table width=30% cellspacing="1"  class="tdborder1">
+		 <tr>
+			<td width="10%"  class="boxcolor" align="left"><img src="images/content.png" border="0"></td>
+			<td bgcolor class="tdbackground2" align="left"><a href="{LESS.EDITNAMELINK}">
+			 <span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessNmEdit}</span></a></td>
+			</tr>
+            <tr>
+			<td width="10%"  class="boxcolor" align="left"><img src="images/mainmenu.png" border="0"></td>
+			<td bgcolor class="tdbackground2" align="left"><a href="{LESS.EDITLINK}">
+			<span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessEdit}</span></a></td>
+			</tr>
+            <tr>
+			<td width="10%"  class="boxcolor" align="left"><img src="images/preview.png" border="0"></td>
+			<td bgcolor  class="tdbackground2" align="left"><a href="javascript:downloadme('{LESS.SHOWLINK}');"> 
+			<span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessShow}</span></a></td>
+			</tr>
+            </table>
+			
+			</span></a>
+		
+		 {NODATA} {LESS.LLL} <a name="{LESS.LessID}"></a></td>
+        <td width="11%" align="center">{LESS.EDIT} {LESS.DELETE}</td>
+      </tr>
+      <tr class="tdbackground_white">
+        <td height="22">&nbsp;</td>
+        <td align="left">{LESS.LessAbstract}</td>
+        <td align="left">&nbsp;</td>
+      </tr>
+      <!-- END LESS -->
+    </table></td>
+  </tr>
+</table>
+
+</body>
+</html>

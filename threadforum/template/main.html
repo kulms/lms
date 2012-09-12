@@ -1,0 +1,77 @@
+<!--<link href="../stales.css" rel="stylesheet" type="text/css">!-->
+  <!-- BEGIN Error -->
+<!--<table width="90%"  border="0" align="center" class="tdbackground">
+  <tr>
+    <td class="main" align="center"><b>{Error.ERROR}</b></td>
+  </tr>
+</table>-->
+  <!-- END Error -->
+  <style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+  </style>
+  
+<br>
+<table width="95%"  border="0" align="center" class="tdborder2">
+  <tr class="boxcolor">
+    <td width="56%" class="Bcolor">&nbsp;&nbsp;Topic</td>
+    <td width="17%" class="Bcolor" >Topic Starter</td>
+    <td width="6%" class="Bcolor" align="center">Replies</td>
+    <td width="6%" class="Bcolor" align="center">View</td>
+    <td width="15%" class="Bcolor" align="center">Last Post </td>
+  </tr>
+  <tr>
+    <td colspan="5"><table width="100%" align="center" cellspacing="0" >
+      <!-- BEGIN topiclist -->
+      <tr class="{topiclist.BG_C}">
+        <td width="56%" class="main"> {topiclist.ICON}&nbsp;&nbsp;{topiclist.SUBJECT}&nbsp;&nbsp;{topiclist.CAM}&nbsp;&nbsp;{topiclist.NEW} </td>
+        <td width="17%" class="main" ><font class="postat">{topiclist.LOGIN}<font class="posttime">{topiclist.TIME}</font></font></td>
+        <td width="6%" class="main"  align="center"><font class="posttime">{topiclist.REPLY}</font></td>
+        <td width="6%" class="main" align="center" ><font class="posttime">{topiclist.READ}</font></td>
+        <td width="15%" class="main" >{topiclist.LASTPOST}</td>
+      </tr>
+      <!-- BEGIN detail -->
+      <tr class="{topiclist.BG_C}">
+        <td colspan="5" class="main">
+          <table width="85%"  border="0" align="center">
+            <tr>
+              <td class="main">{topiclist.detail.DETAIL}</td>
+            </tr>
+        </table></td>
+      </tr>
+      <!-- END detail -->
+      <!-- END topiclist -->
+    </table>
+	
+	  <!-- BEGIN Error -->
+<table width="100%"  border="0" align="center" class="tdbackground">
+  <tr>
+    <td class="main" align="center"><b>{Error.ERROR}</b></td>
+  </tr>
+</table>
+  <!-- END Error -->
+  
+	</td>
+  </tr>
+</table>
+
+  <br>
+
+<!-- Page -->
+<table width="90%"  border="0" align="center">
+  <tr>
+    <td  class="main">
+	<!-- BEGIN page -->
+		{page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+	<!-- END page -->
+	</td>
+  </tr>
+  <tr>
+    <td class="main">{PAGE}
+	<!-- BEGIN pagerows -->
+		<b><font class="page">{pagerows.PAGE} </font></b>
+	<!-- END pagerows -->
+	</td>
+  </tr>
+</table>

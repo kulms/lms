@@ -1,0 +1,98 @@
+/* dotPROJECT REQUIRED CLASSES */
+BODY {	
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	font-family : "MS Sans Serif","Geneva","Helvetica", "Arial", "sans-serif";
+	font-size: 10pt;
+}
+
+a:link {color: #003399;text-decoration: none}     /* unvisited link */
+a:visited {color: #003399;text-decoration: none}  /* visited link */
+a:hover {color: cc0033;text-decoration: none}   /* mouse over link */
+a:active {color: #FF0000;text-decoration: none}   /* selected link */
+
+a.mainmenu:link {color: #CCCCCC;text-decoration: none}     /* unvisited link */
+a.mainmenu:visited {color: #CCCCCC;text-decoration: none}  /* visited link */
+a.mainmenu:hover {color: #FF6633;text-decoration: none;font-weight: bold}   /* mouse over link */
+a.mainmenu:active {color: #FF0000;text-decoration: none;font-weight: bold}   /* selected link */
+
+.border_color {
+	border-top-color: #cc0033;
+	border-right-color: #CC0033;
+	border-bottom-color: #CC0033;
+	border-left-color: #CC0033;
+}
+
+/* Bgcolor */
+.bg {
+	 background-color: #cc0033;
+}
+.bg_color1{
+	 background-color: #FFE1E1;
+}
+
+.bg_color2{
+	 background-color: #FFF2F2;
+}
+
+.bg_color3{
+	 background-color: #FFB0B0;
+}
+.bgCopyT{
+	background-color:#D3D3D3;
+}
+.bgTr{
+	background-color:#C0C0C0;
+}
+TD.nav {
+	border: 1px solid #848284;
+	background-color: #d5d3ce;
+	color: #000000;
+	font-size : 8pt;
+    font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+}
+/*====Color====*/
+.colcor1{
+	color: #cc0033;
+}
+
+/*====Text====*/
+.Tmain{
+	font-size : 9pt;
+	font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial";
+	color: #FFFF00;
+}
+.Twhite {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt; COLOR: #ffffff; 
+	FONT-FAMILY: "MS Sans Serif", Verdana, Geneva, Arial, Helvetica
+}
+.Tmenu  {
+	font-size : 8pt;
+    font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+}
+
+.Terror{
+	font-size : 10pt;
+    font-family : "MS Sans Serif", "Geneva", "Helvetica", "Arial", "sans-serif";
+	color: #FF0000;
+}
+.button{
+	border: 1px black solid;
+	font-family: verdana,Sans-Serif;
+	font-size: 8pt;
+}
+textarea.small {
+	border: 1px black solid;
+	font-family : "MS Sans Serif","Geneva","Helvetica", "Arial", "sans-serif";
+	font-size: 8pt;
+}
+.text{
+	border: 1px black solid;
+	font-family : "MS Sans Serif","Geneva","Helvetica", "Arial", "sans-serif";
+	font-size: 8pt;
+	height: 12pt;
+}
+

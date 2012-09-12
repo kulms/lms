@@ -1,0 +1,283 @@
+<html>
+
+<head>
+
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+</head>
+<body>
+
+<table width="98%"  border="0">
+
+  <tr>
+
+    <td>{HEADER}</td>
+
+  </tr>
+
+</table><br>
+
+<table width="98%"  border="0" align="center">
+  <tr align="center">
+    <td class="bblack">{RES_Person}</td>
+  </tr>
+</table><br>
+
+
+<table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" class="tdborder1">
+
+ <tr valign="middle"  class="boxcolor">
+
+    <td colspan="7" style="border-bottom: solid #FFFFFF 1px; "><span class="Bcolor">{QuesStandard}</span><br>
+
+	<div align="right"><span class="Bcolor">{unitPerStd}</span></div>	</td>
+
+  </tr>
+
+  <tr  height="20" class="boxcolor">
+
+    <td width="8%" align="center" ><span class="Bcolor">{QuesNo}</span></td>
+
+    <td width="52%" align="center"><span class="Bcolor">{Eval_Question}</span></td>
+
+    <td width="40%" align="center" ><span class="Bcolor">{Eval_Score}</span></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="3">
+
+	<!-- BEGIN block -->
+
+	<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="1">
+
+      <tr>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px;  border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">&nbsp;</td>
+
+        <td width="52%" style="border-bottom: solid #FFFFFF 1px;  border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">&nbsp;</td>
+
+		<!-- BEGIN block_alt -->
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" align="center" bgcolor class="tdbackground2">{block.block_alt.ALT}</td>
+
+        <!--<td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px;">&nbsp;</td> -->
+
+		<!-- END  block_alt -->
+
+      </tr>
+
+	  
+
+	  <!-- BEGIN list -->
+
+      <tr  class="tdbackground_white">
+
+        <td height="20" align="center">{block.list.NO}</td>
+
+        <td >{block.list.QUES}</td>
+
+        <td align="center">{block.list.RES1}</td>
+
+        <td align="center">{block.list.RES2}</td>
+
+        <td align="center">{block.list.RES3}</td>
+
+        <td align="center">{block.list.RES4}</td>
+
+        <td align="center">{block.list.RES5}</td>
+
+      </tr>
+
+	  <!-- END list -->
+
+	  <!-- BEGIN score -->
+
+      <tr>
+
+        <td colspan="2" align="right" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2"><b>{TOTAL}</b>&nbsp;</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">{block.score.SumRES1}</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">{block.score.SumRES2}</td>
+
+        <td align="center" style=" border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">{block.score.SumRES3}</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" bgcolor class="tdbackground2">{block.score.SumRES4}</td>
+
+        <td align="center" style="border-top: solid #FFFFFF 1px;"  bgcolor class="tdbackground2">{block.score.SumRES5}</td>
+
+      </tr>
+
+	  <!-- END score -->
+
+    </table>	
+
+	<!-- END block -->
+
+	
+
+	<!-- BEGIN nodata -->
+
+	<table width="100%"  border="0" style="border-top: solid #FFFFFF 1px;">
+
+	  <tr>
+
+		<td align="center" bgcolor class="tdbackground2"><b>{nodata.NoData_std}</b></td>
+
+	  </tr>
+
+	</table>
+
+	<!-- END nodata -->
+
+	</td>
+
+  </tr>
+
+</table><br>
+
+
+
+
+
+<table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" class="tdborder1">
+
+ <tr valign="middle" class="boxcolor">
+
+    <td colspan="7" style="border-bottom: solid #FFFFFF 1px; "><span class="Bcolor">{Eval_TeaQues}</span><a name="QT"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="Bcolor">[{GROUP_NAME}]</span><br>
+
+      <div align="left"><span class="Bcolor">{G_NAME}</span></div> 
+
+	<div align="right"><span class="Bcolor">{unitPerStd}</span></div>	</td>
+
+  </tr>
+
+  <tr class="boxcolor" height="20">
+
+    <td width="8%" align="center" ><span class="Bcolor">{QuesNo}</span></td>
+
+    <td width="52%" align="center"><span class="Bcolor">{Eval_Question}</span></td>
+
+    <td width="40%" align="center" ><span class="Bcolor">{Eval_Score}</span></td>
+
+  </tr>
+
+  <tr>
+
+    <td colspan="3">
+
+	<!-- BEGIN blockU -->
+
+	<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="1" >
+
+      <tr  bgcolor class="tdbackground2">
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="52%" style="border-bottom: solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;">&nbsp;</td>
+
+		<!-- BEGIN block_alt -->
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" align="center">{blockU.block_alt.ALT}</td>
+
+        <!--<td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px; border-right:solid #FFFFFF 1px;">&nbsp;</td>
+
+        <td width="8%" style="border-bottom: solid #FFFFFF 1px;">&nbsp;</td> -->
+
+		<!-- END  block_alt -->
+
+      </tr>
+
+	  
+
+	  <!-- BEGIN list -->
+
+      <tr  class="tdbackground_white">
+
+        <td height="20" align="center">{blockU.list.NO}</td>
+
+        <td >{blockU.list.QUES}</td>
+
+        <td align="center">{blockU.list.RES1}</td>
+
+        <td align="center">{blockU.list.RES2}</td>
+
+        <td align="center">{blockU.list.RES3}</td>
+
+        <td align="center">{blockU.list.RES4}</td>
+
+        <td align="center">{blockU.list.RES5}</td>
+
+      </tr>
+
+	  <!-- END list -->
+
+	  <!-- BEGIN score -->
+
+      <tr class="tdbackground2">
+
+        <td colspan="2" align="right" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" ><b>{TOTAL}</b>&nbsp;</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" >{blockU.score.SumRES1}</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" >{blockU.score.SumRES2}</td>
+
+        <td align="center" style=" border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" >{blockU.score.SumRES3}</td>
+
+        <td align="center" style="border-right:solid #FFFFFF 1px; border-top: solid #FFFFFF 1px;" >{blockU.score.SumRES4}</td>
+
+        <td align="center" style="border-top: solid #FFFFFF 1px;" >{blockU.score.SumRES5}</td>
+
+      </tr>
+
+	  <!-- END score -->
+
+    </table>	
+
+	<!-- END blockU -->
+
+	
+
+	<!-- BEGIN nodata_ -->
+
+	<table width="100%"  border="0" style="border-top: solid #FFFFFF 1px;">
+
+	  <tr>
+
+		<td align="center" class="tdbackground2"><b>{nodata_.NoData_}</b></td>
+
+	  </tr>
+
+	</table>
+
+	<!-- END nodata_ -->
+
+	
+
+	</td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+
+
+

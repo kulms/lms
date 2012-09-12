@@ -1,0 +1,17 @@
+title{
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 13pt; COLOR: navy; 
+	FONT-FAMILY: "MS Sans Serif, Microsoft Sans Serif, Angsana New, Tahoma; 
+	TEXT-DECORATION: underline
+}
+test{	
+	BACKGROUND : #F3F3F3;
+	COLOR: #000000;
+	FONT-SIZE: 10pt;
+	border-bottom: 1px solid #000000;
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	border-top: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+
+}

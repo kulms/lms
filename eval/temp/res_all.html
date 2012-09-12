@@ -1,0 +1,83 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+</head>
+<body>
+{HEADER}
+{DETAIL}
+<table width="90%"  border="0" cellspacing="0"class="tdborder1" align="center">
+
+<tr>
+    <td width="100%">
+	<form method="post" action="s_index2.php" >  
+	  <table width="100%"  border="0" align="center" cellspacing="0" class="tdbackground">
+        <tr align="left"  class="boxcolor">
+          <td colspan="4"  class="Bcolor" height="20">ภาพรวมผลการสำรวจรูปแบบการเรียนรู้ของนิสิต</td>
+        </tr>
+        <tr  class="tdbackground2">
+          <td width="9%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;">{NUM}</td>
+          <td width="47%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">{EVAL_Perceptual_title}</td>
+          <td width="22%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">Major<br>{EVAL_Amount} ({EVAL_Persons})</td>
+          <td width="22%" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' ">Minor<br>{EVAL_Amount} ({EVAL_Persons})</td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td colspan="4" >
+   
+            <table width="100%" border="0" cellspacing="1"  cellpadding="1"class="tdbackground">
+              <tr bgcolor="#FFFFFF" >
+                <td width="8%" height="24" align="center">1</td>
+                <td width="48%">Visual</td>
+                <td width="22%" align="center">{maj_sum_vis}</td>
+                <td width="22%" align="center">{minor_sum_vis}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF" >
+                <td height="24" align="center">2</td>
+                <td>Tactile</td>
+                <td align="center">{maj_sum_tac}</td>
+                <td align="center">{minor_sum_tac}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF" >
+                <td height="24" align="center">3</td>
+                <td>Auditory</td>
+                <td align="center">{maj_sum_aud}</td>
+                <td align="center">{minor_sum_aud}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF" >
+                <td height="24" align="center">4</td>
+                <td>Group</td>
+                <td align="center">{maj_sum_grp}</td>
+                <td align="center">{minor_sum_grp}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF" >
+                <td height="24" align="center">5</td>
+                <td>Kinesthetic</td>
+                <td align="center">{maj_sum_kin}</td>
+                <td align="center">{minor_sum_kin}</td>
+              </tr>
+              <tr bgcolor="#FFFFFF" >
+                <td height="24" align="center">6</td>
+                <td>Individual</td>
+                <td align="center">{maj_sum_ind}</td>
+                <td align="center">{minor_sum_ind}</td>
+              </tr>
+            </table>
+ 
+          </td>
+        </tr>
+        <tr align="right">
+          <td  colspan="4" class="gray">{FROM_WHO}</td>
+        </tr>
+      </table>
+	</form>
+
+	</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

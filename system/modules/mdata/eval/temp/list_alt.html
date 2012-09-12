@@ -1,0 +1,52 @@
+<SCRIPT LANGUAGE="javascript">
+
+  function Edit(altid){
+  	win = window.open("?m=mdata&m1=eval&a=addalt&alt_id="+altid, "_self")
+  }
+  function Delete(altid){
+  	if (confirm("คุณต้องการลบ ข้อมูลนี้หรือไม่?")) 
+		{
+			 win = window.open("?m=mdata&m1=eval&a=delete_alt&alt_id="+altid, "_self");
+		}
+  		return false;
+ 	
+  }
+  
+</SCRIPT>
+<form action="?m=mdata&m1=eval&a=addalt" name="form" method="post">
+<table width="95%"  border="0" align="center">
+  <tr>
+    <td><a href="?m=mdata&m1=eval&a=index"><b>List Question</b></a> <b>> Alternatives Management</b></td>
+  </tr>
+</table>
+
+<table width="95%"  border="0" align="center" cellspacing="0" class="tdborder1">
+<tr bgcolor="#FFFFFF">
+<td colspan="5" align="right"><input type="submit" name="add" value="Add New" class="button"></td>
+</tr>
+  <tr>
+    <td width="5%" rowspan="2" align="center" style=" border-right:solid  1px;  border-bottom:solid  1px; border-top:solid  1px;'" class="bordercolor"><b>No</b></td>
+    <td width="60%" colspan="2" align="center" style=" border-right:solid  1px;  border-bottom:solid  1px; border-top:solid  1px;''" class="bordercolor"><b>ระดับการประเมิน</b></td>
+    <td width="33%" colspan="2" align="center" style=" border-bottom:solid  1px; border-top:solid  1px;''" class="bordercolor"><b>Action</b></td>
+  </tr>
+  <tr>
+    <td align="center" width="30%" style=" border-right:solid  1px;  border-bottom:solid  1px;'" class="bordercolor"><b>ชื่อ</b></td>
+    <td align="center"   width="30%" style=" border-right:solid  1px;  border-bottom:solid  1px;'" class="bordercolor"><b>คะแนน</b></td>
+    <td width="11%" align="center" style=" border-right:solid  1px;  border-bottom:solid  1px;'" class="bordercolor"><b>Edit</b></td>
+    <td width="11%" align="center" style=" border-bottom:solid  1px;'" class="bordercolor"><b>Delete</b></td>
+  </tr>
+  <!-- BEGIN block -->
+  <tr bgcolor="#FFFFFF">
+    <td height="25" align="center" class="bordercolor1" style=" border-right:solid  1px;  border-bottom:solid  1px; '"><b>{block.NO}</b></td>
+    <td style=" border-right:solid  1px;  border-bottom:solid  1px; '" class="bordercolor1">{block.ALT}</td>
+    <td style=" border-right:solid  1px;  border-bottom:solid  1px; '" class="bordercolor1">{block.RES}</td>
+    <td style=" border-right:solid  1px;  border-bottom:solid  1px; '" class="bordercolor1" align="center"><a href="#" onClick="Edit('{block.ALT_ID}')"><img src="../images/edit1.gif" border="0"></a></td>
+    <td style=" border-right:solid  1px;  border-bottom:solid  1px; '" class="bordercolor1" align="center"><a href="#" onClick=" javascript:return Delete('{block.ALT_ID}')"><img src="../images/_delete.gif" border="0"></a></td>
+  </tr>
+  <!-- END block -->
+  <tr>
+    <td colspan="5">&nbsp;</td>
+  </tr>
+</table>
+
+</form>

@@ -1,0 +1,17 @@
+BODY, TABLE, TEXT, SELECT, INPUT		{font-family: "Tahoma, MS Sans Serif"; font-size: 10pt;}
+
+A:link {font-weight: bold; text-decoration: none; color: blue;}
+A:visited {font-weight: bold; text-decoration: none; color: blue;}
+A:active {font-weight: bold; text-decoration: none; color: red;}
+A:hover {font-weight: bold; text-decoration: underline; color: black;}
+
+.button	{border: 2px outset;}
+
+.headTable {background: ButtonFace; width: 100%; color: ButtonText; table-layout: fixed; border: 1px solid ThreeDShadow; border-right: 1px solid ThreeDLightShadow; border-bottom: 1px solid ThreeDLightShadow;}
+.headTable TD {padding-left: 5px padding-right: 5px;}
+.headTable TD.headTitle {padding-left: 5px; padding-right: 5px; border: 1px solid ThreeDHighlight; border-right: 1px solid ThreeDShadow; border-bottom: 1px solid ThreeDShadow; cursor: default; text-align: center; font-weight: bold;}
+
+H1			{font-family: "Tahoma, MS Sans Serif"; font-size: 16pt;}
+.input_num	{text-align: right;}
+
+.error	{font-size: 12pt; color: red; text-align: center;}

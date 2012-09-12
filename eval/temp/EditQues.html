@@ -1,0 +1,257 @@
+<html>
+
+<head>
+
+<title>:: Update... ::</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link href="include/main.css" rel="stylesheet" type="text/css">
+
+<link href="../include/main.css" rel="stylesheet" type="text/css">
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+
+
+<script type="text/javascript" language="JavaScript" src="js/fieldLimiter.js"></script>
+
+
+
+<style type="text/css">
+
+<!--
+
+body {
+
+	margin-left: 0px;
+
+	margin-top: 0px;
+
+	margin-right: 0px;
+
+	margin-bottom: 0px;
+
+}
+
+-->
+
+</style></head>
+
+
+
+<body>
+
+
+
+   <!-- BEGIN startB1 -->
+
+<form name="form1" method="post" action="EditQues.php?upchoice=1">
+
+
+
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="5">
+
+    <tr>
+
+      <td height="25"><b>{EDIT_QC}</b></td>
+
+    </tr>
+
+    <tr>
+
+      <td><table width="90%" border="0" align="center" cellpadding="5" cellspacing="0" class="tdborder1">
+
+            <tr class="tdbackground3">
+
+              <td width="27%" align="right" valign="top"> <b>{Eval_Question} :</b></td>
+
+              <td width="73%" colspan="2"> &nbsp;
+
+                  <textarea name="newChoice" cols="50" rows="5" >{startB1.Question}</textarea>
+
+                <br>
+
+&nbsp;
+
+      <script>displaylimit("document.form1.newChoice",255)</script>
+
+           </td>
+
+            </tr>
+
+            <tr class="tdbackground3">
+
+              <td height="25" align="right" valign="top"><b>{ALTERNATIVE} :</b></td>
+
+              <td colspan="2"> &nbsp;
+
+                  <select name="newalt">
+
+							  {startB1.FIRSTALT}
+
+  							 {startB1.ALT}
+
+                  </select>
+
+&nbsp; &nbsp; </td>
+
+            </tr>
+
+            <tr class="tdbackground3">
+
+              <td height="25" align="right" valign="top"><strong>Active Now : </strong></td>
+
+              <td colspan="2"><input type="checkbox" name="active_c" value="1"  {startB1.CHECK}></td>
+
+            </tr>
+
+            <tr align="center">
+
+              <td height="25" colspan="3" valign="top" bgcolor="#FFFFFF">
+
+			  <input type="submit" name="Submit" value="S u b m i t" class="button">
+
+			  <input type="hidden" name="q_id" value="{startB1.NUM}">
+
+			   <input type="hidden" name="grp_id" value="{GID}">
+
+			  </td>
+
+          </tr>
+
+      
+
+        </table></td>
+
+    </tr>
+
+  </table>
+
+  
+
+</form>
+
+	    <!-- END startB1 -->
+
+
+
+     <!-- BEGIN startB2 -->
+
+  <form name="form2" method="post" action="EditQues.php?upFill=1">
+
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="5" >
+
+    <tr>
+
+      <td height="25"><b>{EDIT_QF}</b></td>
+
+    </tr>
+
+    <tr>
+
+      <td><table align="center" width="90%" border="0" cellspacing="0" cellpadding="5" class="tdborder1">
+
+            <tr valign="top" class="tdbackground3">
+
+              <td width="27%" align="right" ><br>
+
+                  <b>{Eval_Question}</b><b> :</b> </td>
+
+              <td width="73%" > &nbsp;
+
+                  <textarea name="newFillQ" cols="50" rows="5" >{startB2.Question}</textarea>
+
+                  <br>
+
+&nbsp;
+
+      <script>displaylimit("document.form2.newFillQ",255)</script>
+
+              </td>
+
+            </tr>
+
+            <tr valign="top" class="tdbackground3">
+
+              <td align="right"><strong>Active Now : </strong></td>
+
+              <td ><input type="checkbox" name="active_f" value="1" {startB2.CHECK}></td>
+
+            </tr>
+
+            <tr valign="top">
+
+              <td colspan="2" align="center" bgcolor="#FFFFFF"><input type="submit" name="Submit" value="S u b m i t" class="button">
+
+			    <input type="hidden" name="q_id" value="{startB2.NUM}">
+
+				 <input type="hidden" name="grp_id" value="{GID}">
+
+			  </td>
+
+            </tr>
+
+          </table></td>
+
+    </tr>
+
+  </table>
+
+  </form>
+
+      <!-- END startB2 -->
+
+	  
+
+ <!-- BEGIN startG1 -->
+
+	  <form  name="form3" method="post" action="EditQues.php?editgroup=1">
+
+	    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="5" >
+
+          <tr>
+
+            <td height="25"><b>{EDIT_GROUP}</b></td>
+
+          </tr>
+
+          <tr>
+
+            <td><table align="center" width="90%" border="0" cellspacing="0" cellpadding="5" class="tdborder1">
+
+                <tr valign="top" class="tdbackground3">
+
+                  <td width="27%" align="right" ><strong>{NEW_GROUPNAME}</strong> :</td>
+
+                  <td width="73%" >
+
+				  <input name="new_gname" type="text" size="60" value="{startG1.OLDNAME}">  </td>
+
+                </tr>
+
+                <tr valign="top">
+
+                  <td colspan="2" align="center" bgcolor="#FFFFFF">
+
+					  <input type="submit" name="Submit" value="S u b m i t" class="button">
+
+                      <input type="hidden" name="grp_id" value="{startG1.GID}">
+
+                  </td>
+
+                </tr>
+
+            </table></td>
+
+          </tr>
+
+        </table>
+
+	  </form>
+
+	      <!-- END startG1 -->
+
+</body>
+
+</html>

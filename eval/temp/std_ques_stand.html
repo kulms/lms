@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link href="include/main.css" rel="stylesheet" type="text/css">
+<link href="../include/main.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- BEGIN HaveStd -->
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="25"><p><font color="navy"><b><span class="bdarkblue"><img src="images/pen.gif" width="26" height="54" border="0"></span>{Eval_StdQues}</b></font> </p>
+   </td>
+  </tr>
+  <tr>
+    <td height="10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+
+	<table width="100%" border="0" align="center" cellpadding="3" cellspacing="0"  class="tdborder1">
+
+      <tr  class="boxcolor">
+        <td width="7%" align="center" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Num}</span></td>
+        <td width="28%" align="center" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Question}</span></td>
+        <td colspan="6" align="center"><span class="Bcolor">{Eval_Score}</span></td>
+        </tr>
+      <!-- BEGIN StdQ -->
+      <tr>
+        <td height="21" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.M}</td>
+        <td align="left" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_Question}</td>
+      <td width="12%" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_RADIO1}</td>
+        <td width="12%" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_RADIO2}</td>
+      <td width="12%" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_RADIO3}</td>
+      <td width="12%" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_RADIO4} </td>
+      <td width="14%" align="center" {HaveStd.StdQ.COLOR}>{HaveStd.StdQ.S_RADIO5}</td>
+      </tr> 
+	  <input type="hidden" name="m{HaveStd.StdQ.M}" value="{HaveStd.StdQ.S_GID}">
+      <!-- END StdQ -->
+
+    </table>
+</td>
+  </tr>
+</table>
+   <!-- END HaveStd -->
+</body>
+</html>

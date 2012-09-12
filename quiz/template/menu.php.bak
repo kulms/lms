@@ -1,0 +1,39 @@
+<? 
+require("../include/global_login.php");
+//require("classes/quiz.class.php");
+//$modules=$id;
+//$quiz=new Quiz('','','');
+//===================Query Datbase===================================//
+@list($info,$enddate,$name,$users)=$quiz->getQuizInfo($quiz);
+
+//=================================================================//
+$template= new Template(C_SKIN);	
+$template->set_filenames(array('body' => 'menu_ad.html'));
+			$template->set_filenames(array('meun' =>'menu.php'));
+			$template->assign_vars(array('TEXT' =>$strQuiz_LabText ,
+																	     'Q_ID'=>$modules,
+																		 'Q_ID'=>$modules,
+																		'VIEW'=>$strQuiz_LabResultsQuiz ,
+																		'EDIT'=>$strQuiz_LabEditPreferences,
+																		'ADD'=>$strQuiz_LabAddQuestions,
+																		'ADD1'=>$strQuiz_LabMultiple,
+																		'ADD2'=>$strQuiz_LabTrueFalse,
+																		'ADD3'=>$strQuiz_LabMatching,
+																		'ADD4'=>$strQuiz_LabFill,
+																		'SET'=>$strQuiz_LabSetActive,
+																		'VIEWQ'=>$strQuiz_LabViewq,
+																		'SEARCH'=>$strQuiz_LabSearch,
+																		'DEL'=>$strQuiz_LabDelete,
+																		'RESULT'=>$strQuiz_LabResults,
+																		'RESULT1'=>$strQuiz_LabResultsUser,
+																		'RESULT2'=>$strQuiz_LabResultsQuiz,
+																		'RESULTBY'=>$strQuiz_LabResultsBy,
+																		'TOTAL_RUN'=>$strQuiz_LabTotalRun,
+																		'TOTAL_USER'=>$strQuiz_LabResultsUserNum,
+																		'TOTAL_Q'=>$strQuiz_LabTotalQuiz,
+															));
+
+		$template->assign_var_from_handle('MENU', 'meun');
+$template->pparse('body');
+
+?>

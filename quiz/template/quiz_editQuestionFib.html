@@ -1,0 +1,235 @@
+<SCRIPT LANGUAGE="JavaScript" src="verify.js"></SCRIPT>
+
+<script language="JavaScript" type="text/JavaScript">
+
+function check(val){
+
+	input = val.value;
+
+			if (isNaN(input)) 
+
+			{
+
+				alert("กรุณากรอกเป็นตัวเลข");
+
+				val.value="";
+
+				val.focus()
+
+				return false;
+
+			}
+
+}
+
+</script>
+
+<!-- BEGIN copy -->
+
+
+
+<p class="main" align="center"><b>{Explanation}:</b></p>
+
+<table width="100%"  border="0" class="tdbackground_white">
+
+  <tr class="tdbackground">
+
+    <td class="menu" align="center"><b>{Text_courses}</b></td>
+
+    <td class="menu" align="center"><b>{Text_modules}</b></td>
+
+    <td class="menu" align="center"><b>{Text_create}</b></td>
+
+  </tr>
+
+  <tr class="tdbackground1">
+
+    <td align="center">{copy.C_NO}{copy.C_NAMET}{copy.C_NAMEE}</td>
+
+    <td align="center">{copy.M_NAME}</td>
+
+    <td align="center">{copy.CREATE}</td>
+
+  </tr>
+
+</table>
+
+<!-- END copy -->
+
+<div align="left"><font color="#FF0000"><b>{DONOT_COPY}{DONOT_COPY1}</b></font></div>
+
+
+
+<form name="form" method="post" action="?a={Action}&m=admin" ENCTYPE="multipart/form-data" onReset="return confirm('Are you sure that you wish to erase/reset ALL data in the form?')" onSubmit="return verifyTF(this,{QUIZ_TYPE}); ">
+
+<table width="100%"  border="0" class="main" align="center">
+
+  <tr>
+
+    <td><input type="submit" name="s1" value="{EDIT_B}" class="button" {IS_DISABLED} {IS_DISABLED1}>
+
+    <input type="reset" name="r1" value="{RESET_B}" class="button" {IS_DISABLED} {IS_DISABLED1}></td>
+
+  </tr>
+
+    <!-- BEGIN result -->
+
+  <tr>
+
+  	<td><b>{result.RESULT}</b></td>
+
+  </tr>
+
+  <!-- END result -->
+
+  
+
+  <tr>
+
+    <td >
+
+	<table width="100%" border="0" cellspacing="1" cellpadding="0" class="bg">
+
+  <tr>
+
+    <td>
+
+	<table width="100%"  border="0" class="tdborder1">
+
+  <tr class="main">
+
+    <td width="16%" valign="top" ><b>{QUES_TEXT} :</b></td>
+
+    <td width="69%"><textarea name="question" cols="75" rows="6" wrap="PHYSICAL" class="small" onSubmit="return verify(this,<? echo $quiztype?>); ">{QUES}</textarea></td>
+
+    <td width="15%" valign="top">&nbsp;</td>
+
+  </tr>
+
+  <tr class="main">
+
+    <td><b>{FILE_TEXT} :</b> </td>
+
+    <td><input type="file" name="picture" maxlength="50" size="39" class="text">&nbsp;{FileUpload}(
+
+	<script>
+
+		document.write(extArray.join("  "));
+
+	</script>)
+
+      {IMG}&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:DeleteQuestion('{Makecopy}','{QUIZ_ID}','','{Q_ID}','{QT}','1','1')">{DEL_P}</a>
+	  <input  type="hidden" name="old_pic_q"  value="{Old_pic_q}">
+	  </td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+    <tr class="main">
+
+    <td><b>{ANS_TEXT} :</b> </td>
+
+    <td colspan="2"><input type="text" maxlength="10" size="45" value="{ANSWER}" name="answer" class="text" onKeyUp="javascript: return check(document.form.answer);"> 
+
+    <span class="error">***'{NUM_ONRY}***</span></td>
+
+    </tr>
+
+  <tr class="main">
+
+        <td valign="buttom"><b>{CAT_TEXT} : </b></td>
+
+    <td>{CAT_TEXT1}
+
+	<table width="100%" class="main">
+
+              <tr>
+
+                <td valign="top">
+
+                  <select name="categories" style="font-size:10px">
+
+                    <option value="0" id="none">Categories</option>
+
+                    <!-- BEGIN cat_list -->
+
+					<option value="{cat_list.CAT_ID}" {cat_list.IS_SELECT}>{cat_list.CAT_NAME}</option>
+
+					<!-- END cat_list -->
+
+                </select></td>
+
+                <td align="left" width="80%"><div style="cursor:hand" onclick='window.open("?a=addCategory&m=admin", "_blank", "left=300, top=250, width=400,height=200,scrollbars=yes,status=yes,toolbar=no,menubar=no,location=no,resizable=yes")'><b>[{ADD_CAT}]</b></div></td></tr>
+
+            </table>
+
+			</td>
+
+    <td>&nbsp;</td>
+
+   </tr>
+
+  <tr class="main">
+
+    <td><b>{SCORE_T}</b> :</td>
+
+    <td><input type="text" class="text" value="{SCORE}" size="3" maxlength="3" onKeyUp="javascript: return check(document.form.score);" name="score" {Disabled}>
+
+      {SCORE_T1}</td>
+
+    <td>&nbsp;</td>
+
+  </tr>
+
+  <tr class="main">
+
+    <td><b>{SOL_T} : </b></td>
+
+    <td>{SOL_T1}<br><textarea wrap="physical" class="small" name="Solution" cols="75" rows="4">{SOL}</textarea></td>
+
+    <td>&nbsp;</td>
+
+ </tr>
+
+  <tr class="main">
+
+    <td><b>{COMMENT_T} : </b></td>
+
+    <td><textarea wrap="physical"  class="small" name="Comment" cols="75" rows="4">{COMMENT}</textarea></td>
+
+    <td>&nbsp;</td>
+
+ </tr>
+
+  <tr>
+
+    <td colspan="3">&nbsp;</td>
+
+    </tr>
+
+</table>	</td>
+
+    </tr>
+
+</table>	</td>
+
+  </tr>
+
+</table>
+
+<input type="hidden" name="modules" value="{Q_ID}">
+
+<input type="hidden" name="qnr" value="{QUIZ_ID}">
+
+<input type="hidden" name="makecopy" value="{Makecopy}">
+
+<input type="hidden" name="question_type" value="{QT}">
+
+<input type="hidden" name="maxscore" value="{CScore}">
+
+<input type="hidden" name="h_score" value="{Score}">
+
+<input type="hidden" name="num_rows" value="{NumRows}">
+
+</form>

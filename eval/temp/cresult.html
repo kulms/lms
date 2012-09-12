@@ -1,0 +1,107 @@
+<html>
+
+<head>
+
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+	function test(q,std,g){
+
+		links = "view_result.php?qid="+ q+"&std="+std+"&gid="+g;
+
+		window.open(links, "qWindow", "top =0,left=50,width=650,height=580,status=no,toolbar=no,menubar=no,scrollbars=yes");
+
+	}
+
+</SCRIPT>
+</head>
+<body>
+<table width="98%"  border="0">
+
+  <tr>
+
+    <td>{HEADER}</td>
+  </tr>
+</table><br>
+
+<table width="98%"  border="0" align="center">
+  <tr align="center">
+    <td class="bblack">{RES_Everage}</td>
+  </tr>
+</table><br>
+
+<table width="95%"  border="0" align="center" cellpadding="3" cellspacing="1" class="tdborder1">
+
+  <tr class="boxcolor">
+
+    <td colspan="4"  style="border-bottom: solid #FFFFFF 1px; "><span class="Bcolor">{QuesStandard}</span></td>
+
+  </tr>
+
+  <tr  bgcolor class="tdbackground2">
+
+    <td align="center" style="width:7%; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;"><b>{QuesNo}</b></td>
+
+    <td style="width:59% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{Eval_Question}</b></td>
+
+    <td style="width:9% ; border-right: solid #FFFFFF 1px;border-bottom: solid #FFFFFF 1px;" align="center"><b>{MaxScore}</b></td>
+
+    <td style="width:25% ;border-bottom: solid #FFFFFF 1px;" align="center"><b>{AverageScore}</b></td>
+
+  </tr>
+
+  <!-- BEGIN block -->
+
+  <tr height="25"  class="tdbackground_white">
+
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{block.NO}</td>
+
+    <td style="border-right: solid #FFFFFF 1px;">{block.QUES}</td>
+
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{block.SCORE}</td>
+
+    <td valign="top">{block.GRAPH}</td>
+
+  </tr>
+
+  <!-- END block -->
+
+  <!-- BEGIN Suggest -->
+
+  <tr height="25"  class="tdbackground_white">
+
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{Suggest.NO}</td>
+
+    <td style="border-right: solid #FFFFFF 1px;">{Suggest.QUESTION}</td>
+
+    <td align="center" style="border-right: solid #FFFFFF 1px;">{Suggest.SCORE}</td>
+
+    <td valign="top">{Suggest.Click}</td>
+
+  </tr>
+
+  <!-- END Suggest -->
+
+    <!-- BEGIN error -->
+
+  <tr height="25">
+
+    <td colspan="4" align="center" style="border-right: solid #FFFFFF 1px;"><b>{error.NoData_std}</b></td>
+
+  </tr>
+
+  <!-- END error -->
+
+</table>
+
+<br><br>
+
+{QUES_USER}
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+body {margin:0px; padding:0px;}
+#mB {font:bold 12px arial,Helvetica,sans-serif; text-align:left; margin-bottom:5px; position:relative; top:0px; left:0px; width:99%; overflow:hidden; z-index:1000;}
+a.mL {display:block; text-decoration:none}
+a.mL:visited {color:#052160;}
+a.mL:hover {color:#009933; background-color:#c8ff91;}
+a.mL:active {color:#ffffff; background-color:#009933;}
+a.mO {display:block; padding:1px 4px; border-top:1px solid #009933; text-decoration:none}
+.mD {color:#000000; font:10px arial, Helvetica, sans-serif; background-color:#e5fecc; visibility:hidden; margin:0; padding:0; position:absolute; z-index:1000; top:60px; left:0; width:125px;}

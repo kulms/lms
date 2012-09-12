@@ -1,0 +1,376 @@
+<?php  
+@include_once( $user->getModuleClass( $realpath, 'book') );
+@include_once( $user->getModuleClass( $realpath, 'research') );
+@include_once( $user->getModuleClass( $realpath, 'publication') );
+@include_once( $user->getModuleClass( $realpath, 'search') );
+
+$book = new Book('', $user->getUserId(), $user->getFirstName()." ".$user->getLastName(),'', '', '', '', 
+				 '', '', '', '', '', '',
+				 '', '', '', '', ''
+				 );
+$research = new Research('', $user->getUserId(), $user->getFirstName()." ".$user->getLastName(), '', '', '', '', '', 
+						'', '', '', '', '', '', 
+						'', '', '', '', '', 
+						'', '', '', '', ''
+						);						
+$obj = new Journal('', $user->getUserId(), $user->getFirstName()." ".$user->getLastName(),'', '', '', '',
+									'', '', '', '', '', '', ''
+					);						
+				 			
+$search = new Search();	
+?>
+<script language='javascript' src='<? echo "./modules/search";?>/popcalendar.js'></script>
+<script language="javascript"> 
+function displayCB() { 
+	switch (document.all.dropdown.selectedIndex) { 
+	case 1: 		  
+		  document.all.area.innerHTML = "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+										"<tr>"+
+										"<td width=\"50%\"><h1>Search Research</h1></td>"+
+										"<td width=\"50%\"></td>"+
+										"</tr>"+
+										"</table>"+
+										"<table cellspacing=\"0\" cellpadding=\"4\" border=\"0\" width=\"100%\" class=\"std\">"+
+										"<form name=\"SearchResearchFrm\" action=\"./index.php?m=search\" method=\"post\">"+
+										"<input type=\"hidden\" name=\"dosql\" value=\"do_search\" />"+
+										"<input type=\"hidden\" name=\"search_type\" value=\"research\" />"+
+										"<tr>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Research Name Thai</td>"+
+										"<td width=\"100%\"><input type=\"text\" name=\"research_name_th\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Research Name English</td>"+
+										"<td width=\"100%\"> <input type=\"text\" name=\"research_name_eng\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+									  	"</tr>"+
+									  	"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Research Owner</td>"+
+										"<td>"+ 
+										"<input type=\"text\" name=\"research_owner_name\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\"/>"+			  
+										"</td>"+                         
+										"</table>"+
+										"</td>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\" width=\"100%\">"+      
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Research ISBN</td>"+
+										"<td nowrap=\"nowrap\"><input type=\"text\" name=\"research_isbn\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Research Year</td>"+
+										"<td width=\"100%\" nowrap=\"nowrap\"><input type=\"text\" name=\"research_year\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"<tr>"+          
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Keyword</td>"+
+										"<td colspan=\"3\"> <input type=\"text\" name=\"research_keyword\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"</table>"+
+										"</td>"+										
+										"</tr>"+
+										"<tr>"+
+										"<td>"+
+										"<input class=\"button\" type=\"button\" name=\"cancel\" value=\"cancel\" onClick=\"javascript:if(confirm(\'Are you sure you want to cancel.\')){location.href = \'./index.php?m=research\';}\" />"+
+										"</td>"+
+										"<td align=\"right\">"+
+										"<input class=\"button\" type=\"submit\" name=\"btnFuseAction\" value=\"search\" />"+
+										"</td>"+
+										"</tr>"+
+										"</form>"+
+										"</table>";
+										
+		break; 
+	case 2: 
+		//document.all.area.innerHTML = "<input type=\"checkbox\" name=\"cb4\" value=\"doc\">doc<br><input type=\"checkbox\" name=\"cb5\" value=\"pdf\">pdf"; 
+		document.all.area.innerHTML = "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+									  "<tr>"+
+									  "<td width=\"50%\"><h1>Search Publication</h1></td>"+
+									  "</tr>"+
+									  "</table>"+
+									  "<table cellspacing=\"0\" cellpadding=\"4\" border=\"0\" width=\"100%\" class=\"std\">"+
+									  "<form name=\"editFrm\" action=\"./index.php?m=search\" method=\"post\">"+
+									  "<input type=\"hidden\" name=\"dosql\" value=\"do_search\" />"+
+									  "<input type=\"hidden\" name=\"search_type\" value=\"publication\" />"+																			  
+									  "<tr>"+
+									  "<td width=\"50%\" valign=\"top\">"+
+									  "<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">"+
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Type</td>"+
+									  "<td width=\"100%\" align=\"left\">"+									  																		  									  
+									  "<select name=\"type\" style=\"font-size:10px\">"+
+            						  "<option value=\"0\">- Select Item -</option>"+
+									  "<option value=\"1\">Journal</option>"+
+									  "<option value=\"2\">Proceeding</option>"+
+									  "<option value=\"3\">Presentation</option>"+			
+								      "</select>"+ 
+									  "</td>"+ 
+									  "</tr>"+
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Name Thai</td>"+
+									  "<td width=\"100%\"><input type=\"text\" name=\"name_th\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+
+									  "</td>"+
+									  "</tr>"+
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Name English</td>"+
+									  "<td width=\"100%\"> <input type=\"text\" name=\"name_eng\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+									  "</td>"+
+									  "</tr>"+		  			
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Owner</td>"+				
+									  "<td>"+ 
+									  "<input type=\"text\" name=\"owner_name\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+
+									  "</td>"+
+									  "</tr>"+						  
+								      "</table>"+
+									  "</td>"+
+									  "<td width=\"50%\" valign=\"top\">"+
+									  "<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\" width=\"100%\">"+
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Category</td>"+
+  									  "<td width=\"100%\" nowrap=\"nowrap\"> <input type=\"radio\" name=\"category\" value=\"1\">"+
+									  "International"+ 
+									  "<input type=\"radio\" name=\"category\" value=\"2\">"+
+									  "National"+ 
+									  "<input type=\"radio\" name=\"category\" value=\"3\">"+
+									  "Other </td>"+
+									  "</tr>"+
+									  "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">Publication Year</td>"+
+									  "<td nowrap=\"nowrap\"><input type=\"text\" name=\"year\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+								  	  "</tr>"+
+								      "<tr>"+ 
+									  "<td align=\"right\" nowrap=\"nowrap\">ISSN (for journal)</td>"+
+									  "<td nowrap=\"nowrap\"><input type=\"text\" name=\"issn\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+								  	  "</tr>"+
+								  	  "</table>"+
+									  "</td>"+
+									  "</tr>"+
+									  "<tr>"+
+									  "<td>"+
+									  "<input class=\"button\" type=\"button\" name=\"cancel\" value=\"cancel\" onClick=\"javascript:if(confirm(\'Are you sure you want to cancel.\')){location.href = \'./index.php?m=publication\';}\" />"+
+									  "</td>"+
+									  "<td align=\"right\">"+
+									  "<input class=\"button\" type=\"submit\" name=\"btnFuseAction\" value=\"search\" />"+
+									  "</td>"+
+								      "</tr>"+
+								      "</form>"+
+							          "</table>";
+		break; 
+	case 3: 
+		//document.all.area.innerHTML = "<input type=\"checkbox\" name=\"cb4\" value=\"doc\">doc<br><input type=\"checkbox\" name=\"cb5\" value=\"pdf\">pdf"; 
+		document.all.area.innerHTML = "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+										"<tr>"+
+										"<td width=\"50%\"><h1>Search Book</h1></td>"+
+										"<td width=\"50%\"></td>"+
+										"</tr>"+
+										"</table>"+
+										"<table cellspacing=\"0\" cellpadding=\"4\" border=\"0\" width=\"100%\" class=\"std\">"+
+										"<form name=\"SearchResearchFrm\" action=\"./index.php?m=search\" method=\"post\">"+
+										"<input type=\"hidden\" name=\"dosql\" value=\"do_search\" />"+
+										"<input type=\"hidden\" name=\"search_type\" value=\"book\" />"+										
+										"<tr>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Book Name Thai</td>"+
+										"<td width=\"100%\"><input type=\"text\" name=\"book_name_th\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Book Name English</td>"+
+										"<td width=\"100%\"> <input type=\"text\" name=\"book_name_eng\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+									  	"</tr>"+
+									  	"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Book Owner</td>"+
+										"<td>"+ 
+										"<input type=\"text\" name=\"book_owner_name\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\"/>"+			  
+										"</td>"+                         
+										"</table>"+
+										"</td>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\" width=\"100%\">"+       
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Book ISBN</td>"+
+										"<td nowrap=\"nowrap\"><input type=\"text\" name=\"book_isbn\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Book Year</td>"+
+										"<td width=\"100%\" nowrap=\"nowrap\"><input type=\"text\" name=\"book_year\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"<tr>"+          
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Keyword</td>"+
+										"<td colspan=\"3\"> <input type=\"text\" name=\"book_keyword\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"</table>"+
+										"</td>"+										
+										"</tr>"+
+										"<tr>"+
+										"<td>"+
+										"<input class=\"button\" type=\"button\" name=\"cancel\" value=\"cancel\" onClick=\"javascript:if(confirm(\'Are you sure you want to cancel.\')){location.href = \'./index.php?m=book\';}\" />"+
+										"</td>"+
+										"<td align=\"right\">"+
+										"<input class=\"button\" type=\"submit\" name=\"btnFuseAction\" value=\"search\" />"+
+										"</td>"+
+										"</tr>"+
+										"</form>"+
+										"</table>";
+		break;
+	case 4: 		  
+		  document.all.area.innerHTML = "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+										"<tr>"+
+										"<td width=\"50%\"><h1>Search Thesis</h1></td>"+
+										"<td width=\"50%\"></td>"+
+										"</tr>"+
+										"</table>"+
+										"<table cellspacing=\"0\" cellpadding=\"4\" border=\"0\" width=\"100%\" class=\"std\">"+
+										"<form name=\"SearchResearchFrm\" action=\"./index.php?m=search\" method=\"post\">"+
+										"<input type=\"hidden\" name=\"dosql\" value=\"do_search\" />"+
+										"<input type=\"hidden\" name=\"search_type\" value=\"thesis\" />"+
+										"<tr>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Thesis Name Thai</td>"+
+										"<td width=\"100%\"><input type=\"text\" name=\"thesis_name_th\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Thesis Name English</td>"+
+										"<td width=\"100%\"> <input type=\"text\" name=\"thesis_name_eng\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+									  	"</tr>"+
+									  	"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Thesis Owner</td>"+
+										"<td>"+ 
+										"<input type=\"text\" name=\"thesis_owner_name\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\"/>"+			  
+										"</td>"+                         
+										"</table>"+
+										"</td>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\" width=\"100%\">"+      
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Thesis ISBN</td>"+
+										"<td nowrap=\"nowrap\"><input type=\"text\" name=\"thesis_isbn\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Thesis Year</td>"+
+										"<td width=\"100%\" nowrap=\"nowrap\"><input type=\"text\" name=\"thesis_year\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"<tr>"+          
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Keyword</td>"+
+										"<td colspan=\"3\"> <input type=\"text\" name=\"thesis_keyword\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+
+										"</table>"+
+										"</td>"+										
+										"</tr>"+
+										"<tr>"+
+										"<td>"+
+										"<input class=\"button\" type=\"button\" name=\"cancel\" value=\"cancel\" onClick=\"javascript:if(confirm(\'Are you sure you want to cancel.\')){location.href = \'./index.php?m=thesis\';}\" />"+
+										"</td>"+
+										"<td align=\"right\">"+
+										"<input class=\"button\" type=\"submit\" name=\"btnFuseAction\" value=\"search\" />"+
+										"</td>"+
+										"</tr>"+
+										"</form>"+
+										"</table>";
+										
+		break;
+	case 5:
+		  document.all.area.innerHTML = "<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+										"<tr>"+
+										"<td width=\"50%\"><h1>Search Project</h1></td>"+
+										"<td width=\"50%\"></td>"+
+										"</tr>"+
+										"</table>"+
+										"<table cellspacing=\"0\" cellpadding=\"4\" border=\"0\" width=\"100%\" class=\"std\">"+
+										"<form name=\"SearchResearchFrm\" action=\"./index.php?m=search\" method=\"post\">"+
+										"<input type=\"hidden\" name=\"dosql\" value=\"do_search\" />"+
+										"<input type=\"hidden\" name=\"search_type\" value=\"project\" />"+
+										"<tr>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Project Name Thai</td>"+
+										"<td width=\"100%\"><input type=\"text\" name=\"project_name_th\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Project Name English</td>"+
+										"<td width=\"100%\"> <input type=\"text\" name=\"project_name_eng\" value=\"\" size=\"40\" maxlength=\"80\" class=\"text\" />"+ 
+										"</td>"+
+									  	"</tr>"+
+									  	"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Project Owner</td>"+
+										"<td>"+ 
+										"<input type=\"text\" name=\"project_owner_name\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\"/>"+			  
+										"</td>"+                         
+										"</table>"+
+										"</td>"+
+										"<td width=\"50%\" valign=\"top\">"+
+										"<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\" width=\"100%\">"+      
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Project ISBN</td>"+
+										"<td nowrap=\"nowrap\"><input type=\"text\" name=\"project_isbn\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" /></td>"+
+										"</tr>"+
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Project Year</td>"+
+										"<td width=\"100%\" nowrap=\"nowrap\"><input type=\"text\" name=\"project_year\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"<tr>"+          
+										"<tr>"+ 
+										"<td align=\"right\" nowrap=\"nowrap\">Keyword</td>"+
+										"<td colspan=\"3\"> <input type=\"text\" name=\"project_keyword\" value=\"\" size=\"25\" maxlength=\"50\" class=\"text\" />"+ 
+										"</td>"+
+										"</tr>"+          
+										"</table>"+
+										"</td>"+
+										"</tr>"+
+										"<tr>"+
+										"<td>"+
+										"<input class=\"button\" type=\"button\" name=\"cancel\" value=\"cancel\" onClick=\"javascript:if(confirm(\'Are you sure you want to cancel.\')){location.href = \'./index.php?m=project\';}\" />"+
+										"</td>"+
+										"<td align=\"right\">"+
+										"<input class=\"button\" type=\"submit\" name=\"btnFuseAction\" value=\"search\" />"+
+										"</td>"+
+										"</tr>"+
+										"</form>"+
+										"</table>";
+										
+		break; 
+		} 
+} 
+</script> 
+<link rel="stylesheet" type="text/css" href="./style/<?php echo $uistyle;?>/faq.css" media="all" />
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="bottom"> 
+    <td width="25%"> 
+      <h1><img src="./images/zoom.gif"> 
+        <? echo $user->_('Select Search Type');?></h1></td>
+    <td width="75%"> 
+      <select name="dropdown" onchange="displayCB();" style="font-size:10px">
+            <option value="0">-Select Search Type-</option>
+            <option value="1">Research</option>
+            <option value="2">Publication</option>
+			<option value="3">Book</option>
+			<option value="4">Thesis</option>
+			<option value="5">Project</option>
+          </select> 		                  
+	</td>
+  </tr>
+</table><br>
+<div id="area">    
+</div>

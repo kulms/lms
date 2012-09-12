@@ -1,0 +1,74 @@
+<!--<link href="../stales.css" rel="stylesheet" type="text/css">!-->
+<!-- Show Topic-->
+<!-- BEGIN topic -->
+
+
+
+<table width="90%" align="center" cellspacing="1" class="bg_color">
+  <tr class="lmnbg">
+    <td class="menu">{topic.ICON}&nbsp;<b>{topic.SUBJECT}</b></td>
+  </tr>
+  <tr>
+    <td>
+	<table width="100%" border="0" >
+  <tr >
+    <td width="15%">&nbsp;</td>
+    <td width="85%" class="main">&nbsp;{topic.DETAIL}</td>
+  </tr>
+  <tr>
+    <td colspan="2">{topic.IMG}</td>
+  </tr>
+  <tr>
+    <td  style="width:15%" valign="bottom" class="main"><b>{topic.LOGIN}<br>{topic.POSTTIME}</b></td>
+    <td width="85%">&nbsp;</td>
+  </tr>
+</table>
+	</td>
+  </tr>
+  <tr class="tdbackground1">
+    <td  align="right" class="main">{topic.PROFILE}&nbsp;{topic.EDIT}&nbsp;{topic.DELETE}</td>
+  </tr>
+</table>
+<!-- END topic -->
+<br>
+<!-- BEGIN replylist -->
+<table width="90%"  cellspacing=1 cellpadding=0 align=center class="tdbackground">
+  <tr>
+    <td>
+	<table width="100%"  border="0" class="tdbackground1">
+  <tr>
+    <td style="width:15%">&nbsp;</td>
+    <td style="width:85%" class="main">&nbsp;{replylist.DETAIL}</td>
+  </tr>
+  <tr>
+    <td colspan="2">{replylist.IMG}</td>
+    </tr>
+  <tr>
+    <td style="width:15%" class="main"><b>{replylist.REPLYNAME}<br>{replylist.REPLYTIME}</b></td>
+    <td style="width:85%" class="main">&nbsp;</td>
+  </tr>
+</table>	</td>
+  </tr>
+  <tr>
+    <td class="main" align="right">{replylist.PROFILE}&nbsp;{replylist.EDIT}&nbsp;{replylist.DELETE}</td>
+  </tr>
+</table>
+<br>
+<!-- END replylist -->
+<table width="90%"  border="0" align="center">
+  <tr>
+    <td  class="main">
+	<!-- BEGIN page -->
+		{page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+	<!-- END page -->
+	</td>
+  </tr>
+  <tr>
+    <td class="main">{PAGE}
+	<!-- BEGIN pagerows -->
+		<b><font class="page">{pagerows.PAGE} </font></b>
+	<!-- END pagerows -->
+	</td>
+  </tr>
+</table>
+<p>&nbsp;</p>

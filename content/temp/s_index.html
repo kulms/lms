@@ -1,0 +1,83 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<link rel="STYLESHEET" type="text/css" href="../themes/{THEME_NAME}/style/main.css">
+<script language="JavaScript" src="js/JUMPTOP.JS" type="text/javascript"></script>
+<script type="text/javascript" language="JavaScript" src="js/fieldLimiter.js"></script>
+<script>
+ function downloadme(url){
+		  window.open(url,"new_win","top=50,left=100,width=800,height=500,resizable,toolbar=1,menubar=1,scrollbars=yes,status=yes");
+}
+</script>
+
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+
+</head>
+<body>
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <td height="74" align="center">
+	
+	<table width="95%" border="0" align="center" cellpadding="1" cellspacing="1"  class="tdborder1">
+        <tr  class="boxcolor">
+          <td height="27" colspan="2" align="center" class="Bcolor"><strong>{CID} : {CNAME} </strong></td>
+        </tr>
+        <tr align="center" class="tdbackground2">
+          <td colspan="2" class="bblack">{MOD_NAME}</td>
+        </tr>
+    </table>	</td>
+  </tr>
+
+  <tr>
+    <td align="center"><table width="95%" height="74"  align="center" cellpadding="3" cellspacing="1"  class="tdborder1">
+      <tr align="left"  class="boxcolor">
+        <td height="24" colspan="2" class="Bcolor">{Content_Content}</td>
+      </tr>
+  {NODATA}
+  <!-- BEGIN LESS -->
+  <tr class="tdbackground3">
+    <td width="14%" valign="top"><b>{Content_LessNum} : {LESS.LessOrder}<b>
+      <input type="hidden" name="less_id{LESS.LessID}" value="{LESS.LessID}">
+    </b></b></td>
+    <td align="left"><a href="{LESS.SHOWLINK}"> {LESS.LessTitle} &nbsp;[{LESS.LessTimes} {Content_TimeUnit}] </a> <span class="Tmenu" id="{LESS.LessID}" style="display:none">
+   
+   <!--    <table width=30% cellspacing="1"  class="tdborder1">
+        <tr>
+          <td width="10%"  class="boxcolor" align="left"><img src="images/content.png" border="0"></td>
+          <td bgcolor class="tdbackground2" align="left"><a href="{LESS.EDITNAMELINK}"> <span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessNmEdit}</span></a></td>
+        </tr>
+        <tr>
+          <td width="10%"  class="boxcolor" align="left"><img src="images/mainmenu.png" border="0"></td>
+          <td bgcolor class="tdbackground2" align="left"><a href="{LESS.EDITLINK}"> <span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessEdit}</span></a></td>
+        </tr>
+        <tr>
+          <td width="10%"  class="boxcolor" align="left"><img src="images/preview.png" border="0"></td>
+          <td bgcolor  class="tdbackground2" align="left"><a href="{LESS.SHOWLINK}" > <span class="bblack" onmouseover="changeColor(this,'gray')" onMouseOut="changeColor(this,'black')" >{LESS.Content_LessShow}</span></a></td>
+        </tr>
+      </table>
+	  -->
+    </span> {NODATA} {LESS.LLL} </td>
+    </tr>
+  <tr class="tdbackground_white">
+    <td height="22">&nbsp;</td>
+    <td align="left">{LESS.LessAbstract}</td>
+    </tr>
+  <!-- END LESS -->
+    </table></td>
+  </tr>
+</table>
+
+</body>
+</html>

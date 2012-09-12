@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+</head>
+
+<body>
+<table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr >
+    <td width="8" height="21" ><img src="../../themes/{Theme}/images/left_b.gif" width="8" height="21" border="0"></td>
+    <td class="lmnbg"><span class="Bcolor">{HEADER}</span></td>
+    <td width="9" ><img src="../../themes/{Theme}/images/right_b.gif" width="9" height="21" border="0"></td>
+  </tr>
+</table>
+<table width="95%" height="20"  border="0" cellpadding="1" cellspacing="1" class="tdborder1" align="center" background="../../images/line_bg.gif">
+  <tr >
+    <td>
+
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tr align="left">
+          <td height="20" colspan="2" ><img src="images/reply.gif" width="18" height="12" align="absmiddle"><a href="newmsg_form.php?to_id={REPLY_ID}">{POSTREPLY}</a></td>
+        </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="3">
+	<form name="sendMsg" method="post" action="sentComplete.php">
+      <table width="100%"  border="0" cellpadding="5" cellspacing="1"  class="tdborder">
+        <tr align="center" class="lmnbg">
+          <td height="20" colspan="2"  class="Bcolor">{MESSAGE}</td>
+          </tr>
+        <tr  class="tdbackground3">
+          <td width="12%" height="18"  class="bdarkblue">{FROM}:</td>
+          <td width="88%">{FROM_VAL} </td>
+        </tr>
+        <tr class="tdbackground3">
+          <td height="18" class="bdarkblue">{TO}:</td>
+          <td>{TO_VAL}</td>
+        </tr>
+        <tr class="tdbackground3">
+          <td height="18" class="bdarkblue">{DATE}:</td>
+          <td>{DATE_VAL}</td>
+        </tr>
+        <tr class="tdbackground3">
+          <td height="18" class="bdarkblue">{SUBJECT}:</td>
+          <td>{SUBJECT_VAL}</td>
+        </tr>
+        <tr valign="top">
+          <td height="141" colspan="2" class="tdbackground3">
+		  	 
+		   <table width="95%" height="131"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+              <tr>
+                <td valign="top" >{SHOW_MSG}</td>
+              </tr>
+            </table></td>
+          </tr>
+        <tr align="right"  class="lmnbg">
+          <td  colspan="2" height="15">
+		  	<input type="hidden" name="msg_id" value="{MSG_ID}">
+			 {SAV} {DEL}</td>
+          </tr>
+      </table>
+    </form></td>
+  </tr>
+</table>
+
+</td>
+  </tr>
+</table>
+</body>
+</html>

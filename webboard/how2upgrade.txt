@@ -1,0 +1,80 @@
+===============================================
+Setup Database for PHP - Ultimate Webboard 2.00
+===============================================
+การติดตั้งฐานข้อมูลสำหรับ PHP - Ultimate Webboard 2.00
+ให้รันคำสั่ง SQL 3 คำสั่งดังนี้
+
+# (1)
+# Table structure for table 'webboard_ans'
+#
+CREATE TABLE webboard_ans (
+   No int(5) DEFAULT '0' NOT NULL auto_increment,
+   QuestionNo int(5) DEFAULT '0' NOT NULL,
+   Name varchar(50) NOT NULL,
+   Member tinyint(1) DEFAULT '0' NOT NULL,
+   IP varchar(15) NOT NULL,
+   Email varchar(50) NOT NULL,
+   Msg text NOT NULL,
+   Date varchar(20) NOT NULL,
+   Image blob,
+   PRIMARY KEY (No)
+);
+
+# (2)
+# Table structure for table 'webboard_data'
+#
+CREATE TABLE webboard_data (
+   No int(5) DEFAULT '0' NOT NULL auto_increment,
+   Category varchar(50) NOT NULL,
+   Question varchar(100) NOT NULL,
+   Note text NOT NULL,
+   Name varchar(50) NOT NULL,
+   Member tinyint(1) DEFAULT '0' NOT NULL,
+   IP varchar(15) NOT NULL,
+   Email varchar(50) NOT NULL,
+   Date varchar(20) NOT NULL,
+   Reply int(5) DEFAULT '0' NOT NULL,
+   ReplyDate varchar(20) NOT NULL,
+   Image blob,
+   PRIMARY KEY (No)
+);
+
+# (3)
+# Table structure for table 'webboard_member'
+#
+CREATE TABLE webboard_member (
+   User char(10) NOT NULL,
+   Password char(10) NOT NULL,
+   Email char(30),
+   ICQ char(15),
+   WebName char(80),
+   URL char(80),
+   Date char(20) NOT NULL,
+   PRIMARY KEY (User)
+);
+
+คำสั่ง SQL 3 คำสั่งนี้จะทำหน้าที่ในการสร้างฐานข้อมูลสำหรับ
+เก็บ กระทู้-คำตอบ และ รายชื่อสมาชิก
+
+**********************************************
+How to upgrade to PHP - Ultimate Webboard 2.00
+**********************************************
+สำหรับวิธีการ upgrade PHP - Ultimate Webboard 1.00
+เป็น PHP - Ultimate Webboard 2.00 นั้น ก็ให้รันคำสั่ง SQL
+ดังต่อไปนี้
+
+(1)Create : webboard_member
+CREATE TABLE webboard_member ( User char(10) NOT NULL, Password char(10) NOT NULL, Email char(30), ICQ char(15), WebName char(80), URL char(80), Date char(20) NOT NULL, PRIMARY KEY (User));
+
+(2)Update : webboard_data
+ALTER TABLE webboard_data ADD IP CHAR (15) not null AFTER Name; 
+ALTER TABLE webboard_data ADD Image BLOB;
+ALTER TABLE webboard_data ADD Member TINYINT (1) DEFAULT '0' not null AFTER Name;
+
+(3)Update : webboard_ans
+ALTER TABLE webboard_ans ADD IP CHAR (15) not null AFTER Name;
+ALTER TABLE webboard_ans ADD Image BLOB;
+ALTER TABLE webboard_ans ADD Member TINYINT (1) DEFAULT '0' not null AFTER Name;
+
+เพราะในเวอร์ชันเก่า ไม่ได้รองรับการเก็บ IP Address รูป Image 
+และระบบสมาชิก ดังนั้นต้องสร้าง Field ข้อมูลเพิ่มเข้าไป

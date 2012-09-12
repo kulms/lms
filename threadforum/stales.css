@@ -1,0 +1,80 @@
+body {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; 
+	FONT-SIZE: 11px; 
+	/*
+	scrollbar-face-color: White; 
+	scrollbar-track-color: White; 
+	scrollbar-arrow-color: #87CEFA; 
+	scrollbar-shadow-color: Navy; 
+	scrollbar-3dlight-color: White; 
+	scrollbar-darkshadow-color: Black; 
+	buttonface: #FF0000;*/
+}
+
+/*--------------Text--------------------  */
+.header{
+	font-size : 9pt;
+	font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial";
+	color: #FFFF00;
+}
+.main {
+	font-size : 8pt;
+    font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+}
+.postat{
+	font-size : 8pt;
+    font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+	color:#646400;
+}
+.posttime{
+	font-size : 8pt;
+    font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+	color:#7F7F7F;
+}
+.page{
+	font-size : 8pt;
+	color:red;
+}
+
+/*-----------Color-------------------------*/
+.color1{
+	background-color: #ffe1e1;
+}
+.color2{
+	background-color: #fff2f2;
+}
+.bg_color{
+	background-color: #ffffff;
+}
+.hr_color{
+	color:#cc0033;
+}
+.bg_header{
+	background-color: #cc0033;
+}
+/*--------A---------------*/
+A {
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 8pt; COLOR: #666666; 
+	 font-family : "MS Sans Serif", "Geneva","Helvetica", "Arial", "sans-serif";
+	TEXT-DECORATION: none
+}
+A:link {
+	color: #08245b;
+	text-decoration: none;
+}
+A:visited {
+	color: #08245b;
+	text-decoration: none;
+}
+
+A:active {
+	color: red;
+	text-decoration: none;
+}
+
+A:hover {
+	color: #666666;
+	text-decoration: none;
+	font-variant: normal;
+}

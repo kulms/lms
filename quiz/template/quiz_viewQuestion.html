@@ -1,0 +1,92 @@
+<!-- BEGIN block -->
+
+<table width="100%"  border="0" align="center">
+  <tr>
+    <td colspan="2" align="right" class="main"><b>{TOTAL} : {NUM}</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="tdbackground_white">
+        <tr class="tdbackground" height="20">
+          <td rowspan="2" class="main" align="center" style=" width:5% "><b>{NO}</b></td>
+          <td rowspan="2" class="main" align="center" style=" width:50% "><b>{QUES}</b></td>
+          <td  rowspan="2" class="main" align="center" style=" width:12% "><b>{TYPE}</b></td>
+          <td  rowspan="2" class="main" align="center" style=" width:9% "><b>{MAXSCORE}</b></td>
+          <td colspan="4" class="main" align="center"><b>{PROCESS}</b></td>
+        </tr>
+        <tr class="tdbackground" height="20">
+          <td  class="main" align="center" style=" width:6% "><b>{SHOW}</b></td>
+          <td  class="main" align="center" style=" width:6% "><b>{EDIT_T}</b></td>
+          <!-- <td  class="main" align="center" style=" width:6% "><b>{REMOVE}</b></td> -->
+          <td class="main" align="center" style=" width:6% "><b>{DELETE}</b></td>
+        </tr>
+        <!-- BEGIN list -->
+        <tr class="{block.list.MK}" height="25">
+          <td class="main" align="center">{block.list.NUM}</td>
+          <td class="main">{block.list.QUES}</td>
+          <td class="main">{block.list.TYPE}</td>
+          <td class="main" align="center">{block.list.SCORE}{block.list.SCORE_MCIT}</td>
+          <td class="main" align="center">{block.list.SHOW}</td>
+          <td class="main" align="center">{block.list.EDIT}</td>
+          <!--     <td class="main" align="center">{block.list.REMOVE}</td>-->
+          <td class="main" align="center">{block.list.DELETE}</td>
+        </tr>
+        <!-- END list -->
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" class="tdborder1" >
+      <tr bgcolor="#FFFFFF">
+        <td width="12%" class="main"><b>หมายเหตุ :</b></td>
+    <td width="88%" class="main"><p>- ข้อสอบที่เป็นแถบ  <img src="../themes/{Theme}/images/bg1.gif" border="0" align="middle"> แสดงว่าเป็นข้อสอบ  ที่ได้ทำการเลือกใช้ ข้อสอบนี้จากแบบทดสอบ ชุดอื่น </p>
+     <p>- ข้อสอบที่เป็นแถบ <img src="../themes/{Theme}/images/bg.gif" border="0" align="middle"> แสดงว่าเป็นข้อสอบของแบบทดสอบชุดนี้</p></td>
+&nbsp;
+      </tr>
+    </table></td>
+  </tr>
+
+</table>
+<!-- END block -->
+<table width="100%"  border="0" align="center" class="main">
+
+  <tr>
+
+    <td  class="main">
+
+	<!-- BEGIN page -->
+
+		{page.PREV}&nbsp;{page.PAGE}&nbsp;{page.NEXT}
+	<!-- END page -->
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="main">{PAGE}
+
+	<!-- BEGIN pagerows -->
+
+		<b>{pagerows.PAGE} </b>
+
+	<!-- END pagerows -->
+
+	</td>
+
+  </tr>
+
+</table>
+
+<!-- BEGIN error -->
+
+<table width="100%"  border="0">
+
+  <tr>
+
+    <td class="error"><b>{error.ERROR}</b></td>
+
+  </tr>
+
+</table>
+
+<!-- END error -->

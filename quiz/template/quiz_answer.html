@@ -1,0 +1,140 @@
+<title>{NAME}</title>
+
+<link rel="STYLESHEET" type="text/css" href="../themes/{Theme}/style/main.css">
+
+<table width="482" border="0" cellspacing="0" cellpadding="0" align="center" class="bg1" height="53">
+
+  <tr><td class="menu" align="center">
+
+    <b>{NAME}</b></td>
+
+  </tr>
+
+</table>
+
+<table width="95%"  border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr>
+
+    <td  align="center">&nbsp;</td>
+
+  </tr>
+
+  <tr>
+
+    <td align="right" class="main"><a href="#" onClick="JavaScript:window.close()">[ {CLOSE} ]</a></td>
+
+  </tr>
+
+</table>
+
+<table width="95%"  class="main"align="center">
+
+  <tr class="tdbackground">
+
+    <td height="20" align="center" class="main" ><b>{ANSWER}</b></td>
+
+  </tr> 
+
+    <tr>
+
+    <td align="center"  class="main"><b>{ERROR}</b></td>
+
+  </tr>
+
+    <tr>
+
+      <td height="10" align="right">{TOTAL}</td>
+
+    </tr> 
+
+   <!-- BEGIN errorlist -->
+
+  <tr>
+
+    <td align="center">
+
+	<table width="98%"   class="main">
+
+  <tr>
+
+    <td height="26" colspan="4" align="center">&nbsp;</td>
+
+  </tr>
+
+  <tr>
+
+    <td width="3%">{errorlist.NUM}</td>
+
+    <td colspan="3">{errorlist.Q_NAME}</td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td colspan="3" align="center">{errorlist.Q_PIC}</td>
+
+  </tr>
+
+  <tr>
+
+    <td>&nbsp;</td>
+
+    <td colspan="3"><b>{TAns}</b></td>
+
+  </tr>
+
+   <!-- BEGIN ans -->
+
+  <tr>
+
+    <td height="35" colspan="2" rowspan="2">&nbsp;</td>
+
+    <td width="40%" valign="top"><li><b>{errorlist.ans.Q_CHOICE}</b>{errorlist.ans.Q_ANS}</td>
+
+    <td width="41%">{errorlist.ans.Q_ANS_MCIT}&nbsp;{errorlist.ans.Q_A_DES}</td>
+
+  </tr>
+
+  <tr>
+
+    <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;{errorlist.ans.Q_ANS_P}</td>
+
+    <td width="41%">{errorlist.ans.Q_ANS_P_MCIT}</td>
+
+  </tr>
+
+   <!-- END ans -->
+
+  <tr>
+
+    <td colspan="4"><hr  class="colorLine"></td>
+
+    </tr>
+
+</table>
+
+	</td>
+
+  </tr>
+
+   <!-- END errorlist -->
+
+     <tr>
+
+       <td colspan="4" align="right"> {PAGE} </strong> 
+
+              <!-- BEGIN pagerows -->
+
+              <b> {pagerows.PAGE}</b> 
+
+              <!-- END pagerows --> </td>
+
+     </tr>
+
+</table>
+
+
+

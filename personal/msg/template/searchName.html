@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+
+
+</head>
+
+<body>
+<SCRIPT LANGUAGE="JavaScript">
+function sendValue(s){
+var login = s.options[s.selectedIndex].value;
+window.opener.document.sendMsg.mTo.value = login;
+window.close();
+}
+function test(){
+	alert("test");
+}
+</script>
+<table width="400" height="250"  border="0" align="center" class="tdborder1">
+    <tr>
+      <td><table width="100%" height="100%"  border="0" align="center" cellpadding="5" cellspacing="0" >
+    <tr class="boxcolor1">
+      <td colspan="2" class="Bcolor" >Search...</td>
+    </tr>
+
+       <tr align="center">
+  <td width="50%" height="315" valign="top">
+<form name="form1" method="post" action="searchName.php">
+<table width="93%" height="129"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="44" align="left"><select name="userCat" size="1" >
+      <option value="0">=== {ALLUSER}===</option>
+      <option value="1">{ADMIN}</option>
+      <option value="2">{TEACHER}</option>
+      <option value="3">{STUDENT}</option>
+    </select><br>
+      * {PLS}</td>
+    </tr>
+  <tr align="center">
+    <td height="44" align="left"><input name="keyWord" type="text"  size="15" class="text">
+      <br>* {KEY}</td>
+    </tr>
+  <tr align="center">
+    <td align="left"><input name="CatSearch" type="submit"  value="{SEARCH}" class="button"> </td>
+  </tr>
+</table>
+</form>
+</td>
+   <td width="50%" valign="top">
+     <form  method="post" name="form2" >
+				{SHOWLIST}
+			</form>
+   </tr>
+      </table></td>
+    </tr>
+</table>
+
+</body>
+</html>

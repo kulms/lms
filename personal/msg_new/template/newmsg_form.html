@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+
+<script language='javascript' src='../javascript/popcalendar.js'></script>
+
+<script language="javascript1.2">
+function CheckDetail(){
+var a = document.sendMsg.elements["courseadmins[]"].options.length-1;  
+  if(a==0){
+   	alert("Please select name");
+           return false;
+  }else{
+			if(document.sendMsg.mSbj.value==''){ 
+			   alert("Please enter your Subject");
+			   document.sendMsg.mSbj.focus();
+				   return false;
+		  }else{
+		 			if(document.sendMsg.mPri.value==''){
+					   alert("Please checked for Priority");
+				  			 return false;
+				   }else{
+				   			   return true;
+				   }
+		  }
+  }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+  <tr >
+    <td width="8" height="21" ><img src="../../themes/{Theme}/images/left_b.gif" width="8" height="21" border="0"></td>
+    <td class="lmnbg"><span class="Bcolor">{HEADER}</span></td>
+    <td width="9" ><img src="../../themes/{Theme}/images/right_b.gif" width="9" height="21" border="0"></td>
+  </tr>
+</table>
+<table width="95%" height="20"  border="0" cellpadding="1" cellspacing="1" class="tdborder1" align="center" background="../../images/line_bg.gif">
+  <tr >
+    <td>
+
+       
+	
+	
+<br>
+	<form name="sendMsg" method="post" action="sentComplete.php">
+	<input type="hidden" name="mto" value="{MTO}">
+      <table width="80%" height="276"  border="0" align="center" cellpadding="5" cellspacing="1" class="tdborder">
+        <tr align="center" class="lmnbg">
+          <td height="20" colspan="2"  class="Bcolor"><b>{HEADER}</b></td>
+    
+        <tr  class="tdbackground3">
+          <td width="19%" height="35" valign="top" ><b>{TO}:</b></td>
+          <td width="81%">
+		  		<select  name="courseadmins[]" size="{SIZEL}"  onBlur>
+            {LIST}
+              </select>
+ <input name="select" class="button"type="button" value=" Select "  onClick="window.open('selectName.php?to_id={MTO}','search','status=no,top=0,left=200,scrollbars=1,height=600,width=600');">
+
+		  
+		  <!-- 
+		  <input name="mTo" type="text"  value="{MTO}" class="text">
+            <input  class="button" name="search" type="button" id="search" value="{SEARCH}" onClick="window.open('searchName.php','newwin','status=no,top=200,left=280,height=300,width=400');">
+            <img src="images/search.gif" width="14" height="15">
+			-->
+			
+			</td>
+        </tr>
+        <tr  class="tdbackground3">
+          <td valign="top"><b>{SUBJECT}:</b></td>
+          <td><input name="mSbj" type="text" id="mSbj" value="{SUBJECT_VAL}" size="60" class="text"></td>
+        </tr>
+        <tr  class="tdbackground3">
+          <td height="25" valign="top"><b>{PRI}:</b></td>
+          <td><input name="mPri" type="radio" value="3" {P1}><span class="red">{HIGH}</span>
+              <input name="mPri" type="radio" value="2" {P2}><span class="news">{NORMAL}</span> 
+			  <input name="mPri" type="radio" value="1" {P3}><span class="news">{LOW}</span>
+          </td>
+        </tr>
+        <tr  class="tdbackground3">
+          <td valign="top" ><b>{MESSAGE}:</b></td>
+          <td><textarea name="mMsg" cols="60" rows="10" id="mMsg" class="pn-text">{MESSAGE_VAL}</textarea></td>
+        </tr>
+        <tr align="center" class="lmnbg">
+          <td colspan="2" >
+		  <input class = "button" name="send" type="submit" id="send" value="  {SEND}  " onClick="return CheckDetail();"></td>
+        </tr>
+      </table>
+    </form>	</td>
+  </tr>
+</table>
+</body>
+</html>

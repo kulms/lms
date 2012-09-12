@@ -1,0 +1,49 @@
+<!--<link href="../stales.css" rel="stylesheet" type="text/css">!-->
+
+<form action="?a=preferences&update=1&id={MODULE}&courses={COURSES}" name="" method="post">
+<table width="40%"  border="0" align="center"  class="lmnbg">
+  <tr>
+    <td height="32" align="center" class="menu"><b>{HD}&nbsp;&nbsp;{NAME}</b></td>
+  </tr>
+  <tr>
+    <td>
+	<table width="100%"  border="0" cellspacing="2" bgcolor="#FFFFFF">
+  <tr class="tdbackground1">
+    <td width="74%" class="main"  align="right" height="27"><b>{DETAIL_H}</b><br>{DETAIL_S}</td>
+    <td width="26%"><input type="checkbox" name="showcontrib" value="true" {IS_CHECK1}></td>
+  </tr>
+  <tr class="tdbackground1">
+    <td class="main" align="right" height="27"><b>{DESC_H}</b><br>{DESC_S}</td>
+    <td><input type="checkbox" name="sortdesc" value="true"  {IS_CHECK2}></td>
+  </tr>
+  <!--
+  <tr class="color2">
+    <td class="main" align="right" height="27"><b>{THREAD_H}</b></td>
+    <td><input type="checkbox" name="showthread" value="true"  {IS_CHECK3}></td>
+  </tr>
+  <tr class="color2"> 
+    <td class="main" align="right" height="27"><b>{MAIL_H}</b><br>{MAIL_S}</td>
+    <td><input type="checkbox" name="mailstate" value="true"  {IS_CHECK4}></td>
+  </tr>
+  -->
+  <tr class="tdbackground1"> 
+    <td class="main" align="right" height="27"><b>{DATE_H}</b></td>
+    <td class="main"><input type="text" name="showdays" value="{D_DATE}" size="3" maxlength="3">&nbsp;{T_DATE}</td>
+  </tr>
+</table>
+
+	</td>
+  </tr>
+</table><br>
+<table width="40%"  border="0" align="center" class="main">
+  <tr>
+    <td align="center"><input type="submit" name="submit" value="{UPDATE}" class="button"></td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left"><img src="./images/back.gif" border="0">{BACK}</td>
+  </tr>
+</table>
+</form>

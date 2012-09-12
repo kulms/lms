@@ -1,0 +1,115 @@
+<SCRIPT LANGUAGE="javascript">
+function checkAll(){
+	for (var i=0;i<document.forms[0].elements.length;i++)
+	{
+		var e=document.forms[0].elements[i];
+		if ((e.name != 'allbox') && (e.type=='checkbox'))
+			e.checked=document.forms[0].allbox.checked;
+	}
+}
+
+ function AddNew()
+  {
+  	win = window.open("?m=mdata&m1=eval&a=addnew", "_self")
+  }
+  
+  function Edit(qid){
+  	win = window.open("?m=mdata&m1=eval&a=addnew&qid="+qid, "_self")
+  }
+  
+  function Delete(qid){
+  	if (confirm("คุณต้องการลบ ข้อมูลนี้หรือไม่?")) 
+		{
+			 win = window.open("?m=mdata&m1=eval&a=delete&qid="+qid, "_self");
+		}
+  		return false;
+ 	
+  }
+</SCRIPT>
+<form action="?m=mdata&m1=eval&a=index&set=1" name="form" method="post">
+<table width="100%"  border="0" align="center">
+  <tr>
+    <td align="right"><a href="?m=mdata&m1=eval&a=list_alt"><b><img src="../images/homework_result.gif" border="0" align="middle">Alternatives Management</b> </a></td>
+  </tr>
+</table>
+
+<table width="100%"  border="0" cellspacing="0"class="tdborder1">
+	<tr bgcolor="#FFFFFF">
+		<td align="right"><input type="button" name="add" value="Add New" class="button" onClick="javascript: AddNew();" ></td>
+  	<tr>
+    <td>
+	<table width="100%"  border="0" align="center" cellspacing="0" class="tdbackground">
+  <tr >
+    <td width="6%" rowspan="2" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;"><b>No</b></td>
+    <td width="70%" rowspan="2" align="center" class="bordercolor" style="border-bottom: solid  1px;border-top: solid  1px;' "><b>Question</b></td>
+    <td width="24%" colspan="3" align="center" class="bordercolor" style="border-bottom: solid  1px;border-left:solid  1px;border-top: solid  1px;'  "><b>Action</b></td>
+  </tr>
+  <tr >
+    <td align="center" width="8%" style="border-bottom: solid  1px; border-left:solid  1px;'" class="bordercolor"><input type="checkbox" value="on" name="allbox" onClick="javascript: checkAll();">Active</td>
+    <td align="center"width="8%" style="border-bottom: solid  1px;border-left:solid  1px;' " class="bordercolor">Edit</td>
+    <td align="center" width="8%"style="border-bottom: solid  1px;border-left:solid  1px;' " class="bordercolor">Delete</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td colspan="5" >
+	<!-- BEGIN block -->
+		<table width="100%"  border="0" cellspacing="0">
+  <tr class="tdbackground">
+    <td><b>ตัวเลือก : [{block.ALT}]</b></td>
+  </tr>
+  <tr>
+    <td height="33">
+	<!-- BEGIN std -->
+	<table width="100%" border="0" cellspacing="1" class="tdbackground">
+  <tr bgcolor="#FFFFFF" >
+    <td width="6%" height="24" align="center">{block.std.NO}</td>
+    <td width="70%">{block.std.QUES}</td>
+    <td width="8%" align="center"><input type="checkbox" name="chk[{block.std.NO}]" value="{block.std.Q_ID}" {block.std.IS_CHECK}></td>
+    <td width="8%" align="center"><a href="#" onClick="Edit('{block.std.Q_ID}')"><img src="../images/edit1.gif" border="0"></a></td>
+    <td width="8%" align="center"><a href="#" onClick="Delete('{block.std.Q_ID}')"><img src="../images/_delete.gif" border="0"></a></td>
+  </tr>
+</table>
+<!-- END std -->	</td>
+  </tr>
+</table>
+
+	<!-- END block -->	</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td colspan="5" >
+	<!-- BEGIN block_ -->
+		<table width="100%"  border="0" cellspacing="0">
+  <tr class="tdbackground">
+    <td><b>คำถามแบบเติมคำตอบ :</b></td>
+  </tr>
+  <tr>
+    <td height="33">
+	<!-- BEGIN std_ -->
+	<table width="100%" border="0" cellspacing="1" class="tdbackground">
+  <tr bgcolor="#FFFFFF" >
+    <td width="6%" height="20" align="center">{block_.std_.NO}</td>
+    <td width="70%">{block_.std_.QUES}</td>
+    <td width="8%" align="center"><input type="checkbox" name="chk[{block_.std_.NO}]" value="{block_.std_.Q_ID}" {block_.std_.IS_CHECK}></td>
+    <td width="8%" align="center"><a href="#" onClick="Edit('{block_.std_.Q_ID}')"><img src="../images/edit1.gif"  border="0"></a></td>
+    <td width="8%" align="center"><a href="#" onClick="Delete('{block_.std_.Q_ID}')"><img src="../images/_delete.gif" border="0"></a></td>
+  </tr>
+</table>
+<!-- END std_ -->	</td>
+  </tr>
+</table>
+
+	<!-- END block_ -->	</td>
+  </tr>
+  <tr class="tdbackground">
+    <td style="border-top: solid  1px;' " class="bordercolor">&nbsp;</td>
+    <td style="border-top: solid  1px;' " class="bordercolor">&nbsp;</td>
+    <td style="border-top: solid  1px;' " class="bordercolor" align="center"><input type="submit" name="act" value="Active" class="button" ></td>
+    <td style="border-top: solid  1px;' " class="bordercolor">&nbsp;</td>
+    <td style="border-top: solid  1px;' " class="bordercolor">&nbsp;</td>
+  </tr>
+</table>
+	</td>
+  </tr>
+</table>
+<input type="hidden" name="count" value="{NumAll}">
+</form>

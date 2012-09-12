@@ -1,0 +1,343 @@
+Database ieprojectdatabase
+# phpMyAdmin MySQL-Dump
+# http://phpwizard.net/phpMyAdmin/
+#
+# Host: localhost Database : ieprojectdatabase
+
+# --------------------------------------------------------
+#
+# Table structure for table 'company'
+#
+
+CREATE TABLE company (
+   ID int(11) NOT NULL auto_increment,
+   ComName varchar(255) NOT NULL,
+   ComKind varchar(255),
+   ComAddress text,
+   ComPhone varchar(128),
+   ComFax varchar(128),
+   ComEmail varchar(255),
+   ComHomepage varchar(255),
+   ComNote text,
+   PRIMARY KEY (ID)
+);
+
+#
+# Dumping data for table 'company'
+#
+
+INSERT INTO company VALUES( '1', 'โครงงานที่ทำไม่เกี่ยวข้องกับบริษัท/หน่วยงาน
+', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO company VALUES( '2', 'บริษัทโตโยต้ามอเตอร์ประเทศไทย จำกัด', 'ผลิตรถยนต์ และอุปกรณ์ชิ้นส่วน', 'อ. สำโรงเหนือ', '', '', '', '', '');
+INSERT INTO company VALUES( '3', 'บริษัทเอเพ็คซ์ทอยส์ จำกัด', 'ผลิตของเล่น', '12/40   หมู่ 7  ถนน บางขุนเทียน    กรุงเทพฯ', '', '', '', '', '');
+INSERT INTO company VALUES( '4', 'โรงงานสยามบรรจุภัณฑ์ราชบุรี(1989)', 'ผลิตกล่องกระดาษลูกฟูกสำหรับบรรจุสินค้า', '125 หมู่ที่1 ถนน เพชรเกษม  ตำบลวังเย็น  อำเภอบางแพ  จังหวัดราชบุรี 70160', '(032)233-260-75', '(032)233-279', '', '', '');
+INSERT INTO company VALUES( '5', 'บริษัทสยามริคเก้นอินดัสเตรี้ยล จำกัด', 'แหวนลูกสูบเครื่องยนต์ต่างๆ', '61/2 ถ. บางนา-ตราด  กม.21  อ.บางเสาธง  จ. สมุทรปราการ', '', '', '', '', '');
+INSERT INTO company VALUES( '6', 'บริษัทช.การช่าง จำกัด (มหาชน)', 'รับเหมาก่อสร้าง', '', '', '', '', '', '');
+INSERT INTO company VALUES( '7', 'โรงงานแปซิฟิคซินเธ็คทิคอุตสาหกรรม', 'งานทอผ้า ย้อมผ้า กรอด้าย', '', '', '', '', '', '');
+INSERT INTO company VALUES( '8', 'บริษัทคอมฟอร์ตเฟอร์นิคอน จำกัด', 'การผลิตและแปรรูปไม้ต่างๆ', '99/1 102 หมู่ 2  ถนน เพชรเกษม  ซอย 88  ต. บางแค  เขตภาษีเจริญ กทม. 10160', '', '', '', '', '');
+INSERT INTO company VALUES( '9', 'บริษัทไทยโตชิบาอุตสาหกรรม จำกัด', 'เครื่องใช้ไฟฟ้าภายในบ้าน', '181/1 หมู่2 ถนน ติวานนท์ ตำบลท่าทราย  อำเภอเมือง  จังหวัดนนทบุรี 11000', '', '', '', '', '');
+INSERT INTO company VALUES( '10', 'บริษัทไซมิสรับเบอร์ จำกัด', 'ผลิตยางรถจักรยานยนต์ ยางเกษตรกรรม', '15/2    ถนนดินแดง  เขต พญาไท   กรุงเทพ', '', '', '', '', '');
+INSERT INTO company VALUES( '11', 'โรงงานไทยโตชิบาไลท์ติง', 'ผลิตหลอดฟลูออเรสเซนต์', '', '', '', '', '', '');
+INSERT INTO company VALUES( '12', 'โรงอาหารคณะวิศวกรรมศาสตร์มหาวิทยาลัยเกษตรศาสตร์', 'โรงอาหาร', '', '', '', '', '', '');
+INSERT INTO company VALUES( '13', 'บริษัทฮ้อแสงชัย จำกัด', 'กิจการก่อสร้างคอนกรีต ทุกชนิด', '', '', '', '', '', '');
+INSERT INTO company VALUES( '14', 'ห้างหุ้นส่วนจำกัดสิทธิพงษ์รวมมิตร', 'รับเหมาก่อสร้างอาคารและวัสดุก่อสร้าง', '146  ซอย รามคำแหง22  ถ. รามคำแหง  แขวงหัวหมาก  เขต บางกะปิ  กรุงเทพ   10240', '', '', '', '', '');
+INSERT INTO company VALUES( '15', 'บริษัทโชคชัยแคสติ้งอุตสาหกรรม จำกัด', 'หล่อแผ่นความร้อนอลูมิเนียม', '1448 หมู่ 1  ซอยสามมิตรเจริญ  ถนนเทพารัก ตำบลเทพารัก    อำเภอเมือง  จังหวัดสมุทรปราการ  10270', '', '', '', '', 'ผลิตสินค้าให้กับบริษัท ฮิตาชิ โตชิบา  
+และบริษัทอื่นๆที่เป็นผู้ผลิตเครื่องใช้ไฟฟ้าประเภทหม้อหุงข้าว  กระทะไฟฟ้า และอื่นๆ');
+INSERT INTO company VALUES( '16', 'บริษัทกันยงอีเลคทริก จำกัด (มหาชน)', 'ผลิตเครื่องใช้ไฟฟ้าภายในบ้าน', 'ถนน เทพารักษ์ ต.สำโรงเหนือ  อ.เมือง  จังหวัด สมุทรปราการ', '', '', '', '', '');
+INSERT INTO company VALUES( '17', 'บริษัทSRไซมิสรับเบอร์ จำกัด', 'ยางรถยนต์ ยางเกษตรกรรม ยางรถบรรทุกขนาดเล็ก', '43 ถนนสุรินทวงศ์  เขตมีนบุรี  ตำบลมีนบุรี กรุงเทพมหานคร', '', '', '', '', '');
+INSERT INTO company VALUES( '18', 'บริษัทP.L JOHN DYEING CO.LTD', '', '101/1 หมู่ 4 ถนน ฉลองกรุง เขตนิคมอุตสาหกรรมแหลมฉบัง', '', '', '', '', '');
+INSERT INTO company VALUES( '19', 'บริษัทที.เอส.ทรังค์กิ้ง จำกัด', 'ผลิตโคมไฟ', '85/3 ซอยประชุมพร  ถนนแจ้งวัฒนะ  เขตดอนเมือง กรุงเทพ  10120', '', '', '', '', 'มีการเดินสายไฟ และพ่นสีน้ำกับโลหะทั่วไป');
+INSERT INTO company VALUES( '20', 'บริษัทวิเชียรไดนามิคอินดัสตรี จำกัด', 'ผลิต signal lamp สำหรับtruck ,pick up truckผลิต signal lamp สำหรับtruck ,pick up truck', '34/1 หมู่ 10 ถ.ปทุมธานี  ลาดหลุมแก้ว  ตำบล คูบางหลวง  อำเภอ ลาดหลุมแก้ว จ.ปทุมธานี 12140', '', '', '', '', 'สำหรับรถ Nisson ,Toyota,Isuzu,Hino');
+INSERT INTO company VALUES( '21', 'บริษัทไทยเรดิเอเตอร์แมนูแฟคเจอริ่ง จำกัด', 'ผลิตหม้อน้ำรถยนต์ จักรยานยนต์ และถังน้ำมัน', 'ถ.บางนาตราด  กม.15 อำเภอเมือง  ', '', '', '', '', '');
+INSERT INTO company VALUES( '22', 'บริษัทไทยน้ำทิพย์ จำกัด ( โรงงานปทุมธานี)', 'เครื่องดื่ม โคคา-โคลา', '55 หมู่ 2 ถนนบางขะแยง บ้านฉาง  ต.บางขะแยงอำเภอเมือง  จ.ปทุมธานี 12000', '', '', '', '', '');
+INSERT INTO company VALUES( '23', 'บริษัทศักดิ์ศรีอุตสาหกรรม จำกัด', '', '', '', '', '', '', '');
+INSERT INTO company VALUES( '24', 'โรงงานกู๊ดเยียร์ (ประเทศไทย) จำกัด (มหาชน)', 'ผลิตยางทุกแบบทุกขนาด', 'รังสิต  อำเภอ คลองหลวง   จ.ปทุมธานี', '', '', '', '', '');
+INSERT INTO company VALUES( '25', 'บริษัทพิพัฒนกิจเท็กซ์ไทล์ จำกัด', 'สิ่งทอ', 'เลขที่222  หมู่8   ตำบล  ท้ายบ้าน  อำเภอเมือง', '3871465', '', '', '', '');
+INSERT INTO company VALUES( '26', 'บริษัทสหไพศาลอินดัสทรี จำกัด', 'ผลิตสารส้ม', '', '', '', '', '', '');
+INSERT INTO company VALUES( '27', 'บริษัท Cabra International Co.,Ltd.', 'ผลิตWindsurf Board', '112  หมู่ 12 ถนนกิ่งแก้ว บางพลี จ.สมุทรปราการ', '', '', '', '', '');
+INSERT INTO company VALUES( '28', 'บริษัทไทย-เยอรมัน เซรามิกส์ จำกัด (มหาชน)', 'ผลิตกระเบื้องเซรามิกส์', '', '', '', '', '', '');
+INSERT INTO company VALUES( '29', 'โรงงาน ไทย-เยอรมัน เซรามิกส์ จำกัด(มหาชน)', 'ผลิตกระเบื้องเซรามิค', '102-118 ถ.อโศกดินแดง แขวง บางกะปิ กทม. เขต หัวยขวาง 10310', '5168611-6', '', '', '', '');
+INSERT INTO company VALUES( '30', 'บริษัท S.N.B.ผลิตผลการเกษตร จำกัด
+', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO company VALUES( '31', 'บริษัท กรุงไทยคาร์เร้นท์ จำกัด', 'บริการให้เช่ารถเก๋ง รถตู้ รถปิคอัพ', '66/77 ถนน รามอินทรา กม.4  ลาดพร้าว กทม.', '', '', '', '', '');
+INSERT INTO company VALUES( '32', 'บริษัท เค.เอส.ชูช์ จำกัด', 'รองเท้าแตะฟองน้ำ รองเท้าเด็ก รองเท้าบู๊ทกันน้ำ', '294 หมู่ 7 ซ.ประคองมิตร ถ.ราษฎร์บูรณะ 
+อ.ราษฎร์บูรณะ  กทม. 10600', '4277840', '', '', '', '');
+INSERT INTO company VALUES( '33', 'ISUZU MOTORS CO.,LTD.', 'ประกอบรถยนต์', '', '', '', '', '', '');
+INSERT INTO company VALUES( '34', 'สามมิตรมอเตอร์ แมนูแฟคเจอริ่ง จำกัด', 'ผลิตแม่พิมพ์รถยนต์ jigประกอบรถยนต์ ชิ้นส่วนตัวถัง', '39 หมู่ 12 ถ.เพชรเกษม ต.อ้อมน้อย อ.กระทุ่มแบน จ.สมุทรสาคร 74130', '4200027  4201971  4203295-6', '(662) 4201875', '', '', '');
+INSERT INTO company VALUES( '35', 'บริษัท เดลต้า อีเลคทรอนิคส์แห่งประเทศไทย จำกัด', 'ผลิตอุปกรณ์อิเลคทรอนิคส์', '', '', '', '', '', 'อุปกรณ์ เช่น EMI , 
+COLOR MONITOR,
+ POWER SUPPLY,MAGNETIC CONVERTER');
+INSERT INTO company VALUES( '36', 'บริษัท NEC TECHNOLOGIES(THAILAND) CO.,LTD.', 'ผลิตส่วนประกอบทางอิเลคทรอนิคส์', '', '', '', '', '', 'ใช้เป็นส่วนประกอบในคอมพิวเตอร์,อุปกรณ์สื่อสารโทรคมนาคม,เครื่องใช้ในบ้าน,รถยนต์');
+INSERT INTO company VALUES( '37', 'บริษัท ธำรงไทยโพลิเมอร์ จำกัด', 'ผลิตฉนวนกันความร้อน,ความเย็น', 'ถ.เทพารักษ์ เขต เทพารักษ์ สมุทรปราการ', '', '', '', '', '');
+INSERT INTO company VALUES( '38', 'SUNWOOD INDUSTRY CO,LTD.', 'ผลิตเฟอร์นิเจอร์จากไม้สัก,ไม้ยางพารา', '', '', '', '', '', '');
+INSERT INTO company VALUES( '39', 'บริษัท บางจาก ปิโตรเลียมจำกัด', 'ผลิตน้ำมัน', 'ตำบล บางจาก เขต พระโขนง', '', '', '', '', '');
+INSERT INTO company VALUES( '40', 'โรงงาน บางกอกรับเบอร์ จำกัด', 'ผลิตรองเท้าแพน NIKE REBOK', '', '', '', '', '', '');
+INSERT INTO company VALUES( '41', 'เอสโซ่ แสตนดาร์ด ประเทศไทย จำกัด', 'ผลิตภัณฑ์ปิโตรเลียม เครื่องหมายการค้าESSO/EXXON', '1016 ถ. พระราม4 แขวง สีลม เขต บางรัก กทม. 10500', '', '', '', '', '');
+
+# --------------------------------------------------------
+#
+# Table structure for table 'department'
+#
+
+CREATE TABLE department (
+   id int(11) NOT NULL auto_increment,
+   name varchar(64) NOT NULL,
+   fullname varchar(128) NOT NULL,
+   head_user int(11),
+   dept_code varchar(32),
+   PRIMARY KEY (id)
+);
+
+#
+# Dumping data for table 'department'
+#
+
+INSERT INTO department VALUES( '1', 'วศ.กษ.', 'ภาควิชาวิศวกรรมเกษตร', '0', 'deptae');
+INSERT INTO department VALUES( '2', 'วศ.อร.', 'ภาควิชาวิศวกรรมการอาหาร', '0', 'deptfe');
+INSERT INTO department VALUES( '3', 'วศ.ชป.', 'ภาควิชาวิศวกรรมชลประทาน', '0', 'deptir');
+INSERT INTO department VALUES( '4', 'วศ.คต.', 'ภาควิชาวิศวกรรมคอมพิวเตอร์', '0', 'deptcpe');
+INSERT INTO department VALUES( '5', 'วศ.คม.', 'ภาควิชาวิศวกรรมเคมี', '0', 'deptcme');
+INSERT INTO department VALUES( '6', 'วศ.ฟฟ.', 'ภาควิชาวิศวกรรมไฟฟ้า', '0', 'deptee');
+INSERT INTO department VALUES( '7', 'วศ.ยธ.', 'ภาควิชาวิศวกรรมโยธา', '0', NULL);
+INSERT INTO department VALUES( '8', 'วศ.สวล.', 'ภาควิชาวิศวกรรมสิ่งแวดล้อม', '0', NULL);
+INSERT INTO department VALUES( '9', 'วศ.กบอ.', 'ภาควิชาวิศวกรรมการบินและอวกาศยาน', '0', NULL);
+INSERT INTO department VALUES( '10', 'วศ.ทน.', 'ภาควิชาวิศวกรรมทรัพยากรน้ำ', '0', NULL);
+INSERT INTO department VALUES( '11', 'วศ.อก.', ' ภาควิชาวิศวกรรมอุตสาหการ', '0', NULL);
+INSERT INTO department VALUES( '12', 'วศ.คก.', 'ภาควิชาวิศวกรรมเครื่องกล', '0', NULL);
+INSERT INTO department VALUES( '13', 'วศ.วัสดุ', 'ภาควิชาวิศวกรรมวัสดุ', '0', NULL);
+
+# --------------------------------------------------------
+#
+# Table structure for table 'project'
+#
+
+CREATE TABLE project (
+   ID int(11) NOT NULL auto_increment,
+   PrjName varchar(255) NOT NULL,
+   PrjYear varchar(4) NOT NULL,
+   PrjTerm varchar(8) NOT NULL,
+   PrjNote text,
+   PrjAbstract varchar(255) NOT NULL,
+   PrjFile varchar(255),
+   TopID int(11) NOT NULL,
+   SubID int(11) NOT NULL,
+   ComID int(11) NOT NULL,
+   DepID int(11) NOT NULL,
+   SubID2 int(11) NOT NULL,
+   SubID3 int(11) NOT NULL,
+   PRIMARY KEY (ID)
+);
+
+#
+# Dumping data for table 'project'
+#
+
+
+# --------------------------------------------------------
+#
+# Table structure for table 'subject'
+#
+
+CREATE TABLE subject (
+   ID int(11) NOT NULL auto_increment,
+   SubCode int(6) NOT NULL,
+   SubName varchar(255) NOT NULL,
+   SubTName varchar(255),
+   PRIMARY KEY (ID)
+);
+
+#
+# Dumping data for table 'subject'
+#
+
+INSERT INTO subject VALUES( '1', '206211', 'Material Science for Engineering', 'วัสดุศาสตร์สำหรับวิศวกร');
+INSERT INTO subject VALUES( '2', '206221', 'Applied Probability and Statistics for Engineering', 'ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร');
+INSERT INTO subject VALUES( '3', '206311', 'Manufacturing Processes', 'กระบวนการผลิต');
+INSERT INTO subject VALUES( '4', '206321', 'Operation Research for Engineers', 'การวิจัยการดำเนินงาน');
+INSERT INTO subject VALUES( '5', '206323', 'Quality Control', 'การควบคุมคุณภาพ');
+INSERT INTO subject VALUES( '6', '206341', 'Industrial Work Study', 'การศึกษาการทำงานทางอุตสาหกรรม');
+INSERT INTO subject VALUES( '7', '206351', 'Engineering Economic', 'เศรษฐศาสตร์วิศวกรรม');
+INSERT INTO subject VALUES( '8', '206361', 'Computer for Industrial Engineers', 'คอมพิวเตอร์สำหรับวิศวกรอุตสาหการ');
+INSERT INTO subject VALUES( '9', '206401', 'Introduction to Safety Engineering', 'วิศวกรรมความปลอดภัยเบื้องต้น');
+INSERT INTO subject VALUES( '10', '206411', 'Tool Engineering', 'วิศวกรรมเครื่องมือ');
+INSERT INTO subject VALUES( '11', '206412', 'Industrial Instrumentation and Measurement', 'เครื่องมือและการวัดทางอุตสาหกรรม');
+INSERT INTO subject VALUES( '12', '206413', 'Industrial Pollution', 'มลพิษทางอุตสาหกรรม');
+INSERT INTO subject VALUES( '13', '206421', 'Simulation', 'การจำลองสถานการณ์');
+INSERT INTO subject VALUES( '14', '206431', 'Industrial Management', 'การจัดการอุตสาหกรรม');
+INSERT INTO subject VALUES( '15', '206432', 'Management Information System for Engineers', 'ระบบสารสนเทศเพื่อการจัดการสำหรับวิศวกร');
+INSERT INTO subject VALUES( '16', '206441', 'Production Planning and Control', 'การวางแผนและการควบคุมการผลิต');
+INSERT INTO subject VALUES( '17', '206442', 'Industrial Plant Design', 'การออกแบบโรงงานอุตสาหกรรม');
+INSERT INTO subject VALUES( '18', '206443', 'Ergonomics', 'กิจภาวศาสตร์');
+INSERT INTO subject VALUES( '19', '206444', 'Industrial Forecasting', 'การพยากรณ์ทางอุตสาหกรรม');
+INSERT INTO subject VALUES( '20', '206445', 'Inventory Control', 'การควบคุมสินค้าคงคลัง');
+INSERT INTO subject VALUES( '21', '206446', 'Value Engineering', 'วิศวกรรมคุณค่า');
+INSERT INTO subject VALUES( '22', '206451', 'Industrial and Commercial Law', 'กฏหมายอุตสาหกรรมและพาณิชยกรรม');
+INSERT INTO subject VALUES( '23', '206452', 'Industrial Cost Analysis', 'การวิเคราะห์ต้นทุนทางอุตสาหกรรม');
+INSERT INTO subject VALUES( '24', '206453', 'Industrial Project Feasibility Study', 'การศึกษาความเป็นไปได้ของโครงงานอุตสาหกรรม');
+INSERT INTO subject VALUES( '25', '206454', 'Industrial Accouting and Finance', 'การบัญชีและการเงินอุตสาหกรรม');
+INSERT INTO subject VALUES( '26', '206461', 'System Engineering', 'วิศวกรรมระบบ');
+INSERT INTO subject VALUES( '27', '206471', 'Industrial Safety', 'ความปลอดภัยในอุตสาหกรรม');
+INSERT INTO subject VALUES( '28', '206472', 'Maintenance Engineering', 'วิศวกรรมการซ่อมบำรุง');
+
+# --------------------------------------------------------
+#
+# Table structure for table 'topic'
+#
+
+CREATE TABLE topic (
+   ID int(11) NOT NULL auto_increment,
+   TopName varchar(255) NOT NULL,
+   PRIMARY KEY (ID)
+);
+
+#
+# Dumping data for table 'topic'
+#
+
+INSERT INTO topic VALUES( '1', 'การศึกษาความเป็นไปได้ของการจัดตั้งโครงการ
+');
+INSERT INTO topic VALUES( '2', 'โปรแกรมคอมพิวเตอร์
+');
+INSERT INTO topic VALUES( '3', 'ระบบฐานข้อมูล
+');
+INSERT INTO topic VALUES( '4', 'การควบคุมและปรับปรุงคุณภาพ
+');
+INSERT INTO topic VALUES( '5', 'การจัดระบบการซ่อมบำรุงรักษา
+');
+INSERT INTO topic VALUES( '6', 'การลดต้นทุนโดยใช้หลักวิศวกรรมคุณค่า
+');
+INSERT INTO topic VALUES( '7', 'การออกแบบเครื่องมือทางอุตสาหกรรม
+');
+INSERT INTO topic VALUES( '8', 'การวางแผนการผลิต
+');
+INSERT INTO topic VALUES( '9', 'วัสดุศาสตร์และกรรมวิธีการผลิต
+');
+INSERT INTO topic VALUES( '10', 'การควบคุมการผลิตโดยวิธีทางสถิติ
+');
+INSERT INTO topic VALUES( '11', 'ISO14000
+');
+INSERT INTO topic VALUES( '12', 'การจำลองสถานการณ์
+');
+INSERT INTO topic VALUES( '13', 'ความปลอดภัย
+');
+INSERT INTO topic VALUES( '14', 'การควบคุมสินค้าคงคลัง
+');
+INSERT INTO topic VALUES( '15', 'การปรับปรุงการทำงานหรือการผลิต(work  study)
+');
+INSERT INTO topic VALUES( '16', 'การปรับปรุงผังโรงงาน
+');
+INSERT INTO topic VALUES( '17', 'ISO9000
+');
+INSERT INTO topic VALUES( '18', 'เครื่องมือวัด
+');
+INSERT INTO topic VALUES( '19', 'ระบบจัดส่งชิ้นส่วนสายการประกอบ
+');
+INSERT INTO topic VALUES( '20', 'การวิจัยดำเนินงาน
+');
+INSERT INTO topic VALUES( '21', 'การศึกษาเศรษฐศาสตร์และต้นทุน
+');
+INSERT INTO topic VALUES( '22', 'การจัดระบบเอกสาร
+');
+INSERT INTO topic VALUES( '23', 'การจัดสมดุลย์สายการผลิต
+');
+INSERT INTO topic VALUES( '24', 'การจัดทำตารางการผลิต
+');
+INSERT INTO topic VALUES( '25', 'สิ่งแวดล้อมและชีวะอนามัย
+');
+INSERT INTO topic VALUES( '26', 'ISO18000
+');
+INSERT INTO topic VALUES( '27', 'การประเมินผลคุณภาพจากหน่วยวัด');
+INSERT INTO topic VALUES( '28', 'การพยากรณ์แนวโน้มทางอุตสาหกรรม');
+
+# --------------------------------------------------------
+#
+# Table structure for table 'users'
+#
+
+CREATE TABLE users (
+   id int(11) NOT NULL auto_increment,
+   active int(11),
+   login varchar(255),
+   password varchar(255),
+   firstname varchar(255),
+   surname varchar(255),
+   email varchar(255),
+   homepage varchar(255),
+   picture varchar(255),
+   admin int(11),
+   address text,
+   info text,
+   lastlogin bigint(20) NOT NULL,
+   telephone varchar(128),
+   category int(11),
+   dept varchar(255),
+   title varchar(32),
+   ucode varchar(16),
+   temp tinyint(5),
+   email2 varchar(255),
+   PRIMARY KEY (id),
+   KEY id (id)
+);
+
+#
+# Dumping data for table 'users'
+#
+
+INSERT INTO users VALUES( '1', '0', '', '', 'พิชิต', 'สุขเจริญพงษ์', '', '', '', '0', '', '', '0', '', '2', '11', 'รศ.ดร.', 'E8001', '0', '');
+INSERT INTO users VALUES( '2', '0', '', '', 'เสรี', 'เศวตเศรนี', '', '', '', '0', '', '', '0', '', '2', '11', 'ผศ.ดร.', 'E8002', '0', '');
+INSERT INTO users VALUES( '3', '0', '', '', 'อรรถพิลาส', 'ตันตราภรณ์', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8003', '0', '');
+INSERT INTO users VALUES( '4', '0', '', '', 'พีรยุทธ์', 'ชาญเศรษฐิกุล', '', '', '', '0', '', '', '0', '3111445', '2', '11', 'ผศ.ดร.', 'E8006', '0', '');
+INSERT INTO users VALUES( '5', '0', '', '', 'วิศิษฏ์', 'โล้เจริญรัตน์', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8007', '0', '');
+INSERT INTO users VALUES( '6', '0', '', '', 'ศันสนีย์', 'สุภาภา', '', '', '', '0', '', '', '0', '', '2', '11', 'รศ.', 'E8008', '0', '');
+INSERT INTO users VALUES( '7', '0', '', '', 'อนนต์', 'วงษ์เกษม', 'fenganw@nontri.ku.ac.th', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8009', '0', '');
+INSERT INTO users VALUES( '8', '0', '', '', 'พัชราภรณ์', 'ญาณภิรัต', 'fengppy@nontri.ku.ac.th', '', '', '0', '', '', '0', '', '2', '11', 'ดร.', 'E8010', '0', '');
+INSERT INTO users VALUES( '9', '0', '', '', 'เพียงใจ', 'พานิชกุล', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8013', '0', '');
+INSERT INTO users VALUES( '10', '0', '', '', 'ประไพศรี', 'สุทัศน์ ณ อยุธยา', '', '', '', '0', '', '', '0', '', '2', '11', 'ผศ.ดร.', 'E8014', '0', '');
+INSERT INTO users VALUES( '11', '0', '', '', 'พิภพ', 'ลลิตาภรณ์', '', '', '', '0', '', '', '0', '', '2', '11', 'รศ.', 'E8015', '0', '');
+INSERT INTO users VALUES( '12', '0', '', '', 'สุวิวัฒน์', 'แซ่ลิ้ม', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8016', '0', '');
+INSERT INTO users VALUES( '13', '0', '', '', 'ก้องกิติ', 'พูสวัสดิ์', '', '', '', '0', '', '', '0', '', '2', '11', 'ดร.', 'E8018', '0', '');
+INSERT INTO users VALUES( '14', '0', '', '', 'วรวุฒิ', 'หวังวัชรกุล', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8020', '0', '');
+INSERT INTO users VALUES( '15', '0', '', '', 'จักรพันธ์', 'อร่ามพงษ์พันธ์', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8021', '0', '');
+INSERT INTO users VALUES( '16', '0', '', '', 'เลิศชัย', 'ระตะนะอาพร', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8022', '0', '');
+INSERT INTO users VALUES( '17', '0', '', '', 'ดวงฤดี', 'ฉายสุวรรณ', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8023', '0', '');
+INSERT INTO users VALUES( '18', '0', '', '', 'รุ่งรัตน์', 'สีเหลืองสวัสดิ์', '', '', '', '0', '', '', '0', '', '2', '11', 'อ.', 'E8023', '0', '');
+INSERT INTO users VALUES( '19', '0', '', '', 'เกรียงชาย', 'เยาว์ยืนยง', 'fengkry@nontri.ku.ac.th', '', '', '0', '', '', '0', '4480498', '2', '11', 'อ.', 'E8024', '0', '');
+
+# --------------------------------------------------------
+#
+# Table structure for table 'users_prj'
+#
+
+CREATE TABLE users_prj (
+   UseID int(11) NOT NULL,
+   PrjID int(11) NOT NULL
+);
+
+#
+# Dumping data for table 'users_prj'
+#
+
+
+# --------------------------------------------------------
+#
+# Table structure for table 'users_type'
+#
+
+CREATE TABLE users_type (
+   id int(3) NOT NULL,
+   nametype varchar(255),
+   description varchar(255),
+   PRIMARY KEY (id)
+);
+
+#
+# Dumping data for table 'users_type'
+#
+
+INSERT INTO users_type VALUES( '1', 'หน่วยงาน', 'หน่วยงานทั่ว ๆ ไปในคณะ รวมถึงภาควิชา');
+INSERT INTO users_type VALUES( '2', 'อาจารย์', '');
+INSERT INTO users_type VALUES( '3', 'นิสิต', '');
+INSERT INTO users_type VALUES( '4', 'เจ้าหน้าที่', 'เจ้าหน้าที่ทั่วไปซึ่งไม่ใช่อาจารย์');
+INSERT INTO users_type VALUES( '5', 'ผู้มาอบรม-คนนอก', 'สำหรับให้คนนอกหรือผู้ที่มาฝึกอบรม');
+INSERT INTO users_type VALUES( '0', 'superuser', 'สำหรับผู้ดูแลระบบทั้งหมด');
+

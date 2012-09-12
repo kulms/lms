@@ -1,0 +1,31 @@
+<table width="100%"  border="0">
+  <tr>
+    <td  class="main"><b>{COMPLETE}</b></td>
+  </tr>
+</table>
+<table width="100%"  border="0">
+<form action="?a=setactive&m=admin&modules={Q_ID}&update=1" method="post">
+  <tr>
+    <td><input type="submit" name="s12" value="{BUTTON}" class="button"></td>
+  </tr>
+  <tr>
+    <td>
+	<table width="100%"  border="0" cellspacing="1" cellpadding="0" class="tdbackground_white">
+  <tr>
+    <td><table width="100%"  border="0" class="tdborder1">
+  <tr class="main">
+    <td width="12%">&nbsp;</td>
+    <td width="88%"><select name="set" style="font-size:10px">
+      <option value="1" id="true" {SEL_ACTIVE}>{ACTIVE}</option>
+      <option value="0" id="false" {SEL_INACTIVE}>{INACTIVE}</option>
+    </select>      &nbsp;&nbsp; 
+	</td>
+  </tr>
+</table></td>
+  </tr>
+</table>
+
+	</td>
+  </tr>
+  </form>
+</table>

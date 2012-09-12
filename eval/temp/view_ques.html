@@ -1,0 +1,201 @@
+<html>
+
+<head>
+
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+
+<link href="include/main.css" rel="stylesheet" type="text/css">
+
+<link href="../include/main.css" rel="stylesheet" type="text/css">
+
+<script language='javascript'> 
+
+function iconfirmdel(in_url){
+				if( confirm("คุณต้องการลบใช่หรือไม่ ?") ){   
+						document.location =in_url; 
+					 }
+}
+function popupedit(go_url){
+				  window.open(go_url,"edit_win","top=100,left=200,width=550,height=250,resizable,scrollbars=no,status=no");
+}
+
+function editgroup(to_url){
+
+				  window.open(to_url,"new_win","top=150,left=200,width=550,height=100,resizable,scrollbars=no,status=no");
+
+		}
+
+
+
+</script>
+
+</head>
+
+<body>
+
+     <table width="100%"  border="0" cellspacing="0" cellpadding="0" >
+
+       <tr>
+
+         <td height="54"><font color="navy"><b><img src="images/pen.gif"  border="0">{Eval_TeaQues}<a name="QT"></a></b></font></td>
+
+       </tr>
+
+       <tr>
+
+         <td height="25"  background="images/left_bg.gif">{GROUP_NAME} <a href="ques_Group.php">{Eval_AddGroupQues}</a></td>
+
+       </tr>
+
+       <tr>
+
+         <td>    <!-- BEGIN GroupQ -->
+
+		 <form name="std_q" method="post" action="ques_Group.php?gname={GroupQ.G_NAME}&g_id={GroupQ.GID}">
+
+		 <table width="100%"  border="0" cellspacing="0" cellpadding="5" style="border-bottom: solid #000000 1px; border-top: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px;">
+
+		   <tr>
+
+             <td class="bdarkblue">{GroupQ.G_NAME}  &nbsp;
+
+			  <a href="javascript:editgroup('EditQues.php?grp_id={GroupQ.GID}&gname={GroupQ.G_NAME}')">{GroupQ.EDITBUTT}</a>
+
+			<a href="javascript:iconfirmdel('deleteAnything.php?g_id={GroupQ.GID}')">{GroupQ.DELBUTT}</a> 
+
+			 </td>
+
+           </tr>
+
+		     
+
+           <tr>
+
+             <td>
+
+			 <!-- BEGIN QC -->
+
+			 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="tdborder1">
+
+               <tr align="center"  class="boxcolor">
+
+                 <td width="7%" height="24" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Num}</span></td>
+
+                 <td width="27%" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Question}</span></td>
+
+                 <td width="8%" style="border-right: solid #FFFFFF 1px;"><span class="Bcolor">{Eval_Action}</span></td>
+
+                 <td colspan="5"><span class="Bcolor">{Eval_Score}</span></td>
+
+               </tr>
+
+			   {NOTEAQUES}
+
+               <!-- BEGIN Ques -->
+
+               <tr align="center">
+
+                 <td  align="center" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.Q_NUM}</td>
+
+                 <td align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.Question}</td>
+
+                 <td align="center"  {GroupQ.QC.Ques.COLOR}> 
+
+				  <a href="javascript:popupedit('EditQues.php?q_id={GroupQ.QC.Ques.Q_ID}&grp_id={GroupQ.GID}')"><img src="images/edit.gif" alt="{strEdit}" border="0"></a>&nbsp;  
+
+				 <a href="javascript:iconfirmdel('deleteAnything.php?q_id={GroupQ.QC.Ques.Q_ID}&grp_id={GroupQ.GID}')"><img src="images/delete.gif" alt="{strDelete}" border="0"></a></td>
+
+                 <td width="12%"  align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.RADIO1} </td>
+
+                 <td width="10%" align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.RADIO2}</td>
+
+                 <td width="12%"  align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.RADIO3}  </td>
+
+                 <td width="12%"  align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.RADIO4}</td>
+
+                 <td width="14%"  align="left" {GroupQ.QC.Ques.COLOR}>{GroupQ.QC.Ques.RADIO5}
+
+                 </td>
+
+               </tr>
+
+			     <!-- END Ques -->
+
+             </table>
+
+			  <!-- END QC -->
+
+			</td>
+
+           </tr>
+
+
+
+           <tr>
+
+             <td><table align="center" width="100%" border="0" cellspacing="0" cellpadding="5"  class="tdborder1">
+
+               <!-- BEGIN QuesFill -->
+
+               <tr valign="top">
+
+                 <td rowspan="2" align="right" bgcolor class="tdbackground3"><br>
+
+                     <b>{Eval_Question}{Eval_Num}: {GroupQ.QuesFill.QF_NUM}</b>&nbsp; &nbsp; </td>
+
+                 <td bgcolor class="tdbackground3"> {GroupQ.QuesFill.Question} </td>
+
+               </tr>
+
+               <tr valign="top">
+
+                 <td bgcolor class="tdbackground3"><textarea name="text{GroupQ.QuesFill.QF_ID}"  cols="50" rows="5" wrap="VIRTUAL" disabled ></textarea>
+
+				   <a href="javascript:popupedit('EditQues.php?q_id={GroupQ.QuesFill.QF_ID}&grp_id={GroupQ.GID}&fill=1')"><img src="images/edit.gif" alt="{strEdit}" border="0"></a> 
+
+				   <a href="javascript:iconfirmdel('deleteAnything.php?q_id={GroupQ.QuesFill.QF_ID}&grp_id={GroupQ.GID}')"><img src="images/delete.gif" alt="{strDelete}" border="0"></a> 
+
+                     <br>
+
+                   <span class="boxtitle">{FullCharacters}</span>  </td>
+
+               </tr>
+
+               <!-- END QuesFill -->
+
+			   
+
+             </table></td>
+
+           </tr>
+
+		       <tr>
+
+         <td align="center">{GroupQ.SUBMITBUTT}</td>
+
+       </tr>
+
+         </table> 
+
+		 </form>
+
+		    <!-- END GroupQ -->
+
+		   </td>
+
+       </tr>
+
+       <tr>
+
+         <td align="center">&nbsp;</td>
+
+       </tr>
+
+     </table>
+
+</body>
+
+</html>
+

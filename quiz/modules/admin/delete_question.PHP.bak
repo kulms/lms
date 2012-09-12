@@ -1,0 +1,60 @@
+<?require("../include/global_login.php");
+include("../include/function.inc.php");
+
+$check=mysql_query("SELECT * FROM q_modules_questions WHERE module_id <> $modules AND question_id=$qnr;");
+$sql=mysql_query("SELECT o.finished FROM q_occasions o,q_user_questions uq WHERE uq.question_id=$qnr AND o.occasion_id=uq.occasion_id AND o.finished=0");
+
+if(mysql_num_rows($check)!=0){?>
+	<html>
+	<head>
+		<link rel="STYLESHEET" type="text/css" href="../main.css">
+		<META HTTP-EQUIV="Refresh" CONTENT="1;URL=?a=viewQuestion&m=admin&modules=<? echo $quiz->getModules()?>">
+	</head>
+	<body bgcolor="#ffffff">
+	<p>&nbsp;</p>
+	<div align="center" class="h3"><b>Sorry...</b></div>
+	<div align="center" class="main"><b>Couldn't delete this question since it's included in another quiz...</b></div>
+	</body>
+	</html>
+<? }else{
+		if(mysql_num_rows($sql) !=0){ ?>
+			<html>
+		<head>
+		<link rel="STYLESHEET" type="text/css" href="../main.css">
+		<META HTTP-EQUIV="Refresh" CONTENT="1;URL=?a=viewQuestion&m=admin&modules=<? echo $quiz->getModules()?>">
+	</head>
+	<body bgcolor="#ffffff">
+	<p>&nbsp;</p>
+	<div align="center" class="h3"><b>Sorry...</b></div>
+	<div align="center" class="main"><b>Couldn't delete this question due to the students are still testing..</b></div>
+	</body>
+	</html>
+	<?	}else{
+				//Courses_id
+			$courseid=mysql_query("SELECT courses FROM wp WHERE modules=".$quiz->getModules().";");
+			$courses=mysql_result($courseid,0,"courses");
+						//***********insert modules_history***************
+		$action="Delete question";
+			Imodules_h($modules,$action,$person["id"],$courses);
+
+	mysql_query("DELETE FROM q_modules_questions WHERE question_id=$qnr;");
+	mysql_query("DELETE FROM q_questions WHERE question_id=$qnr;");
+	mysql_query("DELETE FROM q_answers WHERE question_id=$qnr;");
+	
+	//delete question_type=mcit
+	mysql_query("DELETE FROM q_answer_mcit WHERE question_id=$qnr;"); 
+	mysql_query("DELETE FROM q_question_mcit WHERE question_id=$qnr;"); 
+	
+?>
+
+<html>
+<head>
+	<META HTTP-EQUIV="Refresh" CONTENT="1;URL=?a=viewQuestion&m=admin&modules=<? echo $quiz->getModules(); ?>">
+</head>
+<body bgcolor="#ffffff">
+<p>&nbsp;</p>
+<div align="center" class="h3"><b>The question has been deleted...</b></div>
+</body>
+</html>
+<? }
+}?>
